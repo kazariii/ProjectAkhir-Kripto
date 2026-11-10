@@ -1,0 +1,14 @@
+{
+  "both-grafana.png": "b9d16befa81b965ea841a27a090cdb963bad7f58f65442a38a51d041b37aba61",
+  "final-grafana.png": "eda1bebd0e430caf72ae054454ad2f8e6678b3ea1a9483b8def4a542fe571f0c",
+  "history-grafana.png": "32444e3cb6a075329e82675bce8ef436a3cd24cb6248f9f49488ec00ba88f9e1",
+  "mqtt-access.json": "4959637d651c2d9956329913e000dc5608c548ef5d78e44fc7ad6d71a5e6e114",
+  "normal-wokwi.png": "75bf422bf0d87bdc049a7bc477e6d92b5a58de75556f8bc858ec1305afe48869",
+  "recovered-wokwi.png": "55a772386ce4bf10046b823c79657a3fb0f5095b3a718e3050e9e151484547be",
+  "sensor.csv": "134abcb76b9f8fd8aeae6fef55e98ae238ae0c0a75a2a6b2c767b79f6decf74d",
+  "serial.txt": "54f280af19c9ed3ce2e882b79e9e0171928cf88a0064a65fec235677381843d1",
+  "stale-grafana.png": "ba266062aa56709eedce46811591a528bd0cf786dac2a13994dec0fc84cb8cd9",
+  "summary.json": "667450a72d5ad7ea4b5138b25d47826a3e72b83cde81ce2ecc41ef64241fb101",
+  "table-grafana.png": "e407f6794bb9d4ed91a54272f226bf34b0794e63d44e3a1e834bc087b35feee3",
+  "tls-experiment.json": "acf4c1fffbc10a40a474bc4ec223a680d181d0c265a192b07a0d5b453ddd9251"
+}

@@ -1,0 +1,5 @@
+{
+  "name": "MQ2 level: 5V to 3V",
+  "author": "Projek Akhir Kriptografi",
+  "pins": ["A5V", "D5V", "GND", "", "D3V", "A3V"]
+}

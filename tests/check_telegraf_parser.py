@@ -13,7 +13,9 @@ import time
 
 def main():
     args = argparse.ArgumentParser(description=__doc__)
-    args.add_argument("--telegraf", required=True, help="Path to Telegraf 1.40.3 executable")
+    runner = args.add_mutually_exclusive_group(required=True)
+    runner.add_argument("--telegraf", help="Path to Telegraf 1.40.3 executable")
+    runner.add_argument("--docker", action="store_true", help="Use the pinned Compose image")
     options = args.parse_args()
     root = Path(__file__).resolve().parents[1]
     production = (root / "infra/telegraf/telegraf.conf").read_text(encoding="utf-8")
@@ -23,41 +25,67 @@ def main():
                         production.index("[[outputs.influxdb_v2]]")]
     parser = parser.replace("inputs.mqtt_consumer", "inputs.file")
     cases = [
-        ("valid float, identity tag, reception timestamp",
-         {"device_id": "esp32-meja01", "temperature_c": 27.5, "timestamp": 0}, True),
-        ("changed Celsius reaches metric",
-         {"device_id": "esp32-meja01", "temperature_c": 35}, True),
+        ("same metric, numeric sensors, identity tag, reception timestamp",
+         {"device_id": "esp32-meja01", "temperature_c": 27.5, "gas_raw": 1200, "timestamp": 0}, True),
+        ("gas rises with fixed temperature",
+         {"device_id": "esp32-meja01", "temperature_c": 27.5, "gas_raw": 3000}, True),
+        ("temperature rises with fixed gas",
+         {"device_id": "esp32-meja01", "temperature_c": 40, "gas_raw": 1200}, True),
+        ("zero gas is a measured integer",
+         {"device_id": "esp32-meja01", "temperature_c": 27.5, "gas_raw": 0}, True),
+        ("ticket-01 payload remains compatible without invented gas",
+         {"device_id": "esp32-meja01", "temperature_c": 27.5}, True),
         ("missing temperature rejected", {"device_id": "esp32-meja01"}, False),
-        ("missing device identity rejected", {"temperature_c": 27.5}, False),
+        ("missing device identity rejected", {"temperature_c": 27.5, "gas_raw": 1200}, False),
         ("nonnumeric temperature rejected",
          {"device_id": "esp32-meja01", "temperature_c": "broken"}, False),
+        ("nonnumeric gas rejected",
+         {"device_id": "esp32-meja01", "temperature_c": 27.5, "gas_raw": "broken"}, False),
     ]
-    with tempfile.TemporaryDirectory(prefix="suhu-parser-") as directory:
+    for gas_alarm, temperature_alarm in ((False, False), (True, False), (False, True), (True, True)):
+        cases.append((f"boolean alarm pair gas={gas_alarm} temperature={temperature_alarm}",
+                      {"device_id": "esp32-meja01", "temperature_c": 40 if temperature_alarm else 25,
+                       "gas_raw": 1200, "gas_alarm": gas_alarm, "temperature_alarm": temperature_alarm}, True))
+    with tempfile.TemporaryDirectory(prefix="telemetry-parser-") as directory:
         payload_path = Path(directory) / "payload.json"
         config = Path(directory) / "parser-test.conf"
         config.write_text(
             '[agent]\n  omit_hostname = true\n[[inputs.file]]\n  files = ['
-            + json.dumps(payload_path.as_posix())
+            + json.dumps("/parser/payload.json" if options.docker else payload_path.as_posix())
             + ']\n  data_format = "json_v2"\n' + parser
             + '\n[[outputs.file]]\n  files = ["stdout"]\n', encoding="utf-8")
+        if options.docker:
+            compose = (root / "compose.yaml").read_text(encoding="utf-8")
+            image = re.search(r"image: (telegraf:[^\s]+)", compose).group(1)
+            command = ["docker", "run", "--rm", "--network", "none", "--mount",
+                       f"type=bind,source={directory},target=/parser,readonly", image,
+                       "telegraf", "--config", "/parser/parser-test.conf", "--test"]
+        else:
+            command = [options.telegraf, "--config", str(config), "--test"]
         for name, payload, valid in cases:
             payload_path.write_text(json.dumps(payload), encoding="utf-8")
             before = time.time_ns()
             result = subprocess.run(
-                [options.telegraf, "--config", str(config), "--test"],
-                capture_output=True, text=True, timeout=20, check=False)
+                command, capture_output=True, text=True, timeout=30, check=False)
             after = time.time_ns()
             matches = re.findall(
-                r"^> (suhu,device_id=esp32-meja01 temperature_c=([0-9.]+) ([0-9]+))$",
+                r"^> suhu,device_id=esp32-meja01 ([^ ]+) ([0-9]+)$",
                 result.stdout, re.M)
             if valid:
                 assert result.returncode == 0, result.stderr
                 assert len(matches) == 1, result.stdout + result.stderr
-                metric, value, stamp = matches[0]
-                assert float(value) == payload["temperature_c"], metric
-                assert before - 1_000_000_000 <= int(stamp) <= after + 1_000_000_000, metric
+                fields, stamp = matches[0]
+                values = dict(field.split("=", 1) for field in fields.split(","))
+                assert float(values.pop("temperature_c")) == payload["temperature_c"], fields
+                if "gas_raw" in payload:
+                    assert values.pop("gas_raw") == str(payload["gas_raw"]) + "i", fields
+                for field in ("gas_alarm", "temperature_alarm"):
+                    if field in payload:
+                        assert values.pop(field) == str(payload[field]).lower(), fields
+                assert not values, fields
+                assert before - 1_000_000_000 <= int(stamp) <= after + 1_000_000_000, stamp
                 assert "E!" not in result.stderr, result.stderr
-                print("PASS:", name, "|", metric)
+                print("PASS:", name, "|", fields, stamp)
             else:
                 # Telegraf --test may exit zero despite a plugin parse error.
                 assert "E! [inputs.file]" in result.stderr, result.stdout + result.stderr

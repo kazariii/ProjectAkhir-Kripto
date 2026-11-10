@@ -5,7 +5,12 @@
   "parts": [
     { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
     { "type": "wokwi-ds18b20", "id": "suhu", "top": -5, "left": 230, "attrs": { "temperature": "25" } },
-    { "type": "wokwi-resistor", "id": "pullup", "top": -50, "left": 170, "attrs": { "value": "4700" } }
+    { "type": "wokwi-resistor", "id": "pullup", "top": -50, "left": 170, "attrs": { "value": "4700" } },
+    { "type": "wokwi-gas-sensor", "id": "gas", "top": 160, "left": 270, "attrs": { "ppm": "400", "threshold": "4.4" } },
+    { "type": "chip-mq2-level", "id": "gasLevel", "top": 200, "left": 140, "attrs": {} },
+    { "type": "wokwi-led", "id": "alarmLed", "top": -100, "left": -110, "attrs": { "color": "red", "label": "Alarm" } },
+    { "type": "wokwi-resistor", "id": "ledResistor", "top": -45, "left": -130, "attrs": { "value": "220" } },
+    { "type": "wokwi-buzzer", "id": "alarmBuzzer", "top": 110, "left": -140, "attrs": { "volume": "0.1" } }
   ],
   "connections": [
     [ "esp:TX0", "$serialMonitor:RX", "", [] ],
@@ -14,7 +19,19 @@
     [ "esp:GND.1", "suhu:GND", "black", [] ],
     [ "esp:D4", "suhu:DQ", "green", [] ],
     [ "esp:3V3", "pullup:1", "red", [] ],
-    [ "pullup:2", "suhu:DQ", "green", [] ]
+    [ "pullup:2", "suhu:DQ", "green", [] ],
+    [ "esp:VIN", "gas:VCC", "red", [] ],
+    [ "esp:GND.1", "gas:GND", "black", [] ],
+    [ "esp:GND.1", "gasLevel:GND", "black", [] ],
+    [ "gas:AOUT", "gasLevel:A5V", "orange", [] ],
+    [ "gas:DOUT", "gasLevel:D5V", "purple", [] ],
+    [ "gasLevel:A3V", "esp:D34", "orange", [] ],
+    [ "gasLevel:D3V", "esp:D27", "purple", [] ],
+    [ "esp:D25", "ledResistor:1", "red", [] ],
+    [ "ledResistor:2", "alarmLed:A", "red", [] ],
+    [ "alarmLed:C", "esp:GND.1", "black", [] ],
+    [ "esp:D26", "alarmBuzzer:2", "red", [] ],
+    [ "alarmBuzzer:1", "esp:GND.1", "black", [] ]
   ],
   "dependencies": {}
 }

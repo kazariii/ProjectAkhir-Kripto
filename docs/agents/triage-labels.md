@@ -7,5 +7,6 @@
 | ready-for-agent | ready-for-agent | Spesifikasi siap dikerjakan agen |
 | ready-for-human | ready-for-human | Memerlukan pekerjaan manusia |
 | wontfix | wontfix | Tidak akan dikerjakan |
+| done | done | Seluruh acceptance criteria telah lulus; tiket selesai |
 
 Kesiapan mengerjakan tiket juga ditentukan oleh Blocked by.

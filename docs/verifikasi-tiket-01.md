@@ -4,7 +4,7 @@ Dokumen ini membedakan persiapan implementasi, pemeriksaan lokal, dan demonstras
 
 ## Batas antarmuka pengujian
 
-Pengguna menyetujui dua jalur pengujian yang berasal dari acceptance criteria tiket: telemetry firmware, serta MQTT/TLS sampai dashboard/persistensi dan izin akses. Pengujian lokal pertama dijalankan melalui fungsi publik pembentuk pesan firmware. Pemeriksaan parser Telegraf menjadi bagian yang dapat dijalankan dari jalur kedua; bagian runtime tetap menunggu lingkungan tersedia.
+Pengguna menyetujui dua jalur pengujian yang berasal dari acceptance criteria tiket: telemetry firmware, serta MQTT/TLS sampai dashboard/persistensi dan izin akses. Pengujian lokal pertama dijalankan melalui fungsi publik pembentuk pesan firmware. Hasil demo cloud setelah konfigurasi pemilik tersedia dicatat pada bagian pembaruan di bawah; hasil lokal awal tetap dipertahankan sebagai riwayat pemeriksaan.
 
 | Batas | Perilaku yang diperiksa | Batas bukti |
 | --- | --- | --- |
@@ -73,16 +73,42 @@ PASS: nonnumeric temperature rejected | parser error, no measurement
 
 Payload pertama sengaja menyertakan `timestamp: 0`; hasil tetap memakai waktu penerimaan Telegraf, bukan epoch nol. Skrip juga memeriksa pesan error dan ketiadaan metric karena `telegraf --test` dapat exit 0 walaupun parser melaporkan error.
 
-## Verifikasi pemilik yang masih diperlukan
+## Pembaruan demo aktual — 10 November 2026
 
-Belum dijalankan: pembuatan/verifikasi akun EMQX, konfirmasi Spend Limit 0, audit aturan autentikasi/otorisasi aktual, handshake CA/hostname pada kedua klien, simulasi Wokwi, interval serial 2 detik, pemutusan DQ, perubahan suhu sampai Grafana, kueri riwayat InfluxDB, serta restart dan persistensi container. Kredensial/cloud tidak tersedia dan mesin Docker belum berjalan, sehingga acceptance criteria ini belum dinyatakan lulus.
+| Pemeriksaan | Bukti dan hasil aktual | Batas kesimpulan |
+| --- | --- | --- |
+| Deployment dan izin | Screenshot pemilik menunjukkan Serverless Running, Spend Limit $0.00, akun `esp32-meja01` dan `telegraf-meja01`, Allow Publish/Subscribe masing-masing pada topik utama, serta All Users deny Publish & Subscribe `#` | Screenshot konfigurasi tidak menggantikan uji operasi; hasil uji dicatat di bawah |
+| Sensor Wokwi | Log pemilik setelah perbaikan timer menunjukkan suhu 25.00 Celsius dan gas 2177 ADC terkirim pada ms 33951, 35951, dan 37951 | Menunjukkan interval 2.000 ms saat terhubung; bukan bukti pembacaan sensor fisik |
+| TLS dan autentikasi ESP32 | Probe PC menggunakan CA tertanam serta hostname/akun firmware berhasil melalui TLS 1.2 dan MQTT 3.1.1; source firmware tetap memverifikasi CA/hostname; Wokwi kemudian melaporkan pengiriman berhasil | Probe PC dan log Wokwi dibedakan; password tidak dicatat |
+| Layanan produksi | InfluxDB healthy; Grafana dan Telegraf running. Telegraf tersambung ke EMQX melalui TLS dengan verifikasi aktif. `.env`, `secrets.h`, dan CA lokal diabaikan serta tidak dilacak Git | Belum merupakan uji restart layanan demo |
+| Penyimpanan cloud → lokal | Kueri InfluxDB menemukan 34 titik `esp32-meja01` dalam jendela satu jam. Nilai suhu bervariasi, antara lain 22, 25, 34.69, 57, dan 104.81 Celsius. Sampel terakhir saat pemeriksaan: `2026-11-10T11:51:06.778561474Z`, suhu 25.12, gas 2177 | Jumlah/nilai merupakan snapshot pemeriksaan; tidak memasukkan titik uji sensor buatan oleh agen |
+| Grafana | API panel stat suhu menghasilkan 25.12; panel historis menghasilkan 33 nilai numerik, tanpa error. Pemilik menyatakan perubahan suhu berhasil setelah mengikuti langkah slider | API membuktikan kueri/provisioning; tampilan browser dilaporkan pemilik |
 
-| Percobaan pemilik | Tanggal/waktu | Bukti disamarkan | Hasil aktual |
-| --- | --- | --- | --- |
-| Serverless, batas nol, dua akun dan fallback deny | Belum dilakukan | — | Belum diverifikasi |
-| Wi-Fi, NTP, TLS, interval 2 detik, payload sensor | Belum dilakukan | — | Belum diverifikasi |
-| Suhu 25 → 35 terlihat di Grafana dan InfluxDB | Belum dilakukan | — | Belum diverifikasi |
-| DQ terputus menghasilkan diagnosis tanpa suhu palsu | Belum dilakukan | — | Belum diverifikasi |
-| Restart mempertahankan riwayat dan menerima titik baru | Belum dilakukan | — | Belum diverifikasi |
+### Pemeriksaan akses MQTT aktual
 
-Simpan bukti mentah lokal di `evidence/local/` yang diabaikan Git. Sebelum memasukkan bukti ke laporan/repository, hilangkan password, token, dan konfigurasi lokal rahasia. Jangan menandai tiket selesai hanya berdasarkan pemeriksaan lokal di atas.
+Semua koneksi pemeriksaan memakai TLS dengan verifikasi CA/hostname, MQTT 5, clean start, serta client ID sementara yang berbeda dari ESP32 dan Telegraf produksi. Tidak ada perubahan akun/aturan broker. Payload uji Publish terlarang tidak memuat field sensor, tidak retained, dan tidak dapat menjadi pengukuran suhu normal melalui parser produksi.
+
+| Percobaan | Respons aktual | Hasil |
+| --- | --- | --- |
+| Akun ESP32 sah sebelum uji negatif | CONNACK 0 | Lulus |
+| Tanpa username/password | CONNACK 134 | Ditolak |
+| Username ESP32 dengan password salah | CONNACK 134 | Ditolak |
+| Telegraf Subscribe topik utama | SUBACK 0 | Diizinkan |
+| ESP32 Subscribe topik utama | SUBACK 135 | Ditolak |
+| Telegraf Publish topik utama | PUBACK 135 | Ditolak |
+| ESP32 Publish topik probe di luar izin | PUBACK 135 | Ditolak |
+| Telegraf Subscribe topik probe di luar izin | SUBACK 135 | Ditolak |
+| Akun ESP32 sah setelah uji negatif | CONNACK 0 | Lulus |
+
+MQTT 5 memakai reason code 134 untuk kredensial tidak diterima dan 135 untuk operasi tidak diizinkan; lihat [spesifikasi OASIS](https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html). Hasil di atas membuktikan kasus yang diuji, bukan seluruh demonstrasi keamanan tiket 05/06.
+
+## Verifikasi akhir pemilik — selesai
+
+| Percobaan | Status | Cara membuktikan |
+| --- | --- | --- |
+| Restart stack demo | Lulus berdasarkan konfirmasi pemilik, 10 November 2026 | Pemilik mengonfirmasi percobaan restart/persistensi yang diarahkan sebelumnya berhasil: riwayat tetap tersedia dan pengiriman baru berlanjut |
+| Pembacaan gagal DS18B20 | Lulus berdasarkan konfirmasi pemilik, 10 November 2026 | Pemilik mengonfirmasi percobaan melepas dan mengembalikan DQ berhasil: diagnosis muncul, tanpa suhu palsu, lalu pengiriman pulih |
+
+Konfirmasi akhir pemilik pada percakapan: "oke udah aman, percobaannya udah kcoba dan bisa". Tidak ada screenshot tambahan atau pengulangan oleh agen yang diklaim untuk dua percobaan ini. Seluruh acceptance criteria tiket 01 selesai; penghambat tiket 02 terpenuhi.
+
+Simpan screenshot dashboard serta log sebelum/sesudah percobaan di `evidence/local/` yang diabaikan Git untuk laporan/presentasi. Hilangkan password, token, dan konfigurasi rahasia dari bukti yang dibagikan.

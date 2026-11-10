@@ -1,0 +1,161 @@
+{
+  "run_id": "ticket06-a3a922059c3e",
+  "started_utc": "2026-11-10T14:06:27.391358+00:00",
+  "scope": "isolated loopback Mosquitto; no EMQX mutation",
+  "status": "passed",
+  "checks": [
+    {
+      "check": "confidentiality plaintext",
+      "marker": "ticket06-a3a922059c3e-plaintext",
+      "payload": "{\"marker\": \"ticket06-a3a922059c3e-plaintext\", \"temperature_c\": 25.5, \"gas_raw\": 1234}",
+      "connack": 0,
+      "suback": 0,
+      "puback": 0,
+      "subscriber_received": true,
+      "marker_visible_in_tcp": true,
+      "tls_application_frames": 0,
+      "capture": "plaintext.pcapng",
+      "port": 36225
+    },
+    {
+      "check": "confidentiality tls",
+      "marker": "ticket06-a3a922059c3e-tls",
+      "payload": "{\"marker\": \"ticket06-a3a922059c3e-tls\", \"temperature_c\": 25.5, \"gas_raw\": 1234}",
+      "connack": 0,
+      "suback": 0,
+      "puback": 0,
+      "subscriber_received": true,
+      "marker_visible_in_tcp": false,
+      "tls_application_frames": 19,
+      "capture": "tls.pcapng",
+      "port": 36226
+    },
+    {
+      "check": "integrity before",
+      "marker": "ticket06-a3a922059c3e-before",
+      "connack": 0,
+      "puback": 0,
+      "subscriber_received": true,
+      "tls_version": "TLSv1.3",
+      "cipher": "TLS_AES_256_GCM_SHA384",
+      "relay_events": [
+        {
+          "event": "tcp_eof",
+          "utc": "2026-11-10T14:07:02.729129+00:00",
+          "direction": "client"
+        },
+        {
+          "event": "tcp_eof",
+          "utc": "2026-11-10T14:07:02.730209+00:00",
+          "direction": "broker"
+        }
+      ],
+      "changed_bits": 0
+    },
+    {
+      "check": "integrity tampered",
+      "marker": "ticket06-a3a922059c3e-tampered",
+      "connack": 0,
+      "puback": null,
+      "subscriber_received": false,
+      "subscriber_observation_seconds": 2,
+      "tls_version": "TLSv1.3",
+      "cipher": "TLS_AES_256_GCM_SHA384",
+      "client_tls": {
+        "exception": "SSLError",
+        "library": "SSL",
+        "reason": "SSLV3_ALERT_BAD_RECORD_MAC"
+      },
+      "broker_tls": [
+        "1794319622: OpenSSL Error[0]: error:0A000119:SSL routines::decryption failed or bad record mac"
+      ],
+      "relay_events": [
+        {
+          "event": "armed_after_connack",
+          "utc": "2026-11-10T14:07:02.869914+00:00"
+        },
+        {
+          "event": "bit_flip",
+          "utc": "2026-11-10T14:07:02.869914+00:00",
+          "client_record": 5,
+          "body_offset": 63,
+          "header_before": "170303007e",
+          "header_after": "170303007e",
+          "record_bytes_before": 131,
+          "record_bytes_after": 131,
+          "byte_before": 86,
+          "byte_after": 87,
+          "xor_mask": 1,
+          "sha256_before": "410583ee13cd4e0196496caedc3264e0a7d5347289ff9a6cc3f9aad70a749a24",
+          "sha256_after": "df866f1cb5efb5d60e1b6ebec729d26573f80367fc475489e4287ef7fa05bbd8"
+        },
+        {
+          "event": "tcp_eof",
+          "utc": "2026-11-10T14:07:02.872145+00:00",
+          "direction": "broker"
+        },
+        {
+          "event": "tcp_eof",
+          "utc": "2026-11-10T14:07:04.875969+00:00",
+          "direction": "client"
+        }
+      ],
+      "changed_bits": 1
+    },
+    {
+      "check": "integrity after",
+      "marker": "ticket06-a3a922059c3e-after",
+      "connack": 0,
+      "puback": 0,
+      "subscriber_received": true,
+      "tls_version": "TLSv1.3",
+      "cipher": "TLS_AES_256_GCM_SHA384",
+      "relay_events": [
+        {
+          "event": "tcp_eof",
+          "utc": "2026-11-10T14:07:05.032798+00:00",
+          "direction": "client"
+        },
+        {
+          "event": "tcp_eof",
+          "utc": "2026-11-10T14:07:05.034515+00:00",
+          "direction": "broker"
+        }
+      ],
+      "changed_bits": 0
+    }
+  ],
+  "retry": false,
+  "reconnect": false,
+  "retained": false,
+  "publish_qos": 1,
+  "runtime": {
+    "python_tls": "OpenSSL 3.0.13 30 Jan 2024",
+    "broker_image": "eclipse-mosquitto:2.0.22@sha256:81a6193ae693942a3231cd3ac52875b02b7e3a19da671b2fb4b55cc874c5b279",
+    "tshark": "TShark (Wireshark) 4.6.7 (v4.6.7-0-gb439fb7b47a9)."
+  },
+  "certificate_verification": {
+    "ca_required": true,
+    "hostname_checked": true,
+    "keylog": false
+  },
+  "finished_utc": "2026-11-10T14:07:18.399397+00:00",
+  "files_sha256": {
+    "after/client-forwarded.tls": "5013ff5aea968dc6319dd42adb5e2d32fec1ea53346465c10f93340af3917395",
+    "after/client-original.tls": "5013ff5aea968dc6319dd42adb5e2d32fec1ea53346465c10f93340af3917395",
+    "after/relay.json": "59d809a804ee26acab553c3de2a85fa35b2612828f7dbf121eea2e24624ecab1",
+    "before/client-forwarded.tls": "872a519316d6553b7956045ea2f6f4f93f9403fdb947cb16251c3930c52efa1e",
+    "before/client-original.tls": "872a519316d6553b7956045ea2f6f4f93f9403fdb947cb16251c3930c52efa1e",
+    "before/relay.json": "6eede3d1b6faa45d391e0eba3fc741faa705be2eadce64d86dd8caa1531a1e04",
+    "broker.log": "6420d6e7bd66f9af6b96abad05c7846376c7c2d3b1ba04c3a224b7a8a4a687a1",
+    "integrity.capture.txt": "7a35236ff4439b5211f91ac9a755ad1afbde7eaa0ba50fa8f65ae11b34465c4e",
+    "integrity.pcapng": "8c9e34bddf7299dcb2f276ce4f8a433d618b33609c08cbf992e6c17cc30f4977",
+    "plaintext.capture.txt": "cd38435d340bba7002cd969a708ba6867da7bf8e4b8451b3071f35821fa1a449",
+    "plaintext.pcapng": "1bcd99187532a354deb31789d52345d2659933862cd0e0f56a20c0fd4197ebb6",
+    "tampered/client-forwarded.tls": "15ee8e7147b485b1fa8fbdc3c394ee029ed5bc3898338457c09e612f265df91b",
+    "tampered/client-original.tls": "acf11060bd0dc6905905580d6e0f7fed23dd75ad4011067a9ca3adaf93618019",
+    "tampered/relay.json": "fe8186e76e898b390608a27c17a90013f305be443ba2affdfc83463e16218773",
+    "tls.capture.txt": "0c06d3d887874c92efebe9bc61312aeb2ad02862c48181791f7a59481179ec6b",
+    "tls.pcapng": "ffdeb22ce7ba30ae1611625852e5fa357667a0362a5431abd3914c2eea948e16"
+  }
+}

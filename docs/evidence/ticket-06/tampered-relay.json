@@ -1,0 +1,31 @@
+[
+  {
+    "event": "armed_after_connack",
+    "utc": "2026-11-10T13:55:39.857654+00:00"
+  },
+  {
+    "event": "bit_flip",
+    "utc": "2026-11-10T13:55:39.857654+00:00",
+    "client_record": 5,
+    "body_offset": 63,
+    "header_before": "170303007e",
+    "header_after": "170303007e",
+    "record_bytes_before": 131,
+    "record_bytes_after": 131,
+    "byte_before": 50,
+    "byte_after": 51,
+    "xor_mask": 1,
+    "sha256_before": "cf267c7836bc9d38fe93b1fcbb57ace06328d8ccf98e1347754f8ca0024edc19",
+    "sha256_after": "e34fe81633f3b37f8c7ec034bc88928bde07ff346770ca58070128ca2764c837"
+  },
+  {
+    "event": "tcp_eof",
+    "utc": "2026-11-10T13:55:39.859809+00:00",
+    "direction": "broker"
+  },
+  {
+    "event": "tcp_eof",
+    "utc": "2026-11-10T13:55:41.865456+00:00",
+    "direction": "client"
+  }
+]

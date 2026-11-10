@@ -1,38 +1,74 @@
 {
   "id": null,
   "uid": "suhu-meja01",
-  "title": "Suhu lingkungan meja praktikum 01",
-  "description": "DS18B20 di sekitar meja, bukan nyala api langsung. Timestamp adalah waktu penerimaan Telegraf.",
-  "tags": ["lab-kimia", "suhu"],
+  "title": "Gas dan suhu lingkungan meja praktikum 01",
+  "description": "DS18B20 di sekitar meja, bukan nyala api. MQ2: ADC/level relatif, bukan konsentrasi LPG terkalibrasi atau ppm pengukuran nyata. Timestamp kedua field adalah waktu penerimaan pesan yang sama oleh Telegraf. Alarm lokal: DOUT MQ2 LOW atau suhu valid >=40 Celsius; ambang demonstrasi simulasi, bukan standar keselamatan. Data lama tanpa status alarm tidak dianggap normal. Data terlambat bila umur penerimaan >10 detik. Status dan waktu terakhir selalu memakai waktu sekarang dan seluruh riwayat tersimpan; pemilih rentang hanya untuk riwayat.",
+  "tags": [
+    "lab-kimia",
+    "suhu",
+    "gas"
+  ],
   "schemaVersion": 39,
-  "version": 1,
+  "version": 4,
   "editable": false,
   "timezone": "browser",
   "refresh": "2s",
-  "time": { "from": "now-1h", "to": "now" },
-  "annotations": { "list": [] },
-  "templating": { "list": [] },
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "annotations": {
+    "list": []
+  },
+  "templating": {
+    "list": []
+  },
   "panels": [
     {
       "id": 1,
       "type": "stat",
       "title": "Suhu terbaru diterima — meja 01",
-      "description": "Nilai terakhir dalam rentang waktu dashboard; ini bukan jaminan kondisi saat ini.",
-      "gridPos": { "x": 0, "y": 0, "w": 8, "h": 7 },
-      "datasource": { "type": "influxdb", "uid": "influx-suhu" },
+      "description": "Nilai terakhir dalam rentang waktu dashboard; ini bukan jaminan kondisi saat ini. Seluruh riwayat tersimpan; baca bersama penanda kesegaran dan waktu terakhir di atas.",
+      "gridPos": {
+        "x": 0,
+        "y": 5,
+        "w": 12,
+        "h": 7
+      },
+      "datasource": {
+        "type": "influxdb",
+        "uid": "influx-suhu"
+      },
       "targets": [
         {
           "refId": "A",
-          "datasource": { "type": "influxdb", "uid": "influx-suhu" },
-          "query": "from(bucket: \"telemetry\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"suhu\" and r._field == \"temperature_c\" and r.device_id == \"esp32-meja01\")\n  |> last()"
+          "datasource": {
+            "type": "influxdb",
+            "uid": "influx-suhu"
+          },
+          "query": "from(bucket: \"telemetry\")\n  |> range(start: 0, stop: now())\n  |> filter(fn: (r) => r._measurement == \"suhu\" and r._field == \"temperature_c\" and r.device_id == \"esp32-meja01\")\n  |> last()"
         }
       ],
       "fieldConfig": {
-        "defaults": { "unit": "celsius", "decimals": 2, "noValue": "Belum ada data", "color": { "mode": "fixed", "fixedColor": "blue" } },
+        "defaults": {
+          "unit": "celsius",
+          "decimals": 2,
+          "noValue": "Belum ada data",
+          "color": {
+            "mode": "fixed",
+            "fixedColor": "blue"
+          }
+        },
         "overrides": []
       },
       "options": {
-        "reduceOptions": { "values": false, "calcs": ["lastNotNull"], "fields": "" },
+        "reduceOptions": {
+          "values": false,
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": ""
+        },
         "orientation": "auto",
         "textMode": "value",
         "colorMode": "value",
@@ -43,13 +79,24 @@
       "id": 2,
       "type": "timeseries",
       "title": "Riwayat suhu lingkungan — meja 01",
-      "gridPos": { "x": 0, "y": 7, "w": 24, "h": 12 },
-      "datasource": { "type": "influxdb", "uid": "influx-suhu" },
+      "gridPos": {
+        "x": 0,
+        "y": 12,
+        "w": 24,
+        "h": 12
+      },
+      "datasource": {
+        "type": "influxdb",
+        "uid": "influx-suhu"
+      },
       "targets": [
         {
           "refId": "A",
-          "datasource": { "type": "influxdb", "uid": "influx-suhu" },
-          "query": "from(bucket: \"telemetry\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"suhu\" and r._field == \"temperature_c\" and r.device_id == \"esp32-meja01\")\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> yield(name: \"suhu\")"
+          "datasource": {
+            "type": "influxdb",
+            "uid": "influx-suhu"
+          },
+          "query": "from(bucket: \"telemetry\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"suhu\" and r._field == \"temperature_c\" and r.device_id == \"esp32-meja01\")\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: true)\n  |> yield(name: \"suhu\")"
         }
       ],
       "fieldConfig": {
@@ -57,14 +104,453 @@
           "unit": "celsius",
           "decimals": 2,
           "displayName": "Meja 01",
-          "color": { "mode": "fixed", "fixedColor": "blue" },
-          "custom": { "drawStyle": "line", "lineWidth": 2, "fillOpacity": 10, "spanNulls": false }
+          "color": {
+            "mode": "fixed",
+            "fixedColor": "blue"
+          },
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 2,
+            "fillOpacity": 10,
+            "spanNulls": false,
+            "insertNulls": 10000
+          }
         },
         "overrides": []
       },
       "options": {
-        "legend": { "displayMode": "list", "placement": "bottom", "showLegend": true },
-        "tooltip": { "mode": "single", "sort": "none" }
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "description": " Jeda tanpa pesan tetap kosong; garis diputus jika antar titik >10 detik. Tidak ada interpolasi/fill normal."
+    },
+    {
+      "id": 3,
+      "type": "stat",
+      "title": "Gas terbaru diterima - MQ2 (ADC)",
+      "description": "ADC 12-bit (0-4095) setelah penurunan level tegangan; bukan ppm atau konsentrasi LPG terkalibrasi. Nilai terakhir dalam rentang waktu dashboard, bukan jaminan kondisi saat ini. Seluruh riwayat tersimpan; baca bersama penanda kesegaran dan waktu terakhir di atas.",
+      "gridPos": {
+        "x": 12,
+        "y": 5,
+        "w": 12,
+        "h": 7
+      },
+      "datasource": {
+        "type": "influxdb",
+        "uid": "influx-suhu"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "influx-suhu"
+          },
+          "query": "from(bucket: \"telemetry\")\n  |> range(start: 0, stop: now())\n  |> filter(fn: (r) => r._measurement == \"suhu\" and r._field == \"gas_raw\" and r.device_id == \"esp32-meja01\")\n  |> last()"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "suffix: ADC",
+          "decimals": 0,
+          "noValue": "Belum ada data",
+          "color": {
+            "mode": "fixed",
+            "fixedColor": "orange"
+          },
+          "min": 0,
+          "max": 4095
+        },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": {
+          "values": false,
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": ""
+        },
+        "orientation": "auto",
+        "textMode": "value",
+        "colorMode": "value",
+        "graphMode": "none"
+      }
+    },
+    {
+      "id": 4,
+      "type": "timeseries",
+      "title": "Riwayat gas relatif - MQ2 (ADC)",
+      "gridPos": {
+        "x": 0,
+        "y": 24,
+        "w": 24,
+        "h": 12
+      },
+      "datasource": {
+        "type": "influxdb",
+        "uid": "influx-suhu"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "influx-suhu"
+          },
+          "query": "from(bucket: \"telemetry\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"suhu\" and r._field == \"gas_raw\" and r.device_id == \"esp32-meja01\")\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: true)\n  |> yield(name: \"gas\")"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "suffix: ADC",
+          "decimals": 0,
+          "displayName": "MQ2 meja 01",
+          "color": {
+            "mode": "fixed",
+            "fixedColor": "orange"
+          },
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 2,
+            "fillOpacity": 10,
+            "spanNulls": false,
+            "insertNulls": 10000
+          },
+          "min": 0,
+          "max": 4095
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "description": "Level ADC relatif, bukan ppm. Agregasi rata-rata per interval tampilan; titik asli disimpan sebagai integer gas_raw. Jeda tanpa pesan tetap kosong; garis diputus jika antar titik >10 detik. Tidak ada interpolasi/fill normal."
+    },
+    {
+      "id": 5,
+      "type": "stat",
+      "title": "Kondisi dan kesegaran data — meja 01",
+      "description": "Data terlambat bila tidak ada pengukuran diterima >10 detik; kondisi saat ini belum diketahui, termasuk jika nilai terakhir normal. Penanda memakai waktu penerimaan Telegraf dan waktu sekarang, terlepas dari rentang riwayat. DOUT LOW atau suhu valid >=40 Celsius: pengaturan demo, bukan standar keselamatan.",
+      "gridPos": {
+        "x": 0,
+        "y": 0,
+        "w": 16,
+        "h": 5
+      },
+      "datasource": {
+        "type": "influxdb",
+        "uid": "influx-suhu"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "influx-suhu"
+          },
+          "query": "import \"array\"\ndata = from(bucket: \"telemetry\")\n  |> range(start: 0, stop: now())\n  |> filter(fn: (r) => r._measurement == \"suhu\" and r.device_id == \"esp32-meja01\")\n  |> filter(fn: (r) => r._field == \"temperature_c\" or r._field == \"gas_alarm\" or r._field == \"temperature_alarm\")\n  |> last()\n  |> pivot(rowKey: [\"_time\"], columnKey: [\"_field\"], valueColumn: \"_value\")\n  |> filter(fn: (r) => exists r.temperature_c)\n  |> group()\n  |> sort(columns: [\"_time\"], desc: true)\n  |> limit(n: 1)\n  |> map(fn: (r) => ({_time: r._time, _value: if int(v: now()) - int(v: r._time) > 10000000000 then -1 else if exists r.gas_alarm and exists r.temperature_alarm then (if r.gas_alarm then 1 else 0) + (if r.temperature_alarm then 2 else 0) else 4}))\nunion(tables: [array.from(rows: [{_time: time(v: 0), _value: -2}]), data])\n  |> group()\n  |> sort(columns: [\"_time\"], desc: true)\n  |> limit(n: 1)"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "noValue": "Belum ada status alarm",
+          "mappings": [
+            {
+              "type": "value",
+              "options": {
+                "0": {
+                  "text": "Normal",
+                  "color": "green",
+                  "index": 0
+                },
+                "1": {
+                  "text": "Peringatan gas",
+                  "color": "orange",
+                  "index": 1
+                },
+                "2": {
+                  "text": "Peringatan suhu",
+                  "color": "yellow",
+                  "index": 2
+                },
+                "3": {
+                  "text": "Peringatan gas dan suhu",
+                  "color": "red",
+                  "index": 3
+                },
+                "-1": {
+                  "text": "Data terlambat — kondisi saat ini belum diketahui",
+                  "color": "orange",
+                  "index": 4
+                },
+                "-2": {
+                  "text": "Belum ada data",
+                  "color": "gray",
+                  "index": 5
+                },
+                "4": {
+                  "text": "Status alarm tidak tersedia",
+                  "color": "gray",
+                  "index": 6
+                }
+              }
+            }
+          ]
+        },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": {
+          "values": false,
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": ""
+        },
+        "orientation": "auto",
+        "textMode": "value",
+        "colorMode": "background",
+        "graphMode": "none"
+      }
+    },
+    {
+      "id": 6,
+      "type": "table",
+      "title": "Riwayat pengukuran dan alarm — meja 01",
+      "description": "Suhu, ADC, dan kedua boolean alarm dari satu pesan/timestamp penerimaan. Keadaan ditulis dalam teks. Riwayat sebelum firmware alarm tersedia tidak diberi status normal buatan. Ambang 40 Celsius dan MQ2 hanya pengaturan demo simulasi.",
+      "gridPos": {
+        "x": 0,
+        "y": 36,
+        "w": 24,
+        "h": 12
+      },
+      "datasource": {
+        "type": "influxdb",
+        "uid": "influx-suhu"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "influx-suhu"
+          },
+          "query": "from(bucket: \"telemetry\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"suhu\" and r.device_id == \"esp32-meja01\")\n  |> filter(fn: (r) => r._field == \"temperature_c\" or r._field == \"gas_raw\" or r._field == \"gas_alarm\" or r._field == \"temperature_alarm\")\n  |> pivot(rowKey: [\"_time\"], columnKey: [\"_field\"], valueColumn: \"_value\")\n  |> filter(fn: (r) => exists r.gas_alarm and exists r.temperature_alarm and exists r.temperature_c and exists r.gas_raw)\n  |> map(fn: (r) => ({r with kondisi: if r.gas_alarm and r.temperature_alarm then \"Peringatan gas dan suhu\" else if r.gas_alarm then \"Peringatan gas\" else if r.temperature_alarm then \"Peringatan suhu\" else \"Normal\"}))\n  |> keep(columns: [\"_time\", \"temperature_c\", \"gas_raw\", \"gas_alarm\", \"temperature_alarm\", \"kondisi\"])\n  |> sort(columns: [\"_time\"], desc: true)",
+          "format": "table"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "align": "auto"
+          },
+          "noValue": "Tidak tersedia"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "_time"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Waktu diterima"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "temperature_c"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Suhu"
+              },
+              {
+                "id": "unit",
+                "value": "celsius"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "gas_raw"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "MQ2 relatif"
+              },
+              {
+                "id": "unit",
+                "value": "suffix: ADC"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "gas_alarm"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Alarm gas"
+              },
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "type": "value",
+                    "options": {
+                      "true": {
+                        "text": "Aktif"
+                      },
+                      "false": {
+                        "text": "Tidak aktif"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "temperature_alarm"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Alarm suhu"
+              },
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "type": "value",
+                    "options": {
+                      "true": {
+                        "text": "Aktif"
+                      },
+                      "false": {
+                        "text": "Tidak aktif"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "kondisi"
+            },
+            "properties": [
+              {
+                "id": "displayName",
+                "value": "Keadaan"
+              }
+            ]
+          }
+        ]
+      },
+      "options": {
+        "showHeader": true,
+        "cellHeight": "sm",
+        "sortBy": [
+          {
+            "displayName": "Waktu diterima",
+            "desc": true
+          }
+        ],
+        "footer": {
+          "show": false
+        }
+      }
+    },
+    {
+      "id": 7,
+      "type": "stat",
+      "title": "Waktu pengukuran terakhir diterima",
+      "description": "Waktu penerimaan pesan oleh Telegraf, bukan jam sensor. Seluruh riwayat tersimpan; tidak mengikuti pemilih rentang riwayat.",
+      "gridPos": {
+        "x": 16,
+        "y": 0,
+        "w": 8,
+        "h": 5
+      },
+      "datasource": {
+        "type": "influxdb",
+        "uid": "influx-suhu"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "influx-suhu"
+          },
+          "query": "import \"array\"\ndata = from(bucket: \"telemetry\")\n  |> range(start: 0, stop: now())\n  |> filter(fn: (r) => r._measurement == \"suhu\" and r._field == \"temperature_c\" and r.device_id == \"esp32-meja01\")\n  |> last()\n  |> map(fn: (r) => ({_time: r._time, _value: int(v: r._time) / 1000000}))\nunion(tables: [array.from(rows: [{_time: time(v: 0), _value: 0}]), data])\n  |> group()\n  |> sort(columns: [\"_time\"], desc: true)\n  |> limit(n: 1)"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "dateTimeAsIso",
+          "decimals": 0,
+          "noValue": "Belum ada data",
+          "color": {
+            "mode": "fixed",
+            "fixedColor": "blue"
+          },
+          "mappings": [
+            {
+              "type": "value",
+              "options": {
+                "0": {
+                  "text": "Belum ada data",
+                  "color": "gray"
+                }
+              }
+            }
+          ]
+        },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": {
+          "values": false,
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": ""
+        },
+        "orientation": "auto",
+        "textMode": "value",
+        "colorMode": "value",
+        "graphMode": "none"
       }
     }
   ]

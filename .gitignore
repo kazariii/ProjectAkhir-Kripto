@@ -3,11 +3,20 @@
 !.env.example
 firmware/include/secrets.h
 firmware/.pio/
+firmware/wokwi-api.h
 .pio/
 .vscode/
-infra/certs/*.pem
+# Local certificates, private keys, and TLS session keys.
+/emqxsl-ca.crt
+*.pem
+*.key
+*.p12
+*.pfx
+*.keylog
+*.keylog.*
 evidence/local/
 __pycache__/
+*.py[cod]
 *.exe
 *.o
 *.log

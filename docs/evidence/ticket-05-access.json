@@ -1,0 +1,116 @@
+{
+  "run_id": "ticket05-f2c780fb91d9",
+  "started_utc": "2026-11-10T13:31:06.669669+00:00",
+  "scope": "EMQX project accounts; Python MQTT5 probes and live ESP32; production Telegraf/InfluxDB/Grafana",
+  "checks": [
+    {
+      "check": "live ESP32 -> Telegraf -> InfluxDB -> Grafana before",
+      "received_at": "2026-11-10T13:31:08.628424376Z",
+      "device_id": "esp32-meja01"
+    },
+    {
+      "check": "tagged positive control before",
+      "connack": 0,
+      "suback": 0,
+      "puback": 0,
+      "independent_subscriber": true,
+      "influx_rows": 1,
+      "grafana_temperature_c": 25.5,
+      "received_at": "2026-11-10T13:31:13.024770391Z"
+    },
+    {
+      "check": "authentication wrong-user",
+      "connack": 135,
+      "publish_sent": false
+    },
+    {
+      "check": "authentication wrong-password",
+      "connack": 134,
+      "publish_sent": false
+    },
+    {
+      "check": "authentication anonymous",
+      "connack": 134,
+      "publish_sent": false
+    },
+    {
+      "check": "authorization sender subscribe lab/kimia/meja01/telemetry",
+      "suback": 135
+    },
+    {
+      "check": "authorization sender subscribe lab/kimia/ticket05/ticket05-f2c780fb91d9",
+      "suback": 135
+    },
+    {
+      "check": "authorization sender subscribe lab/kimia/#",
+      "suback": 135
+    },
+    {
+      "check": "authorization sender publish lab/kimia/ticket05/ticket05-f2c780fb91d9",
+      "puback": 135
+    },
+    {
+      "check": "authorization receiver subscribe lab/kimia/ticket05/ticket05-f2c780fb91d9",
+      "suback": 135
+    },
+    {
+      "check": "authorization receiver subscribe lab/kimia/#",
+      "suback": 135
+    },
+    {
+      "check": "authorization receiver publish lab/kimia/meja01/telemetry",
+      "puback": 135
+    },
+    {
+      "check": "authorization receiver publish lab/kimia/ticket05/ticket05-f2c780fb91d9",
+      "puback": 135
+    },
+    {
+      "check": "untrusted server CA rejected",
+      "exception": "SSLCertVerificationError",
+      "verify_code": 20,
+      "mqtt_connect_sent": false,
+      "publish_sent": false
+    },
+    {
+      "check": "tagged positive control after",
+      "connack": 0,
+      "suback": 0,
+      "puback": 0,
+      "independent_subscriber": true,
+      "influx_rows": 1,
+      "grafana_temperature_c": 25.5,
+      "received_at": "2026-11-10T13:31:38.580826019Z"
+    },
+    {
+      "check": "live ESP32 -> Telegraf -> InfluxDB -> Grafana after",
+      "received_at": "2026-11-10T13:31:41.97610379Z",
+      "device_id": "esp32-meja01"
+    },
+    {
+      "check": "no negative markers in InfluxDB",
+      "observation_seconds": 5,
+      "device_ids": [
+        "ticket05-f2c780fb91d9-wrong-user",
+        "ticket05-f2c780fb91d9-wrong-password",
+        "ticket05-f2c780fb91d9-anonymous",
+        "ticket05-f2c780fb91d9-denied-publish",
+        "ticket05-f2c780fb91d9-outside",
+        "ticket05-f2c780fb91d9-untrusted-ca"
+      ]
+    }
+  ],
+  "status": "passed",
+  "device_ids": {
+    "before": "ticket05-f2c780fb91d9-before",
+    "after": "ticket05-f2c780fb91d9-after",
+    "wrong-user": "ticket05-f2c780fb91d9-wrong-user",
+    "wrong-password": "ticket05-f2c780fb91d9-wrong-password",
+    "anonymous": "ticket05-f2c780fb91d9-anonymous",
+    "denied-publish": "ticket05-f2c780fb91d9-denied-publish",
+    "outside": "ticket05-f2c780fb91d9-outside",
+    "untrusted-ca": "ticket05-f2c780fb91d9-untrusted-ca"
+  },
+  "outside_topic": "lab/kimia/ticket05/ticket05-f2c780fb91d9",
+  "finished_utc": "2026-11-10T13:31:48.796018+00:00"
+}

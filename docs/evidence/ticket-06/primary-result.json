@@ -1,0 +1,67 @@
+{
+  "checked_utc": "2026-11-10T13:56:30.606498+00:00",
+  "status": "passed",
+  "checks": [
+    {
+      "link": "ESP32 -> EMQX",
+      "capture": "esp32-emqx.pcapng",
+      "sha256": "3843972b841207a7f790257bf397b9ee8368a261b4a3172f2ae42219d3f6d12f",
+      "mqtt_port": 8883,
+      "tcp_frames": 796,
+      "protected_tls_frames": 277,
+      "server_hellos": [
+        {
+          "legacy_version": "0x0303",
+          "cipher_suite": "0xc02f"
+        },
+        {
+          "legacy_version": "0x0303",
+          "cipher_suite": "0xc02f"
+        },
+        {
+          "legacy_version": "0x0303",
+          "cipher_suite": "0xc02f"
+        },
+        {
+          "legacy_version": "0x0303",
+          "cipher_suite": "0xc02f"
+        },
+        {
+          "legacy_version": "0x0303",
+          "cipher_suite": "0xc02f"
+        },
+        {
+          "legacy_version": "0x0303",
+          "cipher_suite": "0xc02f"
+        },
+        {
+          "legacy_version": "0x0303",
+          "cipher_suite": "0xc02f"
+        },
+        {
+          "legacy_version": "0x0303",
+          "cipher_suite": "0xc02f"
+        },
+        {
+          "legacy_version": "0x0303",
+          "cipher_suite": "0xc02f"
+        }
+      ],
+      "telemetry_plaintext_found": false,
+      "decryption_keys_supplied": false,
+      "limitation": "MQTT identity/content established by project configuration and live flow, not decrypted capture"
+    },
+    {
+      "link": "Telegraf -> EMQX",
+      "capture": "telegraf-emqx.pcapng",
+      "sha256": "7ed0fd7d101c6b9db8518023a510ee90d9a2388f00f30b84795dabf9a68ba9bc",
+      "mqtt_port": 8883,
+      "tcp_frames": 17,
+      "protected_tls_frames": 9,
+      "server_hellos": [],
+      "telemetry_plaintext_found": false,
+      "decryption_keys_supplied": false,
+      "limitation": "MQTT identity/content established by project configuration and live flow, not decrypted capture"
+    }
+  ]
+}

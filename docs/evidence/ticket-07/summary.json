@@ -1,0 +1,333 @@
+{
+  "started_utc": "2026-11-10T14:04:32.304149+00:00",
+  "finished_utc": "2026-11-10T14:16:12.365081+00:00",
+  "source": "live Wokwi -> EMQX -> production Telegraf/InfluxDB/Grafana; no synthetic ESP32 samples",
+  "stages": [
+    {
+      "stage": "services-started",
+      "captured_utc": "2026-11-10T14:04:32.365788+00:00",
+      "sensor_points": 767,
+      "last_sample": {
+        "_time": "2026-11-10T14:03:31.290312968Z",
+        "device_id": "esp32-meja01",
+        "temperature_c": "25",
+        "gas_raw": "506",
+        "gas_alarm": "false",
+        "temperature_alarm": "false"
+      },
+      "grafana_state": -1,
+      "grafana_query_ids_without_error": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "stage": "normal",
+      "captured_utc": "2026-11-10T14:06:26.457820+00:00",
+      "sensor_points": 788,
+      "last_sample": {
+        "_time": "2026-11-10T14:06:22.837342973Z",
+        "device_id": "esp32-meja01",
+        "temperature_c": "25",
+        "gas_raw": "506",
+        "gas_alarm": "false",
+        "temperature_alarm": "false"
+      },
+      "grafana_state": 0,
+      "grafana_query_ids_without_error": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "stage": "gas",
+      "captured_utc": "2026-11-10T14:07:01.124537+00:00",
+      "sensor_points": 798,
+      "last_sample": {
+        "_time": "2026-11-10T14:06:58.410368908Z",
+        "device_id": "esp32-meja01",
+        "temperature_c": "25",
+        "gas_raw": "2424",
+        "gas_alarm": "true",
+        "temperature_alarm": "false"
+      },
+      "grafana_state": 1,
+      "grafana_query_ids_without_error": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "stage": "temperature",
+      "captured_utc": "2026-11-10T14:10:14.417371+00:00",
+      "sensor_points": 848,
+      "last_sample": {
+        "_time": "2026-11-10T14:10:12.640089995Z",
+        "device_id": "esp32-meja01",
+        "temperature_c": "40",
+        "gas_raw": "506",
+        "gas_alarm": "false",
+        "temperature_alarm": "true"
+      },
+      "grafana_state": 2,
+      "grafana_query_ids_without_error": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "stage": "both",
+      "captured_utc": "2026-11-10T14:10:56.771069+00:00",
+      "sensor_points": 858,
+      "last_sample": {
+        "_time": "2026-11-10T14:10:53.590103542Z",
+        "device_id": "esp32-meja01",
+        "temperature_c": "40",
+        "gas_raw": "2425",
+        "gas_alarm": "true",
+        "temperature_alarm": "true"
+      },
+      "grafana_state": 3,
+      "grafana_query_ids_without_error": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "stage": "gas-cleared",
+      "captured_utc": "2026-11-10T14:11:23.188578+00:00",
+      "sensor_points": 864,
+      "last_sample": {
+        "_time": "2026-11-10T14:11:17.928975108Z",
+        "device_id": "esp32-meja01",
+        "temperature_c": "40",
+        "gas_raw": "506",
+        "gas_alarm": "false",
+        "temperature_alarm": "true"
+      },
+      "grafana_state": 2,
+      "grafana_query_ids_without_error": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "stage": "restored-normal",
+      "captured_utc": "2026-11-10T14:12:04.521156+00:00",
+      "sensor_points": 875,
+      "last_sample": {
+        "_time": "2026-11-10T14:12:00.66254641Z",
+        "device_id": "esp32-meja01",
+        "temperature_c": "25",
+        "gas_raw": "506",
+        "gas_alarm": "false",
+        "temperature_alarm": "false"
+      },
+      "grafana_state": 0,
+      "grafana_query_ids_without_error": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "stage": "offline-gas",
+      "captured_utc": "2026-11-10T14:13:13.454148+00:00",
+      "sensor_points": 876,
+      "last_sample": {
+        "_time": "2026-11-10T14:12:03.657693607Z",
+        "device_id": "esp32-meja01",
+        "temperature_c": "25",
+        "gas_raw": "506",
+        "gas_alarm": "false",
+        "temperature_alarm": "false"
+      },
+      "grafana_state": -1,
+      "grafana_query_ids_without_error": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "stage": "offline-temperature",
+      "captured_utc": "2026-11-10T14:13:48.083381+00:00",
+      "sensor_points": 876,
+      "last_sample": {
+        "_time": "2026-11-10T14:12:03.657693607Z",
+        "device_id": "esp32-meja01",
+        "temperature_c": "25",
+        "gas_raw": "506",
+        "gas_alarm": "false",
+        "temperature_alarm": "false"
+      },
+      "grafana_state": -1,
+      "grafana_query_ids_without_error": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "stage": "recovered",
+      "captured_utc": "2026-11-10T14:14:21.922035+00:00",
+      "sensor_points": 878,
+      "last_sample": {
+        "_time": "2026-11-10T14:14:20.23733854Z",
+        "device_id": "esp32-meja01",
+        "temperature_c": "40",
+        "gas_raw": "506",
+        "gas_alarm": "false",
+        "temperature_alarm": "true"
+      },
+      "grafana_state": 2,
+      "grafana_query_ids_without_error": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "stage": "before-restart",
+      "captured_utc": "2026-11-10T14:15:27.626827+00:00",
+      "sensor_points": 904,
+      "last_sample": {
+        "_time": "2026-11-10T14:15:24.990161012Z",
+        "device_id": "esp32-meja01",
+        "temperature_c": "25",
+        "gas_raw": "506",
+        "gas_alarm": "false",
+        "temperature_alarm": "false"
+      },
+      "grafana_state": 0,
+      "grafana_query_ids_without_error": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "stage": "after-restart",
+      "captured_utc": "2026-11-10T14:16:12.365081+00:00",
+      "sensor_points": 922,
+      "last_sample": {
+        "_time": "2026-11-10T14:16:09.148899378Z",
+        "device_id": "esp32-meja01",
+        "temperature_c": "25",
+        "gas_raw": "506",
+        "gas_alarm": "false",
+        "temperature_alarm": "false"
+      },
+      "grafana_state": 0,
+      "grafana_query_ids_without_error": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  ],
+  "outage": {
+    "started_utc": "2026-11-10T14:12:05.126605+00:00",
+    "requested_seconds": 120,
+    "client_id": "esp32-meja01",
+    "successful_takeovers": 75,
+    "publishes": 0,
+    "status": "completed",
+    "finished_utc": "2026-11-10T14:14:06.230927+00:00",
+    "last_before_gap": "2026-11-10T14:12:03.657693607Z",
+    "first_after_gap": "2026-11-10T14:14:17.29129024Z",
+    "received_gap_seconds": 133.633597,
+    "preserved_points": 876,
+    "no_new_points_between_offline_snapshots": true,
+    "no_samples_in_received_gap": true
+  },
+  "restart": {
+    "preserved_points": 904,
+    "points_after": 922,
+    "new_points": 18,
+    "all_previous_timestamps_and_values_identical": true,
+    "before_last_received": "2026-11-10T14:15:24.990161012Z",
+    "after_last_received": "2026-11-10T14:16:09.148899378Z",
+    "comparison_fields": [
+      "_time",
+      "device_id",
+      "temperature_c",
+      "gas_raw",
+      "gas_alarm",
+      "temperature_alarm"
+    ]
+  },
+  "mqtt_access": {
+    "run_id": "ticket05-bc717ec5d8c7",
+    "status": "passed",
+    "checks": 17
+  },
+  "tls_experiment": {
+    "run_id": "ticket06-a3a922059c3e",
+    "status": "passed",
+    "checks": 5
+  },
+  "limitations": [
+    "No acoustic buzzer recording or physical sensors",
+    "MQTT session takeover, not physical Wi-Fi outage",
+    "Fresh installation/account setup reused ticket-01 instructions; existing owner configuration used for this replay",
+    "Public main-hop PCAPs reused from ticket-06 and revalidated; new local experiment captures remain ignored",
+    "Snapshots and seven Grafana queries are sequential, not atomic",
+    "Availability support only; no offline replay or uptime guarantee"
+  ],
+  "status": "passed"
+}

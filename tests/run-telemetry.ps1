@@ -12,7 +12,7 @@ try {
     if ($LASTEXITCODE -ne 0) { throw "Build tes gagal: $LASTEXITCODE" }
     & $target
     if ($LASTEXITCODE -ne 0) { throw "Tes telemetry gagal: $LASTEXITCODE" }
-    Write-Output 'PASS: JSON suhu valid, penolakan nilai gagal, dan konversi startup'
+    Write-Output 'PASS: JSON suhu/gas/boolean alarm, empat keadaan, batas ADC/suhu, latch kegagalan dan pemulihan'
 } finally {
     if (Test-Path -LiteralPath $target) { Remove-Item -LiteralPath $target }
 }

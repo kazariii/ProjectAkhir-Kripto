@@ -2,3 +2,7 @@
 version = 1
 firmware = '.pio/build/esp32dev/firmware.bin'
 elf = '.pio/build/esp32dev/firmware.elf'
+
+[[chip]]
+name = 'mq2-level'
+binary = 'mq2-level.chip.wasm'

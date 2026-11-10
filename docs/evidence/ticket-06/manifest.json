@@ -1,0 +1,23 @@
+{
+  "run_id": "ticket06-8162f83ddc98",
+  "notes": [
+    "Captures are actual packets, not generated diagrams.",
+    "plaintext-publish.pcapng exports only MQTT PUBLISH/PUBACK; CONNECT with disposable credentials is omitted.",
+    "esp32-emqx.pcapng exports only TCP 8883 from Wokwi capture.",
+    "result.json files_sha256 refers to raw ignored local evidence; this manifest hashes the public exports.",
+    "No decryption secrets blocks, session keys, or private keys are included."
+  ],
+  "files": {
+    "broker.txt": "2299824b05f2b14005bed1f1e76438864c783f3c6fce02aa398117d02628cf23",
+    "esp32-emqx.pcapng": "3843972b841207a7f790257bf397b9ee8368a261b4a3172f2ae42219d3f6d12f",
+    "integrity.pcapng": "ba948c872a987b5c39266b162bb8fb0d62fe1a61e43cd84015fcf2100ec3c43b",
+    "plaintext-publish.pcapng": "1147942f57b0bd62d831814303d83350e7ac6e9c80ab8843996c15c9d01669ee",
+    "primary-result.json": "b6a8ab1d4f18180957777cc5738184bbdc4efc4134409b0b4301c94d471029df",
+    "result.json": "e8f0066fde8c0792338341af23a8220f5659cd65493e8343471c88f86a813da3",
+    "tampered-client-forwarded.tls": "7f62b30e639389ed872b4d5c819a00f9c888a14ad4a9cdb844e78b63244387bd",
+    "tampered-client-original.tls": "2a93be971d8a32988193affab3eeac2130564814a0fe1fe61243cd70cdea813f",
+    "tampered-relay.json": "2a076e42085b309bc1ba5ad754c77886f70ee58e110513d5df3b08e26de89a3b",
+    "telegraf-emqx.pcapng": "7ed0fd7d101c6b9db8518023a510ee90d9a2388f00f30b84795dabf9a68ba9bc",
+    "tls.pcapng": "4a5dc67d406c79595db65959bac5f1f1916bc017bb09a228824f53f243e94ae5"
+  }
+}

@@ -1,0 +1,90 @@
+1794318906: mosquitto version 2.0.22 starting
+1794318906: Config loaded from /test/mosquitto.conf.
+1794318906: Warning: File /test/passwords has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /test/passwords`.
+1794318906: Warning: File /test/acl has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /test/acl`.
+1794318906: Opening ipv4 listen socket on port 1883.
+1794318906: Opening ipv6 listen socket on port 1883.
+1794318906: Opening ipv4 listen socket on port 8883.
+1794318906: Opening ipv6 listen socket on port 8883.
+1794318906: mosquitto version 2.0.22 running
+1794318906: New connection from 172.17.0.1:35598 on port 8883.
+1794318907: New client connected from 172.17.0.1:35598 as t06-7ee793bb45f441e4 (p5, c1, k60, u'demo').
+1794318907: No will message specified.
+1794318907: Sending CONNACK to t06-7ee793bb45f441e4 (0, 0)
+1794318907: Received DISCONNECT from t06-7ee793bb45f441e4
+1794318907: Client t06-7ee793bb45f441e4 disconnected.
+1794318907: New connection from 172.17.0.1:54130 on port 1883.
+1794318907: New client connected from 172.17.0.1:54130 as t06-961b81ddf1174ac9 (p5, c1, k60, u'demo').
+1794318907: No will message specified.
+1794318907: Sending CONNACK to t06-961b81ddf1174ac9 (0, 0)
+1794318907: New connection from 172.17.0.1:54134 on port 1883.
+1794318907: New client connected from 172.17.0.1:54134 as t06-0072eb97a4ba428e (p5, c1, k60, u'demo').
+1794318907: No will message specified.
+1794318907: Sending CONNACK to t06-0072eb97a4ba428e (0, 0)
+1794318907: Received SUBSCRIBE from t06-961b81ddf1174ac9
+1794318907: 	demo/ticket06/ticket06-8162f83ddc98 (QoS 0)
+1794318907: t06-961b81ddf1174ac9 0 demo/ticket06/ticket06-8162f83ddc98
+1794318907: Sending SUBACK to t06-961b81ddf1174ac9
+1794318907: Received PUBLISH from t06-0072eb97a4ba428e (d0, q1, r0, m1, 'demo/ticket06/ticket06-8162f83ddc98', ... (85 bytes))
+1794318907: Sending PUBLISH to t06-961b81ddf1174ac9 (d0, q0, r0, m0, 'demo/ticket06/ticket06-8162f83ddc98', ... (85 bytes))
+1794318907: Sending PUBACK to t06-0072eb97a4ba428e (m1, rc0)
+1794318907: Received DISCONNECT from t06-961b81ddf1174ac9
+1794318907: Client t06-961b81ddf1174ac9 disconnected.
+1794318907: Received DISCONNECT from t06-0072eb97a4ba428e
+1794318907: Client t06-0072eb97a4ba428e disconnected.
+1794318923: New connection from 172.17.0.1:41686 on port 8883.
+1794318923: New client connected from 172.17.0.1:41686 as t06-2efeb11f6eae433a (p5, c1, k60, u'demo').
+1794318923: No will message specified.
+1794318923: Sending CONNACK to t06-2efeb11f6eae433a (0, 0)
+1794318923: New connection from 172.17.0.1:41692 on port 8883.
+1794318923: New client connected from 172.17.0.1:41692 as t06-815123eb56834ad4 (p5, c1, k60, u'demo').
+1794318923: No will message specified.
+1794318923: Sending CONNACK to t06-815123eb56834ad4 (0, 0)
+1794318923: Received SUBSCRIBE from t06-2efeb11f6eae433a
+1794318923: 	demo/ticket06/ticket06-8162f83ddc98 (QoS 0)
+1794318923: t06-2efeb11f6eae433a 0 demo/ticket06/ticket06-8162f83ddc98
+1794318923: Sending SUBACK to t06-2efeb11f6eae433a
+1794318923: Received PUBLISH from t06-815123eb56834ad4 (d0, q1, r0, m1, 'demo/ticket06/ticket06-8162f83ddc98', ... (79 bytes))
+1794318923: Sending PUBLISH to t06-2efeb11f6eae433a (d0, q0, r0, m0, 'demo/ticket06/ticket06-8162f83ddc98', ... (79 bytes))
+1794318923: Sending PUBACK to t06-815123eb56834ad4 (m1, rc0)
+1794318923: Received DISCONNECT from t06-815123eb56834ad4
+1794318923: Client t06-815123eb56834ad4 disconnected.
+1794318923: Received DISCONNECT from t06-2efeb11f6eae433a
+1794318923: Client t06-2efeb11f6eae433a disconnected.
+1794318939: New connection from 172.17.0.1:42690 on port 8883.
+1794318939: New client connected from 172.17.0.1:42690 as t06-a5a07c8f51974240 (p5, c1, k60, u'demo').
+1794318939: No will message specified.
+1794318939: Sending CONNACK to t06-a5a07c8f51974240 (0, 0)
+1794318939: Received SUBSCRIBE from t06-a5a07c8f51974240
+1794318939: 	demo/ticket06/ticket06-8162f83ddc98 (QoS 0)
+1794318939: t06-a5a07c8f51974240 0 demo/ticket06/ticket06-8162f83ddc98
+1794318939: Sending SUBACK to t06-a5a07c8f51974240
+1794318939: New connection from 172.17.0.1:42692 on port 8883.
+1794318939: New client connected from 172.17.0.1:42692 as t06-919f62993ec14b7e (p5, c1, k60, u'demo').
+1794318939: No will message specified.
+1794318939: Sending CONNACK to t06-919f62993ec14b7e (0, 0)
+1794318939: Received PUBLISH from t06-919f62993ec14b7e (d0, q1, r0, m1, 'demo/ticket06/ticket06-8162f83ddc98', ... (65 bytes))
+1794318939: Sending PUBLISH to t06-a5a07c8f51974240 (d0, q0, r0, m0, 'demo/ticket06/ticket06-8162f83ddc98', ... (65 bytes))
+1794318939: Sending PUBACK to t06-919f62993ec14b7e (m1, rc0)
+1794318939: Received DISCONNECT from t06-919f62993ec14b7e
+1794318939: Client t06-919f62993ec14b7e disconnected.
+1794318939: New connection from 172.17.0.1:42704 on port 8883.
+1794318939: New client connected from 172.17.0.1:42704 as t06-1670441395444c15 (p5, c1, k60, u'demo').
+1794318939: No will message specified.
+1794318939: Sending CONNACK to t06-1670441395444c15 (0, 0)
+1794318939: OpenSSL Error[0]: error:0A000119:SSL routines::decryption failed or bad record mac
+1794318939: OpenSSL Error[1]: error:0A000139:SSL routines::record layer failure
+1794318939: Client t06-1670441395444c15 disconnected: Protocol error.
+1794318942: New connection from 172.17.0.1:44362 on port 8883.
+1794318942: New client connected from 172.17.0.1:44362 as t06-b8579ee5404f4481 (p5, c1, k60, u'demo').
+1794318942: No will message specified.
+1794318942: Sending CONNACK to t06-b8579ee5404f4481 (0, 0)
+1794318942: Received PUBLISH from t06-b8579ee5404f4481 (d0, q1, r0, m1, 'demo/ticket06/ticket06-8162f83ddc98', ... (64 bytes))
+1794318942: Sending PUBLISH to t06-a5a07c8f51974240 (d0, q0, r0, m0, 'demo/ticket06/ticket06-8162f83ddc98', ... (64 bytes))
+1794318942: Sending PUBACK to t06-b8579ee5404f4481 (m1, rc0)
+1794318942: Received DISCONNECT from t06-b8579ee5404f4481
+1794318942: Client t06-b8579ee5404f4481 disconnected.
+1794318954: Received DISCONNECT from t06-a5a07c8f51974240
+1794318954: Client t06-a5a07c8f51974240 disconnected.
