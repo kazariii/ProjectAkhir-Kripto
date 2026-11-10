@@ -4,7 +4,7 @@
 
 **Blocked by:** None (can start immediately).
 
-**Status:** ready-for-agent
+**Status:** ready-for-human
 
 - [ ] Rangkaian dan program Wokwi dapat dijalankan ulang, memakai satu ESP32 dan DS18B20, dengan pembacaan serta pengiriman setiap 2 detik saat terhubung.
 - [ ] Broker memakai EMQX Cloud Serverless dengan batas pengeluaran nol; kebutuhan akun dan verifikasi pemilik dijelaskan tanpa menyimpan rahasia di dokumentasi.
@@ -17,3 +17,13 @@
 - [ ] Penyimpanan InfluxDB dan konfigurasi dashboard persisten; mulai ulang layanan mempertahankan data sebelumnya dan memungkinkan pengiriman baru berlanjut.
 - [ ] Pembacaan DS18B20 yang tidak valid tidak disimpan sebagai suhu normal atau nilai Celsius palsu. Kegagalan pembacaan terlihat pada keluaran diagnosis.
 - [ ] Petunjuk menjalankan jalur suhu beserta bukti hasil aktual tersedia. Jalur utama tetap memakai MQTT; koneksi internal Telegraf ke InfluxDB dan akses web dashboard bukan pengganti protokol sensor.
+
+## Comments
+
+10 November 2026: implementasi kode tersedia pada branch `integration/ticket-01-suhu`, commit implementasi `bf77608` dan merge `44dd245`. Cakupan hanya tiket 01; tiket 02–07 belum dikerjakan. Spesifikasi induk `spec.md` belum tersedia, sehingga acceptance criteria tiket ini menjadi acuan.
+
+Hasil aktual lokal: build ESP32 berhasil; tes C++ keluaran firmware lulus; lima kasus parser Telegraf 1.40.3 lulus; rendering Docker Compose dan pemeriksaan pengecualian rahasia dari Git lulus. Pengujian lokal dijalankan ulang dari direktori proyek utama. Tinjauan standar dan kesesuaian spesifikasi masing-masing menemukan nol masalah kode yang memerlukan perbaikan.
+
+Status `ready-for-human` dipakai karena pemilik perlu menyiapkan/verifikasi akun EMQX Serverless, Spend Limit 0, dua akun MQTT dan aturan fallback deny, lalu mengisi kredensial serta CA pada berkas lokal yang diabaikan Git. Docker Desktop saat pemeriksaan gagal memulai mesinnya. Setelah lingkungan tersedia, jalankan Wokwi dan layanan, buktikan handshake TLS/izin topik, interval 2 detik, perubahan suhu sampai Grafana, kegagalan pembacaan sensor, serta persistensi setelah restart. Belum ada klaim keberhasilan demo cloud atau container.
+
+Panduan pengulangan: [docs/jalur-suhu.md](../../../docs/jalur-suhu.md). Bukti lokal dan lembar verifikasi pemilik: [docs/verifikasi-tiket-01.md](../../../docs/verifikasi-tiket-01.md). Checklist penerimaan tetap terbuka sampai jalur sebenarnya dan bukti hasilnya diverifikasi; tiket ini belum selesai dan tiket yang bergantung padanya belum dibuka penghambatnya.
