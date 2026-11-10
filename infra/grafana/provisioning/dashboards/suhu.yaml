@@ -1,0 +1,10 @@
+apiVersion: 1
+providers:
+  - name: Suhu meja praktikum
+    orgId: 1
+    folder: Lab Kimia
+    type: file
+    disableDeletion: true
+    editable: false
+    options:
+      path: /var/lib/grafana/dashboards

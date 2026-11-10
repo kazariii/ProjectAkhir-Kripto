@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+firmware/include/secrets.h
+firmware/.pio/
+.pio/
+.vscode/
+infra/certs/*.pem
+evidence/local/
+__pycache__/
+*.exe
+*.o
+*.log

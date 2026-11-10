@@ -1,0 +1,71 @@
+{
+  "id": null,
+  "uid": "suhu-meja01",
+  "title": "Suhu lingkungan meja praktikum 01",
+  "description": "DS18B20 di sekitar meja, bukan nyala api langsung. Timestamp adalah waktu penerimaan Telegraf.",
+  "tags": ["lab-kimia", "suhu"],
+  "schemaVersion": 39,
+  "version": 1,
+  "editable": false,
+  "timezone": "browser",
+  "refresh": "2s",
+  "time": { "from": "now-1h", "to": "now" },
+  "annotations": { "list": [] },
+  "templating": { "list": [] },
+  "panels": [
+    {
+      "id": 1,
+      "type": "stat",
+      "title": "Suhu terbaru diterima — meja 01",
+      "description": "Nilai terakhir dalam rentang waktu dashboard; ini bukan jaminan kondisi saat ini.",
+      "gridPos": { "x": 0, "y": 0, "w": 8, "h": 7 },
+      "datasource": { "type": "influxdb", "uid": "influx-suhu" },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": { "type": "influxdb", "uid": "influx-suhu" },
+          "query": "from(bucket: \"telemetry\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"suhu\" and r._field == \"temperature_c\" and r.device_id == \"esp32-meja01\")\n  |> last()"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": { "unit": "celsius", "decimals": 2, "noValue": "Belum ada data", "color": { "mode": "fixed", "fixedColor": "blue" } },
+        "overrides": []
+      },
+      "options": {
+        "reduceOptions": { "values": false, "calcs": ["lastNotNull"], "fields": "" },
+        "orientation": "auto",
+        "textMode": "value",
+        "colorMode": "value",
+        "graphMode": "none"
+      }
+    },
+    {
+      "id": 2,
+      "type": "timeseries",
+      "title": "Riwayat suhu lingkungan — meja 01",
+      "gridPos": { "x": 0, "y": 7, "w": 24, "h": 12 },
+      "datasource": { "type": "influxdb", "uid": "influx-suhu" },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": { "type": "influxdb", "uid": "influx-suhu" },
+          "query": "from(bucket: \"telemetry\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"suhu\" and r._field == \"temperature_c\" and r.device_id == \"esp32-meja01\")\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> yield(name: \"suhu\")"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "celsius",
+          "decimals": 2,
+          "displayName": "Meja 01",
+          "color": { "mode": "fixed", "fixedColor": "blue" },
+          "custom": { "drawStyle": "line", "lineWidth": 2, "fillOpacity": 10, "spanNulls": false }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": { "displayMode": "list", "placement": "bottom", "showLegend": true },
+        "tooltip": { "mode": "single", "sort": "none" }
+      }
+    }
+  ]
+}
