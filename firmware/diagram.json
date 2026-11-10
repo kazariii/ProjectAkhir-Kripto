@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "author": "Projek Akhir Kriptografi",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-ds18b20", "id": "suhu", "top": -5, "left": 230, "attrs": { "temperature": "25" } },
+    { "type": "wokwi-resistor", "id": "pullup", "top": -50, "left": 170, "attrs": { "value": "4700" } }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "esp:3V3", "suhu:VCC", "red", [] ],
+    [ "esp:GND.1", "suhu:GND", "black", [] ],
+    [ "esp:D4", "suhu:DQ", "green", [] ],
+    [ "esp:3V3", "pullup:1", "red", [] ],
+    [ "pullup:2", "suhu:DQ", "green", [] ]
+  ],
+  "dependencies": {}
+}

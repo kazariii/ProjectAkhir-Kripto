@@ -1,0 +1,65 @@
+name: lab-kimia-suhu
+
+services:
+  influxdb:
+    image: influxdb:2.9.1@sha256:e4572d094ac3272f06528ea904ce6b4cb3bb19be2db3b3b1acbd27ba5c3a73e2
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8086:8086"
+    environment:
+      DOCKER_INFLUXDB_INIT_MODE: setup
+      DOCKER_INFLUXDB_INIT_USERNAME: ${INFLUX_USERNAME:?Isi INFLUX_USERNAME di .env}
+      DOCKER_INFLUXDB_INIT_PASSWORD: ${INFLUX_PASSWORD:?Isi INFLUX_PASSWORD di .env}
+      DOCKER_INFLUXDB_INIT_ADMIN_TOKEN: ${INFLUX_TOKEN:?Isi INFLUX_TOKEN di .env}
+      DOCKER_INFLUXDB_INIT_ORG: lab-kimia
+      DOCKER_INFLUXDB_INIT_BUCKET: telemetry
+      DOCKER_INFLUXDB_INIT_RETENTION: 0
+    volumes:
+      - influx-data:/var/lib/influxdb2
+      - influx-config:/etc/influxdb2
+    healthcheck:
+      test: ["CMD", "influx", "ping", "--host", "http://localhost:8086"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+      start_period: 20s
+
+  telegraf:
+    image: telegraf:1.40.3@sha256:2958e3cbdc22d702ebd4a1e2db004c564f52a866551a65817eea26011407ea66
+    restart: unless-stopped
+    depends_on:
+      influxdb:
+        condition: service_healthy
+    environment:
+      MQTT_HOST: ${MQTT_HOST:?Isi MQTT_HOST di .env}
+      MQTT_TELEGRAF_USERNAME: ${MQTT_TELEGRAF_USERNAME:?Isi MQTT_TELEGRAF_USERNAME di .env}
+      MQTT_TELEGRAF_PASSWORD: ${MQTT_TELEGRAF_PASSWORD:?Isi MQTT_TELEGRAF_PASSWORD di .env}
+      INFLUX_TOKEN: ${INFLUX_TOKEN:?Isi INFLUX_TOKEN di .env}
+    volumes:
+      - ./infra/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+      - ./infra/certs/emqx-ca.pem:/etc/telegraf/emqx-ca.pem:ro
+
+  grafana:
+    image: grafana/grafana:13.3.0@sha256:488984b716c0862639f91a698adbe2862677a5a07bad42da5f03f3030883b205
+    restart: unless-stopped
+    depends_on:
+      influxdb:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:3000:3000"
+    environment:
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_USERNAME:?Isi GRAFANA_USERNAME di .env}
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASSWORD:?Isi GRAFANA_PASSWORD di .env}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+      GF_AUTH_ANONYMOUS_ENABLED: "false"
+      GF_DASHBOARDS_MIN_REFRESH_INTERVAL: 2s
+      INFLUX_TOKEN: ${INFLUX_TOKEN:?Isi INFLUX_TOKEN di .env}
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./infra/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./infra/grafana/dashboards:/var/lib/grafana/dashboards:ro
+
+volumes:
+  influx-data:
+  influx-config:
+  grafana-data:
