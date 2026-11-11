@@ -2,7 +2,7 @@
 
 Satu ESP32 membaca DS18B20 dan MQ2 di Wokwi, lalu mengirim suhu lingkungan serta level gas relatif sekitar meja praktikum LPG melalui MQTT over TLS ke EMQX Cloud Serverless. Telegraf menerima pesan, InfluxDB 2.x menyimpan kedua pengukuran dengan waktu penerimaan yang sama, dan Grafana menampilkan nilai terbaru, grafik historis terpisah, serta empat keadaan alarm dan riwayatnya. ESP32 mengaktifkan LED merah/buzzer bila DOUT MQ2 LOW atau suhu valid mencapai 40 Celsius; pembacaan suhu gagal tidak menghapus alarm suhu sebelumnya.
 
-Mulai dari **[panduan demo lengkap](docs/demo-proyek.md)**: konfigurasi dari template, layanan Docker/Wokwi, semua kondisi alarm, gangguan/pemulihan, restart tanpa kehilangan riwayat, serta demonstrasi autentikasi dan TLS. [Hasil pengulangan tiket 07](docs/verifikasi-tiket-07.md) mencatat bukti aktual dan batasnya. Push GitHub dilakukan sendiri oleh pengguna.
+Mulai dari **[panduan demo lengkap](docs/demo-proyek.md)**: konfigurasi dari template, layanan Docker/Wokwi, semua kondisi alarm, gangguan/pemulihan, restart tanpa kehilangan riwayat, serta demonstrasi autentikasi dan TLS. Stack monitoring sekarang tersedia di **[LXC 10.34.211.141](docs/deploy-lxc.md)**; laptop cukup untuk membuka dashboard dan menjalankan simulator. [Hasil pengulangan tiket 07](docs/verifikasi-tiket-07.md) mencatat bukti aktual dan batasnya. Push GitHub dilakukan sendiri oleh pengguna.
 
 ```text
 DS18B20 + MQ2 → ESP32/Wokwi → MQTT/TLS :8883 → EMQX Cloud Serverless
