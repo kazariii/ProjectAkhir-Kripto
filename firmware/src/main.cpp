@@ -1,7 +1,12 @@
 #include <Arduino.h>
+#ifdef ARDUINO
+#include <esp_arduino_version.h>
+#endif
 #include <WiFi.h>
+#ifndef PQC_TELEMETRY
 #include <WiFiClientSecure.h>
 #include <PubSubClient.h>
+#endif
 #include <OneWire.h>
 #include <DallasTemperature.h>
 #include <ctime>
@@ -10,11 +15,16 @@
 #include <freertos/queue.h>
 #include <freertos/task.h>
 #include "telemetry.h"
+#include "pending_sample.h"
 
+#ifdef PQC_TELEMETRY
+#include "pqc_telemetry.h"
+#else
 #if __has_include("secrets.h")
 #include "secrets.h"
 #else
 #include "secrets.example.h"
+#endif
 #endif
 
 constexpr uint8_t SENSOR_PIN = 4;
@@ -29,8 +39,10 @@ constexpr char DEVICE_ID[] = "esp32-meja01";
 
 OneWire oneWire(SENSOR_PIN);
 DallasTemperature sensors(&oneWire);
+#ifndef PQC_TELEMETRY
 WiFiClientSecure tls;
 PubSubClient mqtt(tls);
+#endif
 
 bool configured = false;
 bool converting = false;
@@ -47,10 +59,6 @@ AlarmState alarms;
 bool alarmOutputActive = false;
 
 // One copied sample, never a backlog. Only the network task owns WiFi/TLS/MQTT.
-struct PendingSample {
-    uint32_t measuredAtMs;
-    char payload[160];
-};
 QueueHandle_t outgoing = nullptr;
 
 void updateLocalAlarm() {
@@ -68,6 +76,7 @@ void updateLocalAlarm() {
     }
 }
 
+#ifndef PQC_TELEMETRY
 void networkStep() {
     const uint32_t now = millis();
     if (WiFi.status() != WL_CONNECTED) {
@@ -143,6 +152,7 @@ void networkTask(void*) {
         vTaskDelay(pdMS_TO_TICKS(10));
     }
 }
+#endif
 
 void setup() {
     Serial.begin(115200);
@@ -155,10 +165,26 @@ void setup() {
     pinMode(ALARM_LED_PIN, OUTPUT);
     digitalWrite(ALARM_LED_PIN, LOW);
     pinMode(BUZZER_PIN, OUTPUT);
-    noTone(BUZZER_PIN);
+    // Start silent without sending TONE_END to an uninitialized LEDC channel.
+    // noTone() is used only after an active alarm has started tone().
+    digitalWrite(BUZZER_PIN, LOW);
+#if defined(ESP_ARDUINO_VERSION_MAJOR) && ESP_ARDUINO_VERSION_MAJOR == 2
+    // Pinned SDK 2.0.17 tone() reads channel 0 duty before its own setup.
+    // Prime the default tone channel; SDK 3 owns initialization in tone().
+    ledcSetup(0, 2000, 10);
+#endif
     analogReadResolution(12);
     analogSetPinAttenuation(GAS_ANALOG_PIN, ADC_11db);
     updateLocalAlarm();
+#ifdef PQC_TELEMETRY
+    configured = true;
+    outgoing = xQueueCreate(1, sizeof(PendingSample));
+    if (!outgoing || !pqc_telemetry::start(outgoing)) {
+        if (outgoing) vQueueDelete(outgoing);
+        outgoing = nullptr;
+        Serial.println("Jaringan PQC tidak tersedia; sensor dan alarm lokal tetap berjalan");
+    }
+#else
     configured = std::strstr(MQTT_HOST, "ISI_") == nullptr &&
                  std::strstr(MQTT_PASSWORD, "ISI_") == nullptr &&
                  std::strstr(MQTT_ROOT_CA, "ISI_") == nullptr &&
@@ -179,6 +205,7 @@ void setup() {
         outgoing = nullptr;
         Serial.println("Tugas jaringan gagal dibuat; alarm lokal tetap berjalan");
     }
+#endif
 }
 
 void loop() {

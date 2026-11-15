@@ -1,0 +1,890 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1184
+load:0x40078000,len:13232
+load:0x40080400,len:3028
+entry 0x400805e4
+Alarm lokal: gas=aktif suhu=normal LED/buzzer=ON
+TELEMETRY_BEGIN ticket=04 transport=MQTT-TCP profile=LK3/1
+Konversi suhu dimulai ms=1439
+TELEMETRY_RUN {"run_id":"8f337e9c0273ef3c232b05be37524edc","local_ip":"10.13.37.2"}
+MQ2 gas_raw=2177 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=2190 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2177,"gas_alarm":true,"temperature_alarm":false}
+Konversi suhu dimulai ms=3438
+MQ2 gas_raw=2177 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=4189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2177,"gas_alarm":true,"temperature_alarm":false}
+Konversi suhu dimulai ms=5438
+MQ2 gas_raw=2177 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=6189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2177,"gas_alarm":true,"temperature_alarm":false}
+Konversi suhu dimulai ms=7438
+MQ2 gas_raw=2177 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=8189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2177,"gas_alarm":true,"temperature_alarm":false}
+Konversi suhu dimulai ms=9438
+MQ2 gas_raw=2177 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=10189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2177,"gas_alarm":true,"temperature_alarm":false}
+Konversi suhu dimulai ms=11438
+MQ2 gas_raw=2177 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=12189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2177,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_AUTHENTICATED {"run_id":"8f337e9c0273ef3c232b05be37524edc","session_id":"45f068c336ffc674ea77ab8bb317cdfe","mqtt_port":1883,"tls":false}
+Konversi suhu dimulai ms=13438
+MQ2 gas_raw=2177 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=14189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2177,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":1,"measured_ms":14189}
+TELEMETRY_STORED {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":1,"ack_verified":true}
+Konversi suhu dimulai ms=15438
+MQ2 gas_raw=2177 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=16189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2177,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":2,"measured_ms":16189}
+TELEMETRY_STORED {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":2,"ack_verified":true}
+Konversi suhu dimulai ms=17438
+MQ2 gas_raw=2177 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=18189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2177,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":3,"measured_ms":18189}
+TELEMETRY_STORED {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":3,"ack_verified":true}
+Konversi suhu dimulai ms=19438
+MQ2 gas_raw=2177 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=20189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2177,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":4,"measured_ms":20189}
+TELEMETRY_STORED {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":4,"ack_verified":true}
+Konversi suhu dimulai ms=21438
+MQ2 gas_raw=2177 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=22189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2177,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":5,"measured_ms":22189}
+TELEMETRY_STORED {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":5,"ack_verified":true}
+Konversi suhu dimulai ms=23438
+MQ2 gas_raw=2177 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=24189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2177,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":6,"measured_ms":24189}
+TELEMETRY_STORED {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":6,"ack_verified":true}
+Konversi suhu dimulai ms=25438
+MQ2 gas_raw=2177 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=26189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2177,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":7,"measured_ms":26189}
+TELEMETRY_STORED {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":7,"ack_verified":true}
+Konversi suhu dimulai ms=27438
+Alarm lokal: gas=normal suhu=normal LED/buzzer=OFF
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=28189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":8,"measured_ms":28189}
+TELEMETRY_STORED {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":8,"ack_verified":true}
+Konversi suhu dimulai ms=29438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=30189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":9,"measured_ms":30189}
+TELEMETRY_STORED {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":9,"ack_verified":true}
+Konversi suhu dimulai ms=31438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=32189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":10,"measured_ms":32189}
+TELEMETRY_STORED {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":10,"ack_verified":true}
+Konversi suhu dimulai ms=33438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=34189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":11,"measured_ms":34189}
+TELEMETRY_STORED {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":11,"ack_verified":true}
+Konversi suhu dimulai ms=35438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=36189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":12,"measured_ms":36189}
+TELEMETRY_STORED {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":12,"ack_verified":true}
+Konversi suhu dimulai ms=37438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=38189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":13,"measured_ms":38189}
+TELEMETRY_STORED {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":13,"ack_verified":true}
+Konversi suhu dimulai ms=39438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=40189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":14,"measured_ms":40189}
+TELEMETRY_STORED {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":14,"ack_verified":true}
+Konversi suhu dimulai ms=41438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=42189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":15,"measured_ms":42189}
+TELEMETRY_STORED {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":15,"ack_verified":true}
+Konversi suhu dimulai ms=43438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=44189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":16,"measured_ms":44189}
+TELEMETRY_STORED {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":16,"ack_verified":true}
+Konversi suhu dimulai ms=45438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=46189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":17,"measured_ms":46189}
+TELEMETRY_STORED {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":17,"ack_verified":true}
+Konversi suhu dimulai ms=47438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=48189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":18,"measured_ms":48189}
+TELEMETRY_STORED {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":18,"ack_verified":true}
+Konversi suhu dimulai ms=49438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=50189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":19,"measured_ms":50189}
+TELEMETRY_STORED {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":19,"ack_verified":true}
+Konversi suhu dimulai ms=51438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=52189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":20,"measured_ms":52189}
+TELEMETRY_STORED {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":20,"ack_verified":true}
+Konversi suhu dimulai ms=53438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=54189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":21,"measured_ms":54189}
+TELEMETRY_STORED {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":21,"ack_verified":true}
+Konversi suhu dimulai ms=55438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=56189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":22,"measured_ms":56189}
+TELEMETRY_STORED {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":22,"ack_verified":true}
+Konversi suhu dimulai ms=57438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=58189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":23,"measured_ms":58189}
+TELEMETRY_STORED {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":23,"ack_verified":true}
+Konversi suhu dimulai ms=59438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=60189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":24,"measured_ms":60189}
+TELEMETRY_STORED {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":24,"ack_verified":true}
+Konversi suhu dimulai ms=61438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=62189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":25,"measured_ms":62189}
+TELEMETRY_STORED {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":25,"ack_verified":true}
+Konversi suhu dimulai ms=63438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=64189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":26,"measured_ms":64189}
+TELEMETRY_STORED {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":26,"ack_verified":true}
+Konversi suhu dimulai ms=65438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=66189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":27,"measured_ms":66189}
+TELEMETRY_STORED {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":27,"ack_verified":true}
+Konversi suhu dimulai ms=67438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=68189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":28,"measured_ms":68189}
+TELEMETRY_STORED {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":28,"ack_verified":true}
+Konversi suhu dimulai ms=69438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=70189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":29,"measured_ms":70189}
+TELEMETRY_STORED {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":29,"ack_verified":true}
+Konversi suhu dimulai ms=71438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=72189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":30,"measured_ms":72189}
+Konversi suhu dimulai ms=73438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=74189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":31,"measured_ms":74189}
+Konversi suhu dimulai ms=75438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=76189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":32,"measured_ms":76189}
+Konversi suhu dimulai ms=77438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=78189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":33,"measured_ms":78189}
+Konversi suhu dimulai ms=79438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=80189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":34,"measured_ms":80189}
+Konversi suhu dimulai ms=81438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=82189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"45f068c336ffc674ea77ab8bb317cdfe","counter":35,"measured_ms":82189}
+Konversi suhu dimulai ms=83438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=84189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+Konversi suhu dimulai ms=85438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=86189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+Konversi suhu dimulai ms=87438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=88189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+Konversi suhu dimulai ms=89438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=90189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+Konversi suhu dimulai ms=91438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=92189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+Konversi suhu dimulai ms=93438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=94189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+Konversi suhu dimulai ms=95438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=96189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+Konversi suhu dimulai ms=97438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=98189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+Konversi suhu dimulai ms=99438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=100189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+Konversi suhu dimulai ms=101438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=102189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_AUTHENTICATED {"run_id":"8f337e9c0273ef3c232b05be37524edc","session_id":"5a267f8dcdd948b670a04e4b0866d182","mqtt_port":1883,"tls":false}
+Konversi suhu dimulai ms=103438
+Alarm lokal: gas=normal suhu=aktif LED/buzzer=ON
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=104189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"5a267f8dcdd948b670a04e4b0866d182","counter":1,"measured_ms":104189}
+TELEMETRY_STORED {"session_id":"5a267f8dcdd948b670a04e4b0866d182","counter":1,"ack_verified":true}
+Konversi suhu dimulai ms=105438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=106189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"5a267f8dcdd948b670a04e4b0866d182","counter":2,"measured_ms":106189}
+TELEMETRY_STORED {"session_id":"5a267f8dcdd948b670a04e4b0866d182","counter":2,"ack_verified":true}
+Konversi suhu dimulai ms=107438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=108189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"5a267f8dcdd948b670a04e4b0866d182","counter":3,"measured_ms":108189}
+TELEMETRY_STORED {"session_id":"5a267f8dcdd948b670a04e4b0866d182","counter":3,"ack_verified":true}
+Konversi suhu dimulai ms=109438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=110189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"5a267f8dcdd948b670a04e4b0866d182","counter":4,"measured_ms":110189}
+TELEMETRY_STORED {"session_id":"5a267f8dcdd948b670a04e4b0866d182","counter":4,"ack_verified":true}
+Konversi suhu dimulai ms=111438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=112189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"5a267f8dcdd948b670a04e4b0866d182","counter":5,"measured_ms":112189}
+TELEMETRY_STORED {"session_id":"5a267f8dcdd948b670a04e4b0866d182","counter":5,"ack_verified":true}
+Konversi suhu dimulai ms=113438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=114189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"5a267f8dcdd948b670a04e4b0866d182","counter":6,"measured_ms":114189}
+TELEMETRY_STORED {"session_id":"5a267f8dcdd948b670a04e4b0866d182","counter":6,"ack_verified":true}
+Konversi suhu dimulai ms=115438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=116189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"5a267f8dcdd948b670a04e4b0866d182","counter":7,"measured_ms":116189}
+TELEMETRY_STORED {"session_id":"5a267f8dcdd948b670a04e4b0866d182","counter":7,"ack_verified":true}
+Konversi suhu dimulai ms=117438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=118189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"5a267f8dcdd948b670a04e4b0866d182","counter":8,"measured_ms":118189}
+TELEMETRY_STORED {"session_id":"5a267f8dcdd948b670a04e4b0866d182","counter":8,"ack_verified":true}
+TELEMETRY_DISCONNECTED keys reset; local alarms continue
+Konversi suhu dimulai ms=119438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=120189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":true}
+[121098][E][WiFiClient.cpp:275] connect(): socket error on fd 48, errno: 104, "Connection reset by peer"
+TELEMETRY_CONNECT_FAILED state=-2
+Konversi suhu dimulai ms=121438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=122189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":true}
+Konversi suhu dimulai ms=123438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=124189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":true}
+Konversi suhu dimulai ms=125438
+[126080][E][WiFiClient.cpp:275] connect(): socket error on fd 48, errno: 104, "Connection reset by peer"
+TELEMETRY_CONNECT_FAILED state=-2
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=126189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":true}
+Konversi suhu dimulai ms=127438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=128189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":true}
+Konversi suhu dimulai ms=129438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=130189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":true}
+[131094][E][WiFiClient.cpp:275] connect(): socket error on fd 48, errno: 104, "Connection reset by peer"
+TELEMETRY_CONNECT_FAILED state=-2
+Konversi suhu dimulai ms=131438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=132189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":true}
+Konversi suhu dimulai ms=133438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=134189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":true}
+Konversi suhu dimulai ms=135438
+[136093][E][WiFiClient.cpp:275] connect(): socket error on fd 48, errno: 104, "Connection reset by peer"
+TELEMETRY_CONNECT_FAILED state=-2
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=136189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":true}
+Konversi suhu dimulai ms=137438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=138189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":true}
+Konversi suhu dimulai ms=139438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=140189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":true}
+Konversi suhu dimulai ms=141438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=142189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":true}
+Konversi suhu dimulai ms=143438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=144189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":true}
+Konversi suhu dimulai ms=145438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=146189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":true}
+Konversi suhu dimulai ms=147438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=148189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":true}
+Konversi suhu dimulai ms=149438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=150189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+Konversi suhu dimulai ms=151438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=152189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+Konversi suhu dimulai ms=153438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=154189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_AUTHENTICATED {"run_id":"8f337e9c0273ef3c232b05be37524edc","session_id":"56872cf55906d75ee2d702ade22e476f","mqtt_port":1883,"tls":false}
+Konversi suhu dimulai ms=155438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=156189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"56872cf55906d75ee2d702ade22e476f","counter":1,"measured_ms":156189}
+TELEMETRY_STORED {"session_id":"56872cf55906d75ee2d702ade22e476f","counter":1,"ack_verified":true}
+Konversi suhu dimulai ms=157438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=158189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"56872cf55906d75ee2d702ade22e476f","counter":2,"measured_ms":158189}
+TELEMETRY_STORED {"session_id":"56872cf55906d75ee2d702ade22e476f","counter":2,"ack_verified":true}
+Konversi suhu dimulai ms=159438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=160189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"56872cf55906d75ee2d702ade22e476f","counter":3,"measured_ms":160189}
+TELEMETRY_STORED {"session_id":"56872cf55906d75ee2d702ade22e476f","counter":3,"ack_verified":true}
+Konversi suhu dimulai ms=161438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=162189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"56872cf55906d75ee2d702ade22e476f","counter":4,"measured_ms":162189}
+TELEMETRY_STORED {"session_id":"56872cf55906d75ee2d702ade22e476f","counter":4,"ack_verified":true}
+Konversi suhu dimulai ms=163438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=164189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"56872cf55906d75ee2d702ade22e476f","counter":5,"measured_ms":164189}
+TELEMETRY_STORED {"session_id":"56872cf55906d75ee2d702ade22e476f","counter":5,"ack_verified":true}
+Konversi suhu dimulai ms=165438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=166189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"56872cf55906d75ee2d702ade22e476f","counter":6,"measured_ms":166189}
+Konversi suhu dimulai ms=167438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=168189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"56872cf55906d75ee2d702ade22e476f","counter":7,"measured_ms":168189}
+Konversi suhu dimulai ms=169438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=170189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"56872cf55906d75ee2d702ade22e476f","counter":8,"measured_ms":170189}
+Konversi suhu dimulai ms=171438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=172189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"56872cf55906d75ee2d702ade22e476f","counter":9,"measured_ms":172189}
+Konversi suhu dimulai ms=173438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=174189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"56872cf55906d75ee2d702ade22e476f","counter":10,"measured_ms":174189}
+Konversi suhu dimulai ms=175438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=176189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"56872cf55906d75ee2d702ade22e476f","counter":11,"measured_ms":176189}
+Konversi suhu dimulai ms=177438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=178189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+Konversi suhu dimulai ms=179438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=180189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+Konversi suhu dimulai ms=181438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=182189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+Konversi suhu dimulai ms=183438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=184189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+Konversi suhu dimulai ms=185438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=186189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_AUTHENTICATED {"run_id":"8f337e9c0273ef3c232b05be37524edc","session_id":"0e19843623d38e60208b0bab8fa2db7f","mqtt_port":1883,"tls":false}
+Konversi suhu dimulai ms=187438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=188189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":1,"measured_ms":188189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":1,"ack_verified":true}
+Konversi suhu dimulai ms=189438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=190189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":2,"measured_ms":190189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":2,"ack_verified":true}
+Konversi suhu dimulai ms=191438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=192189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":3,"measured_ms":192189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":3,"ack_verified":true}
+Konversi suhu dimulai ms=193438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=194189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":4,"measured_ms":194189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":4,"ack_verified":true}
+Konversi suhu dimulai ms=195438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=196189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":5,"measured_ms":196189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":5,"ack_verified":true}
+Konversi suhu dimulai ms=197438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=198189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":6,"measured_ms":198189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":6,"ack_verified":true}
+Konversi suhu dimulai ms=199438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=200189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":7,"measured_ms":200189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":7,"ack_verified":true}
+Konversi suhu dimulai ms=201438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=202189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":8,"measured_ms":202189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":8,"ack_verified":true}
+Konversi suhu dimulai ms=203438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=204189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":9,"measured_ms":204189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":9,"ack_verified":true}
+Konversi suhu dimulai ms=205438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=206189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":10,"measured_ms":206189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":10,"ack_verified":true}
+Konversi suhu dimulai ms=207438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=208189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":11,"measured_ms":208189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":11,"ack_verified":true}
+Konversi suhu dimulai ms=209438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=210189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":12,"measured_ms":210189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":12,"ack_verified":true}
+Konversi suhu dimulai ms=211438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=212189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":13,"measured_ms":212189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":13,"ack_verified":true}
+Konversi suhu dimulai ms=213438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=214189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":14,"measured_ms":214189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":14,"ack_verified":true}
+Konversi suhu dimulai ms=215438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=216189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":15,"measured_ms":216189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":15,"ack_verified":true}
+Konversi suhu dimulai ms=217438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=218189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":16,"measured_ms":218189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":16,"ack_verified":true}
+Konversi suhu dimulai ms=219438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=220189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":17,"measured_ms":220189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":17,"ack_verified":true}
+Konversi suhu dimulai ms=221438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=222189 {"device_id":"esp32-meja01","temperature_c":45.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":true}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":18,"measured_ms":222189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":18,"ack_verified":true}
+Konversi suhu dimulai ms=223438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=224189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":19,"measured_ms":224189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":19,"ack_verified":true}
+Konversi suhu dimulai ms=225438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=226189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":20,"measured_ms":226189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":20,"ack_verified":true}
+Konversi suhu dimulai ms=227438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=228189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":21,"measured_ms":228189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":21,"ack_verified":true}
+Konversi suhu dimulai ms=229438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=230189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":22,"measured_ms":230189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":22,"ack_verified":true}
+Konversi suhu dimulai ms=231438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=232189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":23,"measured_ms":232189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":23,"ack_verified":true}
+Konversi suhu dimulai ms=233438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=234189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":24,"measured_ms":234189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":24,"ack_verified":true}
+Konversi suhu dimulai ms=235438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=236189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":25,"measured_ms":236189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":25,"ack_verified":true}
+Konversi suhu dimulai ms=237438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=238189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":26,"measured_ms":238189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":26,"ack_verified":true}
+Konversi suhu dimulai ms=239438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=240189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":27,"measured_ms":240189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":27,"ack_verified":true}
+Konversi suhu dimulai ms=241438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=242189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":28,"measured_ms":242189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":28,"ack_verified":true}
+Konversi suhu dimulai ms=243438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=244189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":29,"measured_ms":244189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":29,"ack_verified":true}
+Konversi suhu dimulai ms=245438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=246189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":30,"measured_ms":246189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":30,"ack_verified":true}
+Konversi suhu dimulai ms=247438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=248189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":31,"measured_ms":248189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":31,"ack_verified":true}
+Konversi suhu dimulai ms=249438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=250189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":32,"measured_ms":250189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":32,"ack_verified":true}
+Konversi suhu dimulai ms=251438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=252189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":33,"measured_ms":252189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":33,"ack_verified":true}
+Konversi suhu dimulai ms=253438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=254189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":34,"measured_ms":254189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":34,"ack_verified":true}
+Konversi suhu dimulai ms=255438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=256189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":35,"measured_ms":256189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":35,"ack_verified":true}
+Konversi suhu dimulai ms=257438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=258189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":36,"measured_ms":258189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":36,"ack_verified":true}
+Konversi suhu dimulai ms=259438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=260189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":37,"measured_ms":260189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":37,"ack_verified":true}
+Konversi suhu dimulai ms=261438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=262189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":38,"measured_ms":262189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":38,"ack_verified":true}
+Konversi suhu dimulai ms=263438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=264189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":39,"measured_ms":264189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":39,"ack_verified":true}
+Konversi suhu dimulai ms=265438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=266189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":40,"measured_ms":266189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":40,"ack_verified":true}
+Konversi suhu dimulai ms=267438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=268189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":41,"measured_ms":268189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":41,"ack_verified":true}
+Konversi suhu dimulai ms=269438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=270189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":42,"measured_ms":270189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":42,"ack_verified":true}
+Konversi suhu dimulai ms=271438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=272189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":43,"measured_ms":272189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":43,"ack_verified":true}
+Konversi suhu dimulai ms=273438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=274189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":44,"measured_ms":274189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":44,"ack_verified":true}
+Konversi suhu dimulai ms=275438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=276189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":45,"measured_ms":276189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":45,"ack_verified":true}
+Konversi suhu dimulai ms=277438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=278189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":46,"measured_ms":278189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":46,"ack_verified":true}
+Konversi suhu dimulai ms=279438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=280189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":47,"measured_ms":280189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":47,"ack_verified":true}
+Konversi suhu dimulai ms=281438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=282189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":48,"measured_ms":282189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":48,"ack_verified":true}
+Konversi suhu dimulai ms=283438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=284189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":49,"measured_ms":284189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":49,"ack_verified":true}
+Konversi suhu dimulai ms=285438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=286189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":50,"measured_ms":286189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":50,"ack_verified":true}
+Konversi suhu dimulai ms=287438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=288189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":51,"measured_ms":288189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":51,"ack_verified":true}
+Konversi suhu dimulai ms=289438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=290189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":52,"measured_ms":290189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":52,"ack_verified":true}
+Konversi suhu dimulai ms=291438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=292189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":53,"measured_ms":292189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":53,"ack_verified":true}
+Konversi suhu dimulai ms=293438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=294189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":54,"measured_ms":294189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":54,"ack_verified":true}
+Konversi suhu dimulai ms=295438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=296189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":55,"measured_ms":296189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":55,"ack_verified":true}
+Konversi suhu dimulai ms=297438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=298189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":56,"measured_ms":298189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":56,"ack_verified":true}
+Konversi suhu dimulai ms=299438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=300189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":57,"measured_ms":300189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":57,"ack_verified":true}
+Konversi suhu dimulai ms=301438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=302189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":58,"measured_ms":302189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":58,"ack_verified":true}
+Konversi suhu dimulai ms=303438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=304189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":59,"measured_ms":304189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":59,"ack_verified":true}
+Konversi suhu dimulai ms=305438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=306189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":60,"measured_ms":306189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":60,"ack_verified":true}
+Konversi suhu dimulai ms=307438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=308189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":61,"measured_ms":308189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":61,"ack_verified":true}
+Konversi suhu dimulai ms=309438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=310189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":62,"measured_ms":310189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":62,"ack_verified":true}
+Konversi suhu dimulai ms=311438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=312189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":63,"measured_ms":312189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":63,"ack_verified":true}
+Konversi suhu dimulai ms=313438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=314189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":64,"measured_ms":314189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":64,"ack_verified":true}
+Konversi suhu dimulai ms=315438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=316189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":65,"measured_ms":316189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":65,"ack_verified":true}
+Konversi suhu dimulai ms=317438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=318189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":66,"measured_ms":318189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":66,"ack_verified":true}
+Konversi suhu dimulai ms=319438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=320189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":67,"measured_ms":320189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":67,"ack_verified":true}
+Konversi suhu dimulai ms=321438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=322189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":68,"measured_ms":322189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":68,"ack_verified":true}
+Konversi suhu dimulai ms=323438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=324189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":69,"measured_ms":324189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":69,"ack_verified":true}
+Konversi suhu dimulai ms=325438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=326189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":70,"measured_ms":326189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":70,"ack_verified":true}
+Konversi suhu dimulai ms=327438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=328189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":71,"measured_ms":328189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":71,"ack_verified":true}
+Konversi suhu dimulai ms=329438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=330189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":72,"measured_ms":330189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":72,"ack_verified":true}
+Konversi suhu dimulai ms=331438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=332189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":73,"measured_ms":332189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":73,"ack_verified":true}
+Konversi suhu dimulai ms=333438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=334189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":74,"measured_ms":334189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":74,"ack_verified":true}
+Konversi suhu dimulai ms=335438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=336189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":75,"measured_ms":336189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":75,"ack_verified":true}
+Konversi suhu dimulai ms=337438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=338189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":76,"measured_ms":338189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":76,"ack_verified":true}
+Konversi suhu dimulai ms=339438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=340189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":77,"measured_ms":340189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":77,"ack_verified":true}
+Konversi suhu dimulai ms=341438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=342189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":78,"measured_ms":342189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":78,"ack_verified":true}
+Konversi suhu dimulai ms=343438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=344189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":79,"measured_ms":344189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":79,"ack_verified":true}
+Konversi suhu dimulai ms=345438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=346189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":80,"measured_ms":346189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":80,"ack_verified":true}
+Konversi suhu dimulai ms=347438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=348189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":81,"measured_ms":348189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":81,"ack_verified":true}
+Konversi suhu dimulai ms=349438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=350189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":82,"measured_ms":350189}
+TELEMETRY_STORED {"session_id":"0e19843623d38e60208b0bab8fa2db7f","counter":82,"ack_verified":true}
+Konversi suhu dimulai ms=351438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=352189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+Konversi suhu dimulai ms=353438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=354189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+Konversi suhu dimulai ms=355438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=356189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+Konversi suhu dimulai ms=357438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=358189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+Konversi suhu dimulai ms=359438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=360189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+Konversi suhu dimulai ms=361438
+TELEMETRY_AUTHENTICATED {"run_id":"8f337e9c0273ef3c232b05be37524edc","session_id":"0af2f7276c4f1b4e24b78fb1b0b475d0","mqtt_port":1883,"tls":false}
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=362189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0af2f7276c4f1b4e24b78fb1b0b475d0","counter":1,"measured_ms":362189}
+TELEMETRY_STORED {"session_id":"0af2f7276c4f1b4e24b78fb1b0b475d0","counter":1,"ack_verified":true}
+Konversi suhu dimulai ms=363438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=364189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0af2f7276c4f1b4e24b78fb1b0b475d0","counter":2,"measured_ms":364189}
+TELEMETRY_STORED {"session_id":"0af2f7276c4f1b4e24b78fb1b0b475d0","counter":2,"ack_verified":true}
+Konversi suhu dimulai ms=365438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=366189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0af2f7276c4f1b4e24b78fb1b0b475d0","counter":3,"measured_ms":366189}
+TELEMETRY_STORED {"session_id":"0af2f7276c4f1b4e24b78fb1b0b475d0","counter":3,"ack_verified":true}
+Konversi suhu dimulai ms=367438
+MQ2 gas_raw=2423 ADC; ambang=terlampaui (DOUT=LOW)
+Sampel lokal ms=368189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":2423,"gas_alarm":true,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0af2f7276c4f1b4e24b78fb1b0b475d0","counter":4,"measured_ms":368189}
+Alarm lokal: gas=normal suhu=normal LED/buzzer=OFF
+TELEMETRY_STORED {"session_id":"0af2f7276c4f1b4e24b78fb1b0b475d0","counter":4,"ack_verified":true}
+Konversi suhu dimulai ms=369438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=370189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0af2f7276c4f1b4e24b78fb1b0b475d0","counter":5,"measured_ms":370189}
+TELEMETRY_STORED {"session_id":"0af2f7276c4f1b4e24b78fb1b0b475d0","counter":5,"ack_verified":true}
+Konversi suhu dimulai ms=371438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=372189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0af2f7276c4f1b4e24b78fb1b0b475d0","counter":6,"measured_ms":372189}
+TELEMETRY_STORED {"session_id":"0af2f7276c4f1b4e24b78fb1b0b475d0","counter":6,"ack_verified":true}
+Konversi suhu dimulai ms=373438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=374189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0af2f7276c4f1b4e24b78fb1b0b475d0","counter":7,"measured_ms":374189}
+TELEMETRY_STORED {"session_id":"0af2f7276c4f1b4e24b78fb1b0b475d0","counter":7,"ack_verified":true}
+Konversi suhu dimulai ms=375438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=376189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0af2f7276c4f1b4e24b78fb1b0b475d0","counter":8,"measured_ms":376189}
+TELEMETRY_STORED {"session_id":"0af2f7276c4f1b4e24b78fb1b0b475d0","counter":8,"ack_verified":true}
+Konversi suhu dimulai ms=377438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=378189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0af2f7276c4f1b4e24b78fb1b0b475d0","counter":9,"measured_ms":378189}
+TELEMETRY_STORED {"session_id":"0af2f7276c4f1b4e24b78fb1b0b475d0","counter":9,"ack_verified":true}
+Konversi suhu dimulai ms=379438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=380189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0af2f7276c4f1b4e24b78fb1b0b475d0","counter":10,"measured_ms":380189}
+TELEMETRY_STORED {"session_id":"0af2f7276c4f1b4e24b78fb1b0b475d0","counter":10,"ack_verified":true}
+Konversi suhu dimulai ms=381438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=382189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0af2f7276c4f1b4e24b78fb1b0b475d0","counter":11,"measured_ms":382189}
+TELEMETRY_STORED {"session_id":"0af2f7276c4f1b4e24b78fb1b0b475d0","counter":11,"ack_verified":true}
+Konversi suhu dimulai ms=383438
+MQ2 gas_raw=513 ADC; ambang=belum terlampaui (DOUT=HIGH)
+Sampel lokal ms=384189 {"device_id":"esp32-meja01","temperature_c":25.00,"gas_raw":513,"gas_alarm":false,"temperature_alarm":false}
+TELEMETRY_SENT {"session_id":"0af2f7276c4f1b4e24b78fb1b0b475d0","counter":12,"measured_ms":384189}
+TELEMETRY_STORED {"session_id":"0af2f7276c4f1b4e24b78fb1b0b475d0","counter":12,"ack_verified":true}

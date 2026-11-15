@@ -1,0 +1,152 @@
+{
+  "ticket": "07",
+  "status": "done",
+  "verified": true,
+  "collected_utc": "2026-11-15T07:12:12.374887+00:00",
+  "scope": "Complete demo guide, fresh native security checks, existing Wokwi/fault evidence revalidated",
+  "state": {
+    "preserved_initialized_state": true,
+    "historical_points": [
+      {
+        "session_id": "79023128dccac3dabb68a5f7bbce51d8",
+        "counter": 1,
+        "received_ns": 1794673196852637418,
+        "influx_time": "2026-11-14T16:19:56.852637418Z",
+        "temperature_c": 25.0,
+        "gas_raw": 2177,
+        "gas_alarm": true,
+        "temperature_alarm": false
+      },
+      {
+        "session_id": "6031710b4aa72b64cf4e4fcb81436467",
+        "counter": 63,
+        "received_ns": 1794673653829751436,
+        "influx_time": "2026-11-14T16:27:33.829751436Z",
+        "temperature_c": 25.0,
+        "gas_raw": 513,
+        "gas_alarm": false,
+        "temperature_alarm": false
+      },
+      {
+        "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+        "counter": 1,
+        "received_ns": 1794722547905196595,
+        "influx_time": "2026-11-15T06:02:27.905196595Z",
+        "temperature_c": 25.0,
+        "gas_raw": 2177,
+        "gas_alarm": true,
+        "temperature_alarm": false
+      },
+      {
+        "session_id": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+        "counter": 12,
+        "received_ns": 1794722985746088680,
+        "influx_time": "2026-11-15T06:09:45.74608868Z",
+        "temperature_c": 25.0,
+        "gas_raw": 513,
+        "gas_alarm": false,
+        "temperature_alarm": false
+      }
+    ],
+    "default_services": [
+      "influxdb",
+      "grafana"
+    ],
+    "telegraf_removed": true,
+    "receiver_active_enabled": true,
+    "diagnostic_stopped": true,
+    "private_mqtt_port": 1883,
+    "tls": false,
+    "autostart_configured": true,
+    "lxc_reboot_tested": false,
+    "default_compose_without_cloud_credentials": true,
+    "volumes": {
+      "lab-kimia-suhu-influxdb-1": {
+        "/etc/influxdb2": "lab-kimia-suhu_influx-config",
+        "/var/lib/influxdb2": "lab-kimia-suhu_influx-data"
+      },
+      "lab-kimia-suhu-grafana-1": {
+        "/var/lib/grafana": "lab-kimia-suhu_grafana-data"
+      }
+    },
+    "dashboard_uid": "suhu-meja01"
+  },
+  "health": {
+    "influx": "pass",
+    "grafana": "ok"
+  },
+  "runtime_matches_ticket06": true,
+  "new_wokwi_run": false,
+  "reused_wokwi": [
+    {
+      "ticket": "05",
+      "source": "existing Wokwi run revalidated; not a new simulator run",
+      "run": {
+        "run_id": "8f337e9c0273ef3c232b05be37524edc",
+        "local_ip": "10.13.37.2"
+      },
+      "capture_mode": "fault",
+      "capture_sha256": "76f224b746525e8a217590be9d14c5c3640db6f7b6abffd9a867b94a194878b2",
+      "sent": 148,
+      "acked": 136,
+      "unconfirmed": 12,
+      "four_states": true,
+      "all_acked_points_rechecked_in_influx_grafana": true,
+      "current_grafana_state": [
+        -1
+      ]
+    },
+    {
+      "ticket": "06",
+      "source": "existing Wokwi run revalidated; not a new simulator run",
+      "run": {
+        "run_id": "3066a27ea869a9b9f201019f5537cf99",
+        "local_ip": "10.13.37.2"
+      },
+      "capture_mode": "nominal",
+      "capture_sha256": "eb65feebaac0b2183f0fe1225087245ddaa4fd38225940626a5e9510d9f54d91",
+      "sent": 169,
+      "acked": 169,
+      "unconfirmed": 0,
+      "four_states": true,
+      "all_acked_points_rechecked_in_influx_grafana": true,
+      "current_grafana_state": [
+        -1
+      ]
+    }
+  ],
+  "fresh_native_security": {
+    "cases": 21,
+    "stored_points": 8,
+    "source": "native-client on real MQTT/LXC"
+  },
+  "protocol": {
+    "passed": true,
+    "checks": 113
+  },
+  "unit_tests": 12,
+  "sensor_regressions": [
+    "PASS: PQC selection shares actual sensor loop, all four alarm states, 2s cadence, latest-only readings, invalid latch/recovery",
+    "PASS: PQC startup failure preserves local alarm"
+  ],
+  "historical_evidence_overwrite_rejected_before_faults": true,
+  "local_links_checked": 34,
+  "public_texts_scanned_for_known_active_secrets": 71,
+  "source_sha256": {
+    "README.md": "dd6e8df4985313ba2ea805770e45743e05b6a8cfccff7fe8d5fc49f8e7a22931",
+    "docs/demo-proyek.md": "cf4794b832efcd6f077347e913758265e5047ebe7a7019ab902c5c13abfc8a5b",
+    "docs/operasi-pqc.md": "62981a1a6bee9bcd44f0bfe5f36045bf44f258218e8e0fc3a8e88d7430687f61",
+    "docs/verifikasi-pqc-tiket-07.md": "89985d86163aff0fd78a6c98a20c9de645971d5c8cd03d039fd9aa37c40f0831",
+    "tools/demo/collect_evidence.py": "6c5f047925722192cdbf8915fc58113e46826193daa5956fb76983f6799ebcb4",
+    "tools/telemetry/check_security.py": "09bb47200689891c48265fd864c049a4136fac243855e199e4bede508407ffbb",
+    "tools/telemetry/wokwi_fault.py": "658e671b326fe6d4651717af3b3a326a94c109109b56f434a5f1fe96d9df0cb4",
+    "tools/telemetry/verify_capture.py": "af054a0359b6fd7ec632edd19955cfe38a4070cad3665f2cb2b953d8f93ec8e2"
+  },
+  "limitations": [
+    "Wokwi runs and interactive sensor/outage observations reused from tickets 05/06; not reenacted in ticket 07",
+    "Fresh mutations/restarts use native clients on the private lab broker, not physical sensors",
+    "No LXC reboot, acoustic recording, physical RNG/performance or safety certification",
+    "Prospective FN-DSA/custom lab protocol; no independent audit or final FIPS 206 claim",
+    "MQTT broker credentials and metadata remain visible without TLS"
+  ]
+}

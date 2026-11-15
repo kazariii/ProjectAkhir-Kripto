@@ -1,0 +1,348 @@
+{
+  "passed": true,
+  "source": "native-control",
+  "points": [
+    {
+      "session_id": "7eef442653dbb575739ed063e399cb48",
+      "counter": 1,
+      "received_ns": 1794724894328400824,
+      "influx_time": "2026-11-15T06:41:34.328400824Z",
+      "temperature_c": 26.75,
+      "gas_raw": 1001,
+      "gas_alarm": false,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "8807184ca8d904753e6642ea0b7746d8",
+      "counter": 1,
+      "received_ns": 1794724900987416675,
+      "influx_time": "2026-11-15T06:41:40.987416675Z",
+      "temperature_c": 26.75,
+      "gas_raw": 1001,
+      "gas_alarm": false,
+      "temperature_alarm": false
+    }
+  ],
+  "restart_preserved_history": true,
+  "fresh_session_after_restart": true,
+  "state": {
+    "preserved_initialized_state": true,
+    "historical_points": [
+      {
+        "session_id": "79023128dccac3dabb68a5f7bbce51d8",
+        "counter": 1,
+        "received_ns": 1794673196852637418,
+        "influx_time": "2026-11-14T16:19:56.852637418Z",
+        "temperature_c": 25.0,
+        "gas_raw": 2177,
+        "gas_alarm": true,
+        "temperature_alarm": false
+      },
+      {
+        "session_id": "6031710b4aa72b64cf4e4fcb81436467",
+        "counter": 63,
+        "received_ns": 1794673653829751436,
+        "influx_time": "2026-11-14T16:27:33.829751436Z",
+        "temperature_c": 25.0,
+        "gas_raw": 513,
+        "gas_alarm": false,
+        "temperature_alarm": false
+      },
+      {
+        "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+        "counter": 1,
+        "received_ns": 1794722547905196595,
+        "influx_time": "2026-11-15T06:02:27.905196595Z",
+        "temperature_c": 25.0,
+        "gas_raw": 2177,
+        "gas_alarm": true,
+        "temperature_alarm": false
+      },
+      {
+        "session_id": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+        "counter": 12,
+        "received_ns": 1794722985746088680,
+        "influx_time": "2026-11-15T06:09:45.74608868Z",
+        "temperature_c": 25.0,
+        "gas_raw": 513,
+        "gas_alarm": false,
+        "temperature_alarm": false
+      }
+    ],
+    "default_services": [
+      "influxdb",
+      "grafana"
+    ],
+    "telegraf_removed": true,
+    "receiver_active_enabled": true,
+    "diagnostic_stopped": true,
+    "private_mqtt_port": 1883,
+    "tls": false,
+    "autostart_configured": true,
+    "lxc_reboot_tested": false,
+    "volumes": {
+      "lab-kimia-suhu-influxdb-1": {
+        "/etc/influxdb2": "lab-kimia-suhu_influx-config",
+        "/var/lib/influxdb2": "lab-kimia-suhu_influx-data"
+      },
+      "lab-kimia-suhu-grafana-1": {
+        "/var/lib/grafana": "lab-kimia-suhu_grafana-data"
+      }
+    },
+    "dashboard_uid": "suhu-meja01"
+  },
+  "token": {
+    "bucket_write_only": true,
+    "read_data_visible": false,
+    "read_control_nonempty_admin": true,
+    "read_behavior": "HTTP 404"
+  },
+  "grafana": {
+    "history_panel_results": {
+      "2": {
+        "status": 200,
+        "frames": [
+          {
+            "schema": {
+              "name": "suhu",
+              "refId": "A",
+              "meta": {
+                "typeVersion": [
+                  0,
+                  0
+                ],
+                "executedQueryString": "from(bucket: \"telemetry\")\n  |> range(start: 2026-11-15T06:41:33.328Z, stop: 2026-11-15T06:41:41.988Z)\n  |> filter(fn: (r) => r._measurement == \"suhu\" and r._field == \"temperature_c\" and r.device_id == \"esp32-meja01\")\n  |> aggregateWindow(every: 2s, fn: mean, createEmpty: true)\n  |> yield(name: \"suhu\")"
+              },
+              "fields": [
+                {
+                  "name": "Time",
+                  "type": "time",
+                  "typeInfo": {
+                    "frame": "time.Time",
+                    "nullable": true
+                  }
+                },
+                {
+                  "name": "temperature_c",
+                  "type": "number",
+                  "typeInfo": {
+                    "frame": "float64",
+                    "nullable": true
+                  },
+                  "labels": {
+                    "device_id": "esp32-meja01"
+                  }
+                }
+              ]
+            },
+            "data": {
+              "values": [
+                [
+                  1794724894000,
+                  1794724896000,
+                  1794724898000,
+                  1794724900000,
+                  1794724901988
+                ],
+                [
+                  null,
+                  26.75,
+                  null,
+                  null,
+                  26.75
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "4": {
+        "status": 200,
+        "frames": [
+          {
+            "schema": {
+              "name": "suhu",
+              "refId": "A",
+              "meta": {
+                "typeVersion": [
+                  0,
+                  0
+                ],
+                "executedQueryString": "from(bucket: \"telemetry\")\n  |> range(start: 2026-11-15T06:41:33.328Z, stop: 2026-11-15T06:41:41.988Z)\n  |> filter(fn: (r) => r._measurement == \"suhu\" and r._field == \"gas_raw\" and r.device_id == \"esp32-meja01\")\n  |> aggregateWindow(every: 2s, fn: mean, createEmpty: true)\n  |> yield(name: \"gas\")"
+              },
+              "fields": [
+                {
+                  "name": "Time",
+                  "type": "time",
+                  "typeInfo": {
+                    "frame": "time.Time",
+                    "nullable": true
+                  }
+                },
+                {
+                  "name": "gas_raw",
+                  "type": "number",
+                  "typeInfo": {
+                    "frame": "float64",
+                    "nullable": true
+                  },
+                  "labels": {
+                    "device_id": "esp32-meja01"
+                  }
+                }
+              ]
+            },
+            "data": {
+              "values": [
+                [
+                  1794724894000,
+                  1794724896000,
+                  1794724898000,
+                  1794724900000,
+                  1794724901988
+                ],
+                [
+                  null,
+                  1001,
+                  null,
+                  null,
+                  1001
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "6": {
+        "status": 200,
+        "frames": [
+          {
+            "schema": {
+              "refId": "A",
+              "meta": {
+                "typeVersion": [
+                  0,
+                  0
+                ],
+                "executedQueryString": "from(bucket: \"telemetry\")\n  |> range(start: 2026-11-15T06:41:33.328Z, stop: 2026-11-15T06:41:41.988Z)\n  |> filter(fn: (r) => r._measurement == \"suhu\" and r.device_id == \"esp32-meja01\")\n  |> filter(fn: (r) => r._field == \"temperature_c\" or r._field == \"gas_raw\" or r._field == \"gas_alarm\" or r._field == \"temperature_alarm\")\n  |> pivot(rowKey: [\"_time\"], columnKey: [\"_field\"], valueColumn: \"_value\")\n  |> filter(fn: (r) => exists r.gas_alarm and exists r.temperature_alarm and exists r.temperature_c and exists r.gas_raw)\n  |> map(fn: (r) => ({r with kondisi: if r.gas_alarm and r.temperature_alarm then \"Peringatan gas dan suhu\" else if r.gas_alarm then \"Peringatan gas\" else if r.temperature_alarm then \"Peringatan suhu\" else \"Normal\"}))\n  |> keep(columns: [\"_time\", \"temperature_c\", \"gas_raw\", \"gas_alarm\", \"temperature_alarm\", \"kondisi\"])\n  |> sort(columns: [\"_time\"], desc: true)"
+              },
+              "fields": [
+                {
+                  "name": "_time",
+                  "type": "time",
+                  "typeInfo": {
+                    "frame": "time.Time",
+                    "nullable": true
+                  }
+                },
+                {
+                  "name": "gas_alarm",
+                  "type": "boolean",
+                  "typeInfo": {
+                    "frame": "bool",
+                    "nullable": true
+                  },
+                  "labels": {}
+                },
+                {
+                  "name": "gas_raw",
+                  "type": "number",
+                  "typeInfo": {
+                    "frame": "int64",
+                    "nullable": true
+                  },
+                  "labels": {}
+                },
+                {
+                  "name": "temperature_alarm",
+                  "type": "boolean",
+                  "typeInfo": {
+                    "frame": "bool",
+                    "nullable": true
+                  },
+                  "labels": {}
+                },
+                {
+                  "name": "temperature_c",
+                  "type": "number",
+                  "typeInfo": {
+                    "frame": "float64",
+                    "nullable": true
+                  },
+                  "labels": {}
+                },
+                {
+                  "name": "kondisi",
+                  "type": "string",
+                  "typeInfo": {
+                    "frame": "string",
+                    "nullable": true
+                  },
+                  "labels": {}
+                }
+              ]
+            },
+            "data": {
+              "values": [
+                [
+                  1794724900987,
+                  1794724894328
+                ],
+                [
+                  false,
+                  false
+                ],
+                [
+                  1001,
+                  1001
+                ],
+                [
+                  false,
+                  false
+                ],
+                [
+                  26.75,
+                  26.75
+                ],
+                [
+                  "Normal",
+                  "Normal"
+                ]
+              ],
+              "nanos": [
+                [
+                  416675,
+                  400824
+                ],
+                null,
+                null,
+                null,
+                null,
+                null
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "history_table_points_matched": true,
+    "historical_alarm_states": [
+      {
+        "counter": 1,
+        "session_id": "7eef442653dbb575739ed063e399cb48",
+        "state": 0,
+        "query_clock": "receiver time + 100ms for historical state validation"
+      },
+      {
+        "counter": 1,
+        "session_id": "8807184ca8d904753e6642ea0b7746d8",
+        "state": 0,
+        "query_clock": "receiver time + 100ms for historical state validation"
+      }
+    ],
+    "latest_stats_matched_at_sample_time": true,
+    "current_alarm_state_at_verification": [
+      0
+    ]
+  }
+}

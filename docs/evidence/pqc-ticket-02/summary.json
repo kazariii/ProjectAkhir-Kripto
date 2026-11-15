@@ -1,0 +1,84 @@
+{
+  "recorded_at_utc": "2026-11-14T14:07:36.806213+00:00",
+  "scope": "ticket 02 diagnostic connectivity; no application cryptographic session or InfluxDB writes",
+  "broker": {
+    "image": "eclipse-mosquitto:2.0.22@sha256:81a6193ae693942a3231cd3ac52875b02b7e3a19da671b2fb4b55cc874c5b279",
+    "private_bind": "10.34.211.141",
+    "port": 1883,
+    "read_only": true,
+    "container_user": "1883:1883"
+  },
+  "laptop_network": {
+    "recorded_at_utc": "2026-11-14T13:58:26.3184850Z",
+    "private_endpoint": "10.34.211.141:1883",
+    "simulator_extension": "Wokwi.wokwi-vscode@4.1.0",
+    "tcp_success": true
+  },
+  "native_controls": {
+    "passed": true,
+    "transport": "MQTT over TCP",
+    "port": 1883,
+    "tls": false,
+    "run_id": "e6c517accfa1baf9196d7c953eda4222",
+    "correlated_roundtrip": true,
+    "device_request_read_leaked": false,
+    "unauthorized_request_suback": [
+      0
+    ],
+    "device_reply_publish": 135,
+    "device_telemetry_publish": 135,
+    "receiver_request_publish": 135,
+    "wrong_password_connack": 135,
+    "anonymous_connack": 135
+  },
+  "broker_restart_controls": {
+    "passed": true,
+    "transport": "MQTT over TCP",
+    "port": 1883,
+    "tls": false,
+    "run_id": "31cd32e4bd71afddbaaba9ab7633cf2b",
+    "correlated_roundtrip": true,
+    "device_request_read_leaked": false,
+    "unauthorized_request_suback": [
+      0
+    ],
+    "device_reply_publish": 135,
+    "device_telemetry_publish": 135,
+    "receiver_request_publish": 135,
+    "wrong_password_connack": 135,
+    "anonymous_connack": 135
+  },
+  "esp32_build": {
+    "passed": true,
+    "static_ram_bytes": 44904,
+    "flash_bytes": 747109,
+    "image_sha256": "1065a1e8579762b78bd7196e8d7dc5bd8b484dc9fb922529338bfada95777c5b"
+  },
+  "simulator_runtime": {
+    "verified": true,
+    "provenance": "supplied Wokwi VS Code serial log matched to LXC journal",
+    "capture_sha256": "d5111550e51034c13a43dfc84c3b3f30b55eaffb48974e976020c4285db574ee",
+    "esp32": {
+      "passed": true,
+      "run_id": "3981f73517679858691afa4b7b65009e",
+      "mqtt_port": 1883,
+      "tls": false,
+      "local_ip": "10.13.37.2",
+      "roundtrip_ms": 110
+    },
+    "lxc_events": [
+      {
+        "event": "request_received",
+        "utc": "2026-11-14T14:04:47.894109+00:00",
+        "run_id": "3981f73517679858691afa4b7b65009e"
+      },
+      {
+        "event": "reply_queued",
+        "utc": "2026-11-14T14:04:47.894186+00:00",
+        "run_id": "3981f73517679858691afa4b7b65009e"
+      }
+    ],
+    "broker_client_id": "esp32-diag-3981f7351767",
+    "broker_device_connection_matched": true
+  }
+}

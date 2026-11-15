@@ -1,0 +1,135 @@
+{
+  "ticket": "05",
+  "status": "done",
+  "verified": true,
+  "collected_utc": "2026-11-15T06:16:54.879510+00:00",
+  "protocol": {
+    "passed": true,
+    "checks": 113
+  },
+  "security_cases": 21,
+  "native_control_points": 8,
+  "unit_tests": {
+    "passed": true,
+    "tests": 12
+  },
+  "sensor_regression": [
+    "PASS: PQC selection shares actual sensor loop, all four alarm states, 2s cadence, latest-only readings, invalid latch/recovery",
+    "PASS: PQC startup failure preserves local alarm"
+  ],
+  "previous_ticket_history_points_matched": 2,
+  "legacy_sensor_regression": [
+    "PASS: independent gas/temperature, four states, LED/buzzer, invalid-reading latch, valid recovery, local operation without MQTT/config",
+    "PASS: actual firmware loop waits for command completion, keeps 2s cadence, rejects disconnected sensor",
+    "PASS: independent gas/temperature, four states, LED/buzzer, invalid-reading latch, valid recovery, local operation without MQTT/config",
+    "PASS: actual firmware loop waits for command completion, keeps 2s cadence, rejects disconnected sensor",
+    "PASS: stuck conversion times out without publishing a fake temperature",
+    "PASS: blocked reconnect preserves sensor cadence and local alarms; Wi-Fi/MQTT recover with same TLS/auth; no replay, expiry, failed publish, retry/rollover",
+    "PASS: network allocation failure preserves local alarm",
+    "PASS: network allocation failure preserves local alarm"
+  ],
+  "services": {
+    "lab-kimia-pqc-session.service": "active",
+    "lab-kimia-mqtt-diagnostic.service": "active"
+  },
+  "firmware_build": {
+    "passed": true,
+    "ram_bytes": 83644,
+    "flash_bytes": 861561
+  },
+  "wokwi_run": {
+    "run_id": "8f337e9c0273ef3c232b05be37524edc",
+    "local_ip": "10.13.37.2"
+  },
+  "wokwi_sessions": 5,
+  "wokwi_acked": 136,
+  "wokwi_sent": 148,
+  "wokwi_unconfirmed": 12,
+  "local_sample_max_gap_ms": 2000,
+  "no_backlog_sent": true,
+  "faults": [
+    {
+      "kind": "receiver",
+      "baseline_session": "45f068c336ffc674ea77ab8bb317cdfe",
+      "baseline_counter": 29,
+      "started_ns": 1794722630057527379,
+      "utc": "2026-11-15T06:03:50.057529+00:00",
+      "restored_ns": 1794722650073441797,
+      "recovered_session": "5a267f8dcdd948b670a04e4b0866d182",
+      "recovered_counter": 1,
+      "recovered_ns": 1794722666947132127,
+      "passed": true,
+      "recovery_seconds_after_restore": 16.874
+    },
+    {
+      "kind": "broker",
+      "baseline_session": "5a267f8dcdd948b670a04e4b0866d182",
+      "baseline_counter": 8,
+      "started_ns": 1794722683408765053,
+      "utc": "2026-11-15T06:04:43.408766+00:00",
+      "restored_ns": 1794722703793860902,
+      "recovered_session": "56872cf55906d75ee2d702ade22e476f",
+      "recovered_counter": 1,
+      "recovered_ns": 1794722727082632869,
+      "passed": true,
+      "recovery_seconds_after_restore": 23.289
+    },
+    {
+      "kind": "influx",
+      "baseline_session": "56872cf55906d75ee2d702ade22e476f",
+      "baseline_counter": 5,
+      "started_ns": 1794722736355322833,
+      "utc": "2026-11-15T06:05:36.355325+00:00",
+      "restored_ns": 1794722756653148904,
+      "recovered_session": "0e19843623d38e60208b0bab8fa2db7f",
+      "recovered_counter": 1,
+      "recovered_ns": 1794722765593452204,
+      "passed": true,
+      "unconfirmed_writes": 6,
+      "recovery_seconds_after_restore": 8.94
+    }
+  ],
+  "renewals": [
+    {
+      "old_session": "0e19843623d38e60208b0bab8fa2db7f",
+      "new_session": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+      "server_age_seconds": 180.219,
+      "client_virtual_ms_until_new_auth": 174000,
+      "encrypted_storage_resumed": true
+    }
+  ],
+  "health": {
+    "grafana": "ok",
+    "influx": "pass"
+  },
+  "token_scope": {
+    "bucket_write_only": true,
+    "read_data_visible": false,
+    "read_control_nonempty_admin": true,
+    "read_behavior": "HTTP 404"
+  },
+  "source_sha256": {
+    "firmware/lib/pqc-proof/src/pqc_session.cpp": "a9208e360748a9599e8d7a9d8f5f987d7720e557f94ed3381eb9e1f2f860d204",
+    "firmware/lib/pqc-proof/src/pqc_session.h": "25537e5c8172d6b6e51280a7a718cc2c65053ff45d58851591b1a0b6842a701f",
+    "firmware/lib/pqc-telemetry/src/pqc_telemetry.cpp": "ff3ba5e1f6e1885d05b932853540b864d72152c08f1e6af620f2ee4984d9af7c",
+    "tools/session/receiver.py": "37314344d2deb23f14289b3f3e17a5a18ce44b2dcb36e66ed4e5192ca837dfb3",
+    "tools/session/native.cpp": "eaa788a598b9859c127c574834806c12479c151431e6770a5d340f9283708e1b",
+    "tools/session/native.py": "c2a2a9c46e52f05068cd007e8b85611b6d781f6d0c8cc23c013484489af73b49",
+    "tools/telemetry/check_security.py": "e84306ea2026b990675c917212c17e06265e8d621e9674fa7074e5c744ef6c39",
+    "tools/telemetry/wokwi_fault.py": "30a1484feb08cd685daf3b4c1ba5497bec61d6fa5ce7fe722b9c8762c6f29e70",
+    "tools/telemetry/verify_capture.py": "79804fe0acfb7f778a655a6af83c69f1125cbeb96b2d2cd3a6b1537405c10639",
+    "tools/telemetry/verify_recovery.py": "7450cd02c974a6aeac044983967e57a073dcdfc9e8e41c9e90116af6e179b3a0",
+    "tests/session_test.cpp": "9c559b6b2274eed3e1e5bb1d256d0f4db1f77356599c581815a5ebf9de618d47"
+  },
+  "private_artifact_sha256": {
+    "pqc-telemetry-full.bin": "5d06deedad16ced2d439887efd088a2414efbbf54d597ed5acef73fe506f95c1",
+    "firmware.elf": "7626b1874e7ebf75dece3ec6289d4b5eda12af1d17f43c3b6445b3cd0b95bd02"
+  },
+  "limitations": [
+    "Custom lab protocol, prospective FN-DSA; no independent security audit or final FIPS 206 claim",
+    "No TLS: broker passwords, topics, sizes and timing remain visible",
+    "Loss and handshake pauses remain; an absent ACK does not prove the database did not write",
+    "No DoS resistance, physical RNG, hardware performance or sensor safety certification",
+    "Legacy ingress remains until migration ticket 06; one active simulator only"
+  ]
+}

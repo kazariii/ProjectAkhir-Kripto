@@ -1,5 +1,7 @@
 # Verifikasi tiket 07
 
+> **Arsip hasil MQTT/TLS 10 November 2026.** Panduan yang dipakai saat itu disimpan di [arsip demo TLS](demo-proyek-tls-arsip.md). Hasil revisi MQTT/PQC ada pada [verifikasi PQC tiket 07](verifikasi-pqc-tiket-07.md).
+
 Tanggal: **10 November 2026, WIB (UTC+7)**. Acuan: [07-demo-proyek-lengkap.md](../.scratch/monitoring-lab-kimia/issues/07-demo-proyek-lengkap.md). Penghambat 04, 05 dan 06 sudah `done`. Seluruh 10 acceptance criteria terpenuhi. Spesifikasi induk, glosarium, dan ADR belum tersedia; acceptance criteria tiket menjadi acuan.
 
 ## Hasil dan perubahan

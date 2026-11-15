@@ -1,0 +1,80 @@
+{
+  "ticket": "03",
+  "verified": true,
+  "collected_utc": "2026-11-14T14:41:53.897410+00:00",
+  "scope": "one synthetic encrypted probe and encrypted ACK; sensors/Influx integration is ticket 04",
+  "native_protocol": {
+    "passed": true,
+    "checks": 71
+  },
+  "ticket01_regression": {
+    "positive_controls": 2,
+    "negative_checks": 13,
+    "aead_rfc8439": true,
+    "passed": true
+  },
+  "ticket02_regression": {
+    "passed": true,
+    "transport": "MQTT over TCP",
+    "port": 1883,
+    "tls": false,
+    "run_id": "d0252fbcf310b362dca961cf5c80f33a",
+    "correlated_roundtrip": true,
+    "device_request_read_leaked": false,
+    "unauthorized_request_suback": [
+      0
+    ],
+    "device_reply_publish": 135,
+    "device_telemetry_publish": 135,
+    "receiver_request_publish": 135,
+    "wrong_password_connack": 135,
+    "anonymous_connack": 135
+  },
+  "wokwi": {
+    "passed": true,
+    "run_id": "87e262e942f35bc4f7e310eba1538c14",
+    "session_id": "a20cbd94bfcf36f556ff25d49c14301f",
+    "mqtt_port": 1883,
+    "tls": false,
+    "local_ip": "10.13.37.2",
+    "mutual_auth": true,
+    "key_confirmation": true,
+    "encrypted_ack_verified": true,
+    "elapsed_ms": 12478
+  },
+  "capture_provenance": "user-supplied Wokwi VS Code serial matched to live LXC journal and broker",
+  "services": {
+    "lab-kimia-pqc-session.service": "active",
+    "lab-kimia-mqtt-diagnostic.service": "active"
+  },
+  "grafana_database": "ok",
+  "influx_status": "pass",
+  "esp32_build": {
+    "passed": true,
+    "ram_bytes": 83220,
+    "ram_capacity": 327680,
+    "flash_bytes": 811405,
+    "flash_capacity": 1310720
+  },
+  "proof_esp32_regression_build": true,
+  "source_sha256": {
+    "firmware/src/mqtt_session.cpp": "bf8876fc72ebe653a4a6c83c5741ccfdd3a2ac54d98d6d25e43741523f3379b2",
+    "firmware/platformio.ini": "fbf1a3a07f0cbc01faf9aad17ec6f7c98a43d25a5132dd5842eb7905cd580dea",
+    "tools/session/native.cpp": "d01a5c381aa3d990c15fe6fbf7a8ad00bc36733311c4d3bfd4db468f6ac6391e",
+    "firmware/lib/pqc-proof/src/pqc_crypto.cpp": "bd471ebf46172ff131d7eab98f33bedca834a76299362850acc8a496e9aab635",
+    "firmware/lib/pqc-proof/src/pqc_crypto.h": "d5ffd82695d74e55f8269b3938d48dcca65216e0261e60555ebbb78c04235956",
+    "firmware/lib/pqc-proof/src/pqc_session.cpp": "8c31d56484b594a7df233384080375ab3c246e9f3300abb0a5edf895914ffd5c",
+    "firmware/lib/pqc-proof/src/pqc_session.h": "3d37701998e0b21bbd2973daed7ca6038a56d52fd2bf8ca68def86c7094ce8d0"
+  },
+  "private_artifact_sha256": {
+    "session-firmware/pqc-session-full.bin": "96beeaf5a116a2543ac442895d4a59667f11708a150ba5e0df76968224b1a35d",
+    "session-firmware/firmware.elf": "65f774da27124d151b3119376aa80b2e44f21862b5ca43da5c09e40024928330",
+    "pqc-session-build/libpqc-session.so": "18885cf472c294c8e6a3ab86dce6e0ce8a99a28f1143cde6e0cf2e9d4b61418f"
+  },
+  "limitations": [
+    "Prospective FN-DSA pinned to ticket-01 commit; no claim of final FIPS 206 compliance",
+    "Custom lab protocol, not an independently audited secure transport",
+    "MQTT credentials, topic metadata and availability are not protected by TLS",
+    "Wokwi success does not establish hardware RNG quality or physical performance"
+  ]
+}

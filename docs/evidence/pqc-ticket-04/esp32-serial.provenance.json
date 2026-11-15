@@ -1,0 +1,9 @@
+{
+  "source": "agent-captured Wokwi VS Code RFC2217 UART; sensor controls operated through Wokwi UI",
+  "capture_sha256": "5109f261f0272851d530ca95f21e46f44b80501946593ba45950cd090118565a",
+  "raw_capture_sha256": "5109f261f0272851d530ca95f21e46f44b80501946593ba45950cd090118565a",
+  "raw_capture_path": "evidence/local/wokwi-ticket04-r06.txt",
+  "normalization": "none; byte-for-byte UART capture",
+  "endpoint": "localhost:4000",
+  "user_reported_prior_pause": true
+}

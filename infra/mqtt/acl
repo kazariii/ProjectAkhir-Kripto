@@ -1,0 +1,11 @@
+user diag-device
+topic write lab/kimia/pqc/session/up
+topic read lab/kimia/pqc/session/down
+topic write lab/kimia/pqc/diag/request
+topic read lab/kimia/pqc/diag/reply
+
+user diag-receiver
+topic read lab/kimia/pqc/session/up
+topic write lab/kimia/pqc/session/down
+topic read lab/kimia/pqc/diag/request
+topic write lab/kimia/pqc/diag/reply

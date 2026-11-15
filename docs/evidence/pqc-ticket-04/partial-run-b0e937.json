@@ -1,0 +1,704 @@
+{
+  "verified": false,
+  "run_id": "b0e9375f96b65cb7e9f0a607369abe8d",
+  "provenance": "User supplied serial excerpts; live receiver/Influx points independently matched",
+  "matched_storage": true,
+  "stored_points": [
+    {
+      "session_id": "d8ddd0c7688619b437ca06b797d4598d",
+      "counter": 1,
+      "received_ns": 1794670428160322003,
+      "influx_time": "2026-11-14T15:33:48.160322003Z",
+      "temperature_c": 25.0,
+      "gas_raw": 2177,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "d8ddd0c7688619b437ca06b797d4598d",
+      "counter": 2,
+      "received_ns": 1794670433183019285,
+      "influx_time": "2026-11-14T15:33:53.183019285Z",
+      "temperature_c": 25.0,
+      "gas_raw": 2177,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "d8ddd0c7688619b437ca06b797d4598d",
+      "counter": 3,
+      "received_ns": 1794670437299565590,
+      "influx_time": "2026-11-14T15:33:57.29956559Z",
+      "temperature_c": 25.0,
+      "gas_raw": 2177,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "d8ddd0c7688619b437ca06b797d4598d",
+      "counter": 4,
+      "received_ns": 1794670441528194466,
+      "influx_time": "2026-11-14T15:34:01.528194466Z",
+      "temperature_c": 25.0,
+      "gas_raw": 2177,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "d8ddd0c7688619b437ca06b797d4598d",
+      "counter": 5,
+      "received_ns": 1794670446625130145,
+      "influx_time": "2026-11-14T15:34:06.625130145Z",
+      "temperature_c": 25.0,
+      "gas_raw": 2177,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "d8ddd0c7688619b437ca06b797d4598d",
+      "counter": 6,
+      "received_ns": 1794670452577817164,
+      "influx_time": "2026-11-14T15:34:12.577817164Z",
+      "temperature_c": 25.0,
+      "gas_raw": 2177,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "d8ddd0c7688619b437ca06b797d4598d",
+      "counter": 7,
+      "received_ns": 1794670462511963481,
+      "influx_time": "2026-11-14T15:34:22.511963481Z",
+      "temperature_c": 25.0,
+      "gas_raw": 2177,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "d8ddd0c7688619b437ca06b797d4598d",
+      "counter": 8,
+      "received_ns": 1794670473050652260,
+      "influx_time": "2026-11-14T15:34:33.05065226Z",
+      "temperature_c": 25.0,
+      "gas_raw": 2177,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "d8ddd0c7688619b437ca06b797d4598d",
+      "counter": 9,
+      "received_ns": 1794670488019370913,
+      "influx_time": "2026-11-14T15:34:48.019370913Z",
+      "temperature_c": 25.0,
+      "gas_raw": 2177,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "6d41ba81fb2d4de39fe741d3b556abf2",
+      "counter": 1,
+      "received_ns": 1794670550145927486,
+      "influx_time": "2026-11-14T15:35:50.145927486Z",
+      "temperature_c": 46.0,
+      "gas_raw": 2177,
+      "gas_alarm": true,
+      "temperature_alarm": true
+    },
+    {
+      "session_id": "6d41ba81fb2d4de39fe741d3b556abf2",
+      "counter": 2,
+      "received_ns": 1794670552720306441,
+      "influx_time": "2026-11-14T15:35:52.720306441Z",
+      "temperature_c": 46.0,
+      "gas_raw": 2177,
+      "gas_alarm": true,
+      "temperature_alarm": true
+    },
+    {
+      "session_id": "6d41ba81fb2d4de39fe741d3b556abf2",
+      "counter": 3,
+      "received_ns": 1794670573460440281,
+      "influx_time": "2026-11-14T15:36:13.460440281Z",
+      "temperature_c": 46.0,
+      "gas_raw": 2257,
+      "gas_alarm": true,
+      "temperature_alarm": true
+    },
+    {
+      "session_id": "6d41ba81fb2d4de39fe741d3b556abf2",
+      "counter": 4,
+      "received_ns": 1794670575616200291,
+      "influx_time": "2026-11-14T15:36:15.616200291Z",
+      "temperature_c": 46.0,
+      "gas_raw": 2257,
+      "gas_alarm": true,
+      "temperature_alarm": true
+    },
+    {
+      "session_id": "6d41ba81fb2d4de39fe741d3b556abf2",
+      "counter": 5,
+      "received_ns": 1794670577776523302,
+      "influx_time": "2026-11-14T15:36:17.776523302Z",
+      "temperature_c": 46.0,
+      "gas_raw": 2257,
+      "gas_alarm": true,
+      "temperature_alarm": true
+    },
+    {
+      "session_id": "6d41ba81fb2d4de39fe741d3b556abf2",
+      "counter": 6,
+      "received_ns": 1794670579892481186,
+      "influx_time": "2026-11-14T15:36:19.892481186Z",
+      "temperature_c": 46.0,
+      "gas_raw": 2257,
+      "gas_alarm": true,
+      "temperature_alarm": true
+    }
+  ],
+  "observed_alarm_states": [
+    1,
+    3
+  ],
+  "all_four_states": false,
+  "grafana": {
+    "history_panel_results": {
+      "2": {
+        "status": 200,
+        "frames": [
+          {
+            "schema": {
+              "name": "suhu",
+              "refId": "A",
+              "meta": {
+                "typeVersion": [
+                  0,
+                  0
+                ],
+                "executedQueryString": "from(bucket: \"telemetry\")\n  |> range(start: 2026-11-14T15:33:47.16Z, stop: 2026-11-14T15:35:51.146Z)\n  |> filter(fn: (r) => r._measurement == \"suhu\" and r._field == \"temperature_c\" and r.device_id == \"esp32-meja01\")\n  |> aggregateWindow(every: 2s, fn: mean, createEmpty: true)\n  |> yield(name: \"suhu\")"
+              },
+              "fields": [
+                {
+                  "name": "Time",
+                  "type": "time",
+                  "typeInfo": {
+                    "frame": "time.Time",
+                    "nullable": true
+                  }
+                },
+                {
+                  "name": "temperature_c",
+                  "type": "number",
+                  "typeInfo": {
+                    "frame": "float64",
+                    "nullable": true
+                  },
+                  "labels": {
+                    "device_id": "esp32-meja01"
+                  }
+                }
+              ]
+            },
+            "data": {
+              "values": [
+                [
+                  1794670428000,
+                  1794670430000,
+                  1794670432000,
+                  1794670434000,
+                  1794670436000,
+                  1794670438000,
+                  1794670440000,
+                  1794670442000,
+                  1794670444000,
+                  1794670446000,
+                  1794670448000,
+                  1794670450000,
+                  1794670452000,
+                  1794670454000,
+                  1794670456000,
+                  1794670458000,
+                  1794670460000,
+                  1794670462000,
+                  1794670464000,
+                  1794670466000,
+                  1794670468000,
+                  1794670470000,
+                  1794670472000,
+                  1794670474000,
+                  1794670476000,
+                  1794670478000,
+                  1794670480000,
+                  1794670482000,
+                  1794670484000,
+                  1794670486000,
+                  1794670488000,
+                  1794670490000,
+                  1794670492000,
+                  1794670494000,
+                  1794670496000,
+                  1794670498000,
+                  1794670500000,
+                  1794670502000,
+                  1794670504000,
+                  1794670506000,
+                  1794670508000,
+                  1794670510000,
+                  1794670512000,
+                  1794670514000,
+                  1794670516000,
+                  1794670518000,
+                  1794670520000,
+                  1794670522000,
+                  1794670524000,
+                  1794670526000,
+                  1794670528000,
+                  1794670530000,
+                  1794670532000,
+                  1794670534000,
+                  1794670536000,
+                  1794670538000,
+                  1794670540000,
+                  1794670542000,
+                  1794670544000,
+                  1794670546000,
+                  1794670548000,
+                  1794670550000,
+                  1794670551146
+                ],
+                [
+                  null,
+                  25,
+                  null,
+                  25,
+                  null,
+                  25,
+                  null,
+                  25,
+                  null,
+                  null,
+                  25,
+                  null,
+                  null,
+                  25,
+                  null,
+                  null,
+                  null,
+                  null,
+                  25,
+                  null,
+                  null,
+                  null,
+                  null,
+                  25,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  25,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  46
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "4": {
+        "status": 200,
+        "frames": [
+          {
+            "schema": {
+              "name": "suhu",
+              "refId": "A",
+              "meta": {
+                "typeVersion": [
+                  0,
+                  0
+                ],
+                "executedQueryString": "from(bucket: \"telemetry\")\n  |> range(start: 2026-11-14T15:33:47.16Z, stop: 2026-11-14T15:35:51.146Z)\n  |> filter(fn: (r) => r._measurement == \"suhu\" and r._field == \"gas_raw\" and r.device_id == \"esp32-meja01\")\n  |> aggregateWindow(every: 2s, fn: mean, createEmpty: true)\n  |> yield(name: \"gas\")"
+              },
+              "fields": [
+                {
+                  "name": "Time",
+                  "type": "time",
+                  "typeInfo": {
+                    "frame": "time.Time",
+                    "nullable": true
+                  }
+                },
+                {
+                  "name": "gas_raw",
+                  "type": "number",
+                  "typeInfo": {
+                    "frame": "float64",
+                    "nullable": true
+                  },
+                  "labels": {
+                    "device_id": "esp32-meja01"
+                  }
+                }
+              ]
+            },
+            "data": {
+              "values": [
+                [
+                  1794670428000,
+                  1794670430000,
+                  1794670432000,
+                  1794670434000,
+                  1794670436000,
+                  1794670438000,
+                  1794670440000,
+                  1794670442000,
+                  1794670444000,
+                  1794670446000,
+                  1794670448000,
+                  1794670450000,
+                  1794670452000,
+                  1794670454000,
+                  1794670456000,
+                  1794670458000,
+                  1794670460000,
+                  1794670462000,
+                  1794670464000,
+                  1794670466000,
+                  1794670468000,
+                  1794670470000,
+                  1794670472000,
+                  1794670474000,
+                  1794670476000,
+                  1794670478000,
+                  1794670480000,
+                  1794670482000,
+                  1794670484000,
+                  1794670486000,
+                  1794670488000,
+                  1794670490000,
+                  1794670492000,
+                  1794670494000,
+                  1794670496000,
+                  1794670498000,
+                  1794670500000,
+                  1794670502000,
+                  1794670504000,
+                  1794670506000,
+                  1794670508000,
+                  1794670510000,
+                  1794670512000,
+                  1794670514000,
+                  1794670516000,
+                  1794670518000,
+                  1794670520000,
+                  1794670522000,
+                  1794670524000,
+                  1794670526000,
+                  1794670528000,
+                  1794670530000,
+                  1794670532000,
+                  1794670534000,
+                  1794670536000,
+                  1794670538000,
+                  1794670540000,
+                  1794670542000,
+                  1794670544000,
+                  1794670546000,
+                  1794670548000,
+                  1794670550000,
+                  1794670551146
+                ],
+                [
+                  null,
+                  2177,
+                  null,
+                  2177,
+                  null,
+                  2177,
+                  null,
+                  2177,
+                  null,
+                  null,
+                  2177,
+                  null,
+                  null,
+                  2177,
+                  null,
+                  null,
+                  null,
+                  null,
+                  2177,
+                  null,
+                  null,
+                  null,
+                  null,
+                  2177,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  2177,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  2177
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "6": {
+        "status": 200,
+        "frames": [
+          {
+            "schema": {
+              "refId": "A",
+              "meta": {
+                "typeVersion": [
+                  0,
+                  0
+                ],
+                "executedQueryString": "from(bucket: \"telemetry\")\n  |> range(start: 2026-11-14T15:33:47.16Z, stop: 2026-11-14T15:35:51.146Z)\n  |> filter(fn: (r) => r._measurement == \"suhu\" and r.device_id == \"esp32-meja01\")\n  |> filter(fn: (r) => r._field == \"temperature_c\" or r._field == \"gas_raw\" or r._field == \"gas_alarm\" or r._field == \"temperature_alarm\")\n  |> pivot(rowKey: [\"_time\"], columnKey: [\"_field\"], valueColumn: \"_value\")\n  |> filter(fn: (r) => exists r.gas_alarm and exists r.temperature_alarm and exists r.temperature_c and exists r.gas_raw)\n  |> map(fn: (r) => ({r with kondisi: if r.gas_alarm and r.temperature_alarm then \"Peringatan gas dan suhu\" else if r.gas_alarm then \"Peringatan gas\" else if r.temperature_alarm then \"Peringatan suhu\" else \"Normal\"}))\n  |> keep(columns: [\"_time\", \"temperature_c\", \"gas_raw\", \"gas_alarm\", \"temperature_alarm\", \"kondisi\"])\n  |> sort(columns: [\"_time\"], desc: true)"
+              },
+              "fields": [
+                {
+                  "name": "_time",
+                  "type": "time",
+                  "typeInfo": {
+                    "frame": "time.Time",
+                    "nullable": true
+                  }
+                },
+                {
+                  "name": "gas_alarm",
+                  "type": "boolean",
+                  "typeInfo": {
+                    "frame": "bool",
+                    "nullable": true
+                  },
+                  "labels": {}
+                },
+                {
+                  "name": "gas_raw",
+                  "type": "number",
+                  "typeInfo": {
+                    "frame": "int64",
+                    "nullable": true
+                  },
+                  "labels": {}
+                },
+                {
+                  "name": "temperature_alarm",
+                  "type": "boolean",
+                  "typeInfo": {
+                    "frame": "bool",
+                    "nullable": true
+                  },
+                  "labels": {}
+                },
+                {
+                  "name": "temperature_c",
+                  "type": "number",
+                  "typeInfo": {
+                    "frame": "float64",
+                    "nullable": true
+                  },
+                  "labels": {}
+                },
+                {
+                  "name": "kondisi",
+                  "type": "string",
+                  "typeInfo": {
+                    "frame": "string",
+                    "nullable": true
+                  },
+                  "labels": {}
+                }
+              ]
+            },
+            "data": {
+              "values": [
+                [
+                  1794670550145,
+                  1794670488019,
+                  1794670473050,
+                  1794670462511,
+                  1794670452577,
+                  1794670446625,
+                  1794670441528,
+                  1794670437299,
+                  1794670433183,
+                  1794670428160
+                ],
+                [
+                  true,
+                  true,
+                  true,
+                  true,
+                  true,
+                  true,
+                  true,
+                  true,
+                  true,
+                  true
+                ],
+                [
+                  2177,
+                  2177,
+                  2177,
+                  2177,
+                  2177,
+                  2177,
+                  2177,
+                  2177,
+                  2177,
+                  2177
+                ],
+                [
+                  true,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false
+                ],
+                [
+                  46,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25
+                ],
+                [
+                  "Peringatan gas dan suhu",
+                  "Peringatan gas",
+                  "Peringatan gas",
+                  "Peringatan gas",
+                  "Peringatan gas",
+                  "Peringatan gas",
+                  "Peringatan gas",
+                  "Peringatan gas",
+                  "Peringatan gas",
+                  "Peringatan gas"
+                ]
+              ],
+              "nanos": [
+                [
+                  927486,
+                  370913,
+                  652260,
+                  963481,
+                  817164,
+                  130145,
+                  194466,
+                  565590,
+                  19285,
+                  322003
+                ],
+                null,
+                null,
+                null,
+                null,
+                null
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "history_table_points_matched": true,
+    "historical_alarm_states": [
+      {
+        "counter": 1,
+        "session_id": "d8ddd0c7688619b437ca06b797d4598d",
+        "state": 1,
+        "query_clock": "receiver time + 100ms for historical state validation"
+      },
+      {
+        "counter": 1,
+        "session_id": "6d41ba81fb2d4de39fe741d3b556abf2",
+        "state": 3,
+        "query_clock": "receiver time + 100ms for historical state validation"
+      }
+    ],
+    "latest_stats_matched_at_sample_time": true,
+    "current_alarm_state_at_verification": [
+      -1
+    ]
+  },
+  "limitations": [
+    "Serial BEGIN was interleaved with SDK LEDC errors; excerpts contain duplicates and omissions",
+    "Only gas-only and gas-plus-temperature states observed; no Normal or temperature-only evidence",
+    "Broker logged keepalive timeout; user confirmed pressing Pause"
+  ]
+}

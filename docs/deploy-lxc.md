@@ -1,5 +1,7 @@
 # Monitoring di LXC
 
+> **Arsip deployment MQTT/TLS 11 November 2026.** Jalur utama telah dimigrasikan ke MQTT/PQC tanpa TLS pada tiket 06. Untuk operasi sekarang gunakan [operasi MQTT/PQC](operasi-pqc.md); perintah/hasil di bawah adalah catatan sebelum migrasi.
+
 Deployment dilakukan pada 11 November 2026 di `root@10.34.211.141`, hostname `TA-Bu-Ari`, Ubuntu 26.04.1 LTS, RAM 2 GB, disk 10 GB. Direktori aplikasi: `/opt/lab-kimia-suhu`.
 
 ## Akses

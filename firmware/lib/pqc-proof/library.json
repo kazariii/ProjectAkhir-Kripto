@@ -1,0 +1,1 @@
+{"name":"pqc-proof","version":"0.1.0","dependencies":{"mlkem-native":"*","c-fn-dsa":"*","mbedtls-extra":"*"}}

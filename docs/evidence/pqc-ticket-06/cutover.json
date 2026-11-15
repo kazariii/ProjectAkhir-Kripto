@@ -1,0 +1,68 @@
+{
+  "cutover_utc": "2026-11-15T06:43:02.263255+00:00",
+  "preserved_initialized_state": true,
+  "historical_points": [
+    {
+      "session_id": "79023128dccac3dabb68a5f7bbce51d8",
+      "counter": 1,
+      "received_ns": 1794673196852637418,
+      "influx_time": "2026-11-14T16:19:56.852637418Z",
+      "temperature_c": 25.0,
+      "gas_raw": 2177,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "6031710b4aa72b64cf4e4fcb81436467",
+      "counter": 63,
+      "received_ns": 1794673653829751436,
+      "influx_time": "2026-11-14T16:27:33.829751436Z",
+      "temperature_c": 25.0,
+      "gas_raw": 513,
+      "gas_alarm": false,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+      "counter": 1,
+      "received_ns": 1794722547905196595,
+      "influx_time": "2026-11-15T06:02:27.905196595Z",
+      "temperature_c": 25.0,
+      "gas_raw": 2177,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+      "counter": 12,
+      "received_ns": 1794722985746088680,
+      "influx_time": "2026-11-15T06:09:45.74608868Z",
+      "temperature_c": 25.0,
+      "gas_raw": 513,
+      "gas_alarm": false,
+      "temperature_alarm": false
+    }
+  ],
+  "default_services": [
+    "influxdb",
+    "grafana"
+  ],
+  "telegraf_removed": true,
+  "receiver_active_enabled": true,
+  "diagnostic_stopped": true,
+  "private_mqtt_port": 1883,
+  "tls": false,
+  "autostart_configured": true,
+  "lxc_reboot_tested": false,
+  "default_compose_without_cloud_credentials": true,
+  "volumes": {
+    "lab-kimia-suhu-influxdb-1": {
+      "/etc/influxdb2": "lab-kimia-suhu_influx-config",
+      "/var/lib/influxdb2": "lab-kimia-suhu_influx-data"
+    },
+    "lab-kimia-suhu-grafana-1": {
+      "/var/lib/grafana": "lab-kimia-suhu_grafana-data"
+    }
+  },
+  "dashboard_uid": "suhu-meja01"
+}

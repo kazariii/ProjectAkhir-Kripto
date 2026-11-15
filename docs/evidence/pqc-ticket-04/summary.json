@@ -1,0 +1,85 @@
+{
+  "ticket": "04",
+  "implemented": true,
+  "verified": true,
+  "status": "done",
+  "collected_utc": "2026-11-14T16:36:28.580779+00:00",
+  "unit_tests": {
+    "passed": true,
+    "tests": 11
+  },
+  "pqc_sensor_loop_regression": [
+    "PASS: PQC selection shares actual sensor loop, all four alarm states, 2s cadence, latest-only readings, invalid latch/recovery",
+    "PASS: PQC startup failure preserves local alarm"
+  ],
+  "legacy_sensor_loop_regression": [
+    "PASS: independent gas/temperature, four states, LED/buzzer, invalid-reading latch, valid recovery, local operation without MQTT/config",
+    "PASS: actual firmware loop waits for command completion, keeps 2s cadence, rejects disconnected sensor",
+    "PASS: independent gas/temperature, four states, LED/buzzer, invalid-reading latch, valid recovery, local operation without MQTT/config",
+    "PASS: actual firmware loop waits for command completion, keeps 2s cadence, rejects disconnected sensor",
+    "PASS: stuck conversion times out without publishing a fake temperature",
+    "PASS: blocked reconnect preserves sensor cadence and local alarms; Wi-Fi/MQTT recover with same TLS/auth; no replay, expiry, failed publish, retry/rollover",
+    "PASS: network allocation failure preserves local alarm",
+    "PASS: network allocation failure preserves local alarm"
+  ],
+  "session_regression": {
+    "passed": true,
+    "checks": 71
+  },
+  "native_storage_grafana": "native-storage-grafana.json",
+  "wokwi": {
+    "run": {
+      "run_id": "f1cecf1e31692ad79413cff2e86b215a",
+      "local_ip": "10.13.37.2"
+    },
+    "acked_samples": 176,
+    "sent_samples": 182,
+    "unconfirmed_sent_frames": 6,
+    "session_ids": [
+      "6031710b4aa72b64cf4e4fcb81436467",
+      "79023128dccac3dabb68a5f7bbce51d8"
+    ],
+    "four_states": true,
+    "provenance": "agent-captured Wokwi VS Code RFC2217 UART; sensor controls operated through Wokwi UI; sensor readings and encrypted storage ACKs matched to live LXC, InfluxDB and Grafana"
+  },
+  "firmware_build": {
+    "passed": true,
+    "ram_bytes": 83580,
+    "flash_bytes": 860701,
+    "legacy_build_passed": true
+  },
+  "grafana_database": "ok",
+  "influx_status": "pass",
+  "services": {
+    "lab-kimia-pqc-session.service": "active",
+    "lab-kimia-mqtt-diagnostic.service": "active"
+  },
+  "source_sha256": {
+    "firmware/src/main.cpp": "915b0b4aec038f37e31310ea099397476a091af163db8df5ade8ded743dfd3f0",
+    "firmware/include/pending_sample.h": "8b566e1249c667e4d59c5a2d2bc9bf2c98dc62defa46324ce399b0057e011b16",
+    "firmware/include/telemetry.h": "5a01a0805a3e4f8e33d0d3319461c5619e695593dbbf0cd85f9e45e1591ccbd6",
+    "firmware/include/monitoring.h": "596c5fa190b6c45b40261a9bc75197c228835482ea41f58d14df3e2749e6975b",
+    "firmware/lib/pqc-telemetry/src/pqc_telemetry.cpp": "efb9d0e97a8124ffcf031884133b5e2d3a58b2ced8d9caff2fc9db38d48c5b9f",
+    "firmware/lib/pqc-telemetry/src/pqc_telemetry.h": "f9434aac3efbf134241dc21da8347799152588020641749fb151493d6bc93f4c",
+    "firmware/platformio.ini": "aec4e160b823f38aebc8ad3e96c0ae9f45d393006722205c317e81e46bbf6db0",
+    "tools/session/receiver.py": "0ba6bc46ebc2e097649c09393a4c57f74ce5a98c23f5e3b461729b7eb9d449eb",
+    "tools/telemetry/storage.py": "85211db1ba1c43ac5f0cfc09dceb5386b3343645d70690d48e1e54f3ddfe635f",
+    "infra/mqtt/session.service": "c7c265c0154b41c09f1e8113182f3a2870b9a4aa564beaa6a122429620a28299",
+    "infra/grafana/dashboards/suhu.json": "21c73a90167a92e9337540bb2723b21620cfd12e9d09edb0337ad9fc2dd74770",
+    "tools/telemetry/simulator/wokwi.toml": "c7de8188278cabcbb9a555d9dbc87be546127a39b7ada14e2700533b16f30528",
+    "tools/telemetry/simulator/diagram.json": "e22cc761f8554a6e197411b45ac298d8b5f024fc321e01751772cf4a0cc9346c",
+    "firmware/mq2-level.chip.wasm": "993a478e98ef70d52ef564e46ba50a2914ab74c697fb65f549eaf816765e485c"
+  },
+  "private_artifact_sha256": {
+    "pqc-telemetry-full.bin": "8ef44c83f52bc2e70ac83430fbf11e60de89fe9a42a6522331ac84217754b6c9",
+    "firmware.elf": "e228c1489c13ab77885e83c7f80896232ad1c7359dd3579ff7eefffdab31405a"
+  },
+  "limitations": [
+    "Prospective FN-DSA; custom lab protocol, no production security certification",
+    "MQTT metadata and broker credentials remain plaintext without TLS",
+    "Rekey at 240s can pause telemetry about 12 simulated seconds; local sensors/alarms continue",
+    "Wokwi virtual time can lag LXC wall time; missing storage ACKs trigger a fresh handshake after 10 virtual seconds",
+    "Legacy ingress remains available until migration ticket 06; run one simulator at a time",
+    "Wokwi does not prove physical sensor calibration, RNG quality or hardware performance"
+  ]
+}

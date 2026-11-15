@@ -1,0 +1,101 @@
+{
+  "recorded_at_utc": "2026-11-14T13:29:01.589742+00:00",
+  "scope": "ticket 01 isolated one-message proof; no MQTT session or production migration",
+  "profile": "ML-KEM-512 / ChaCha20-Poly1305-IETF / prospective FN-DSA degree 512",
+  "source_lock_sha256": "390d2d63a0cf12edb4b944680af4a4de91126cd2a03de8f662c5932fbd313766",
+  "upstream_files_verified": 156,
+  "sources": [
+    {
+      "name": "mlkem-native",
+      "commit": "d1b2fe782888bdb761a50336012923180be7f502",
+      "revision": "v2.0.0",
+      "url": "https://github.com/pq-code-package/mlkem-native"
+    },
+    {
+      "name": "c-fn-dsa",
+      "commit": "1b858880dcac091b5e5f84f0e4d8617c35ba1392",
+      "revision": "prospective FN-DSA; not final FIPS 206",
+      "url": "https://github.com/pornin/c-fn-dsa"
+    },
+    {
+      "name": "mbedtls-extra",
+      "commit": "555f84735aecdbd76a566cf087ec8425dfb0c8ab",
+      "revision": "v2.28.7; missing AEAD/HKDF components only, matching Arduino SDK headers",
+      "url": "https://github.com/Mbed-TLS/mbedtls"
+    }
+  ],
+  "lxc_native": {
+    "architecture": "x86_64",
+    "metrics": {
+      "native_response": true,
+      "server_verify_us": 32,
+      "encapsulate_us": 29,
+      "sign_us": 2295,
+      "encrypt_us": 232
+    },
+    "positive": {
+      "verified": true,
+      "aead_rfc8439": true,
+      "payload": {
+        "device_id": "pqc-proof-only",
+        "temperature_c": 26.25,
+        "gas_raw": 321,
+        "gas_alarm": false,
+        "temperature_alarm": false
+      }
+    },
+    "negative": {
+      "positive_controls": 2,
+      "negative_checks": 13,
+      "aead_rfc8439": true,
+      "passed": true
+    }
+  },
+  "esp32_build": {
+    "passed": true,
+    "static_ram_bytes": 77672,
+    "ram_capacity_bytes": 327680,
+    "flash_bytes": 783849,
+    "application_partition_bytes": 1310720,
+    "full_image_sha256": "c7adf0c37d7adb4785883ccab4373f2bec209e377251526f0a76ebad882bc2e6"
+  },
+  "esp32_runtime": {
+    "verified": true,
+    "provenance": "supplied ESP32/Wokwi serial capture; not hardware attestation",
+    "runtime_image_sha256": "c52b258e0ae4c18dbc0693eade143589e3aa124e017b73a5dc5b2cab009e3bc3",
+    "capture_sha256": "991d0d3e5b374069a80d548f277983f0adf412220421ad56057594967f3c863c",
+    "response_sha256": "f5c295a213b2adf3ca94cb76b44b7fa3782e61566d1e4b12898e9eb7b307d9e3",
+    "esp32_metrics": {
+      "target": "esp32",
+      "passed": true,
+      "aead_rfc8439": true,
+      "server_verify_us": 234340,
+      "encapsulate_us": 175921,
+      "sign_us": 12386392,
+      "encrypt_us": 19874,
+      "total_us": 12861140,
+      "heap_before": 193292,
+      "heap_after": 193224,
+      "minimum_heap": 189732,
+      "task_stack_free_bytes": 19216,
+      "response_bytes": 1624
+    },
+    "lxc_verification": {
+      "verified": true,
+      "aead_rfc8439": true,
+      "payload": {
+        "device_id": "pqc-proof-only",
+        "temperature_c": 26.25,
+        "gas_raw": 321,
+        "gas_alarm": false,
+        "temperature_alarm": false
+      }
+    },
+    "negative_controls": {
+      "positive_controls": 2,
+      "negative_checks": 13,
+      "aead_rfc8439": true,
+      "passed": true
+    }
+  }
+}

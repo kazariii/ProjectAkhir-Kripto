@@ -109,7 +109,7 @@ def main():
         fixture = Path(directory)
         # Never read the owner's .env. Render the actual production Compose file.
         base = ["docker", "compose", "--env-file", str(fixture / "empty.env"),
-                "-p", project, "-f", str(ROOT / "compose.yaml")]
+                "-p", project, "-f", str(ROOT / "compose.yaml"), "-f", str(ROOT / "compose.legacy.yaml")]
         (fixture / "empty.env").touch()
         config = json.loads(run(base + ["config", "--format", "json"], env=env))
         for service in ("influxdb", "grafana"):

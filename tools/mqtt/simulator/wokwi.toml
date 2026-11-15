@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = '../../../evidence/local/mqtt-firmware/mqtt-diagnostic-full.bin'
+elf = '../../../evidence/local/mqtt-firmware/firmware.elf'

@@ -1,0 +1,7 @@
+{
+    "source":  "automatic Wokwi RFC2217 UART capture; Computer Use sensor controls",
+    "capture_sha256":  "76f224b746525e8a217590be9d14c5c3640db6f7b6abffd9a867b94a194878b2",
+    "bytes":  71659,
+    "reader":  "tools/telemetry/capture_serial.mjs",
+    "paused":  false
+}

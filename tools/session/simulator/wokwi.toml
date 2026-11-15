@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = '../../../evidence/local/session-firmware/pqc-session-full.bin'
+elf = '../../../evidence/local/session-firmware/firmware.elf'

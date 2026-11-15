@@ -20,6 +20,7 @@ BOUNDARIES = r'''
 #include <cmath>
 #include <cstring>
 #include <functional>
+#define ESP_ARDUINO_VERSION_MAJOR 2
 static uint32_t clockMs = 1000;
 static bool sensorOnBus = true;
 static uint32_t conversionDurationMs = 750;
@@ -30,6 +31,7 @@ static int connectCalls = 0, wifiRetries = 0;
 static std::function<void()> duringConnect;
 static int gasDigital = 1;
 static bool ledOn = false, buzzerOn = false;
+static bool toneInitialized = false;
 static std::vector<std::string> logs, published;
 uint32_t millis() { return clockMs; }
 void delay(unsigned int ms) { clockMs += ms; }
@@ -44,9 +46,27 @@ struct SerialPort {
 } Serial;
 enum { WL_CONNECTED = 3, WIFI_STA = 1, INPUT = 0, OUTPUT = 1, ADC_11db = 3, LOW = 0, HIGH = 1 };
 void pinMode(int, int) {}
-void digitalWrite(int pin, int value) { assert(pin == 25); ledOn = value == HIGH; }
-void tone(int pin, int frequency) { assert(pin == 26 && frequency == 2000); buzzerOn = true; }
-void noTone(int pin) { assert(pin == 26); buzzerOn = false; }
+void digitalWrite(int pin, int value) {
+    assert(pin == 25 || pin == 26);
+    if (pin == 25) ledOn = value == HIGH;
+    else { assert(value == LOW); buzzerOn = false; }
+}
+double ledcSetup(int channel, int frequency, int bits) {
+    assert(channel == 0 && frequency == 2000 && bits == 10);
+    toneInitialized = true; return frequency;
+}
+void tone(int pin, int frequency) {
+    assert(pin == 26 && frequency == 2000);
+    assert(toneInitialized && "LEDC is not initialized: SDK 2 tone reads duty before setup");
+    buzzerOn = true;
+}
+void noTone(int pin) {
+    assert(pin == 26);
+    // Arduino-ESP32 2.0.17 TONE_END calls LEDC on its channel even before
+    // TONE_START initialized it. Catch the real setup() call-site error.
+    assert(toneInitialized && "LEDC is not initialized: noTone before first tone");
+    buzzerOn = false;
+}
 int analogRead(int) { return 1200; }
 int digitalRead(int pin) { assert(pin == 27); return gasDigital; }
 void analogReadResolution(int) {}

@@ -1,0 +1,2541 @@
+[
+  {
+    "event": "session_established",
+    "utc": "2026-11-15T06:02:25.075505+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "peer_authenticated": true,
+    "client_key_confirmed": true
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:02:27.912003+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 1,
+    "received_ns": 1794722547905196595,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2177,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:02:27.912075+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 1
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:02:31.526723+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 2,
+    "received_ns": 1794722551520146144,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2177,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:02:31.526790+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 2
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:02:35.830525+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 3,
+    "received_ns": 1794722555823852203,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2177,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:02:35.830601+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 3
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:02:40.837680+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 4,
+    "received_ns": 1794722560831058941,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2177,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:02:40.837751+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 4
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:02:46.157124+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 5,
+    "received_ns": 1794722566150398990,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2177,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:02:46.157195+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 5
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:02:52.210220+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 6,
+    "received_ns": 1794722572203568452,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2177,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:02:52.210290+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 6
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:02:59.107146+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 7,
+    "received_ns": 1794722579100265216,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2177,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:02:59.107217+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 7
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:03:05.073696+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 8,
+    "received_ns": 1794722585066790862,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:03:05.073770+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 8
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:03:07.203480+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 9,
+    "received_ns": 1794722587196468055,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:03:07.203552+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 9
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:03:09.324916+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 10,
+    "received_ns": 1794722589318251250,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:03:09.325009+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 10
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:03:11.452458+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 11,
+    "received_ns": 1794722591445699046,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:03:11.452535+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 11
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:03:13.592717+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 12,
+    "received_ns": 1794722593586084177,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:03:13.592789+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 12
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:03:15.746525+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 13,
+    "received_ns": 1794722595739807944,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:03:15.746598+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 13
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:03:17.895345+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 14,
+    "received_ns": 1794722597888779776,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:03:17.895418+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 14
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:03:20.008318+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 15,
+    "received_ns": 1794722600001792765,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:03:20.008390+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 15
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:03:22.139271+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 16,
+    "received_ns": 1794722602132702318,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:03:22.139341+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 16
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:03:24.265214+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 17,
+    "received_ns": 1794722604258569689,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:03:24.265284+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 17
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:03:26.434851+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 18,
+    "received_ns": 1794722606428315389,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:03:26.434942+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 18
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:03:28.560512+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 19,
+    "received_ns": 1794722608558977794,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:03:28.560582+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 19
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:03:30.689990+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 20,
+    "received_ns": 1794722610688520913,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:03:30.690064+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 20
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:03:32.850482+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 21,
+    "received_ns": 1794722612843865905,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:03:32.850555+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 21
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:03:34.978634+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 22,
+    "received_ns": 1794722614971761587,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:03:34.978715+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 22
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:03:37.109537+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 23,
+    "received_ns": 1794722617103013263,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:03:37.109609+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 23
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:03:39.260540+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 24,
+    "received_ns": 1794722619253796477,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:03:39.260618+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 24
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:03:41.437287+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 25,
+    "received_ns": 1794722621435672704,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:03:41.437362+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 25
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:03:43.588212+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 26,
+    "received_ns": 1794722623581677860,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:03:43.588284+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 26
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:03:45.708795+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 27,
+    "received_ns": 1794722625702154492,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:03:45.708867+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 27
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:03:47.854274+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 28,
+    "received_ns": 1794722627847738807,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:03:47.854345+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 28
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:03:49.963310+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 29,
+    "received_ns": 1794722629956522745,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:03:49.963386+00:00",
+    "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+    "counter": 29
+  },
+  {
+    "event": "session_established",
+    "utc": "2026-11-15T06:04:25.826403+00:00",
+    "session_id": "5a267f8dcdd948b670a04e4b0866d182",
+    "peer_authenticated": true,
+    "client_key_confirmed": true
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:04:26.959779+00:00",
+    "session_id": "5a267f8dcdd948b670a04e4b0866d182",
+    "counter": 1,
+    "received_ns": 1794722666947132127,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:04:26.959854+00:00",
+    "session_id": "5a267f8dcdd948b670a04e4b0866d182",
+    "counter": 1
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:04:29.202400+00:00",
+    "session_id": "5a267f8dcdd948b670a04e4b0866d182",
+    "counter": 2,
+    "received_ns": 1794722669195653020,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:04:29.202474+00:00",
+    "session_id": "5a267f8dcdd948b670a04e4b0866d182",
+    "counter": 2
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:04:31.403876+00:00",
+    "session_id": "5a267f8dcdd948b670a04e4b0866d182",
+    "counter": 3,
+    "received_ns": 1794722671397341476,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:04:31.403955+00:00",
+    "session_id": "5a267f8dcdd948b670a04e4b0866d182",
+    "counter": 3
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:04:33.655845+00:00",
+    "session_id": "5a267f8dcdd948b670a04e4b0866d182",
+    "counter": 4,
+    "received_ns": 1794722673649376217,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:04:33.655918+00:00",
+    "session_id": "5a267f8dcdd948b670a04e4b0866d182",
+    "counter": 4
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:04:35.927276+00:00",
+    "session_id": "5a267f8dcdd948b670a04e4b0866d182",
+    "counter": 5,
+    "received_ns": 1794722675920627700,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:04:35.927346+00:00",
+    "session_id": "5a267f8dcdd948b670a04e4b0866d182",
+    "counter": 5
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:04:38.115000+00:00",
+    "session_id": "5a267f8dcdd948b670a04e4b0866d182",
+    "counter": 6,
+    "received_ns": 1794722678108303426,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:04:38.115073+00:00",
+    "session_id": "5a267f8dcdd948b670a04e4b0866d182",
+    "counter": 6
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:04:40.355617+00:00",
+    "session_id": "5a267f8dcdd948b670a04e4b0866d182",
+    "counter": 7,
+    "received_ns": 1794722680348653892,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:04:40.355689+00:00",
+    "session_id": "5a267f8dcdd948b670a04e4b0866d182",
+    "counter": 7
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:04:42.588771+00:00",
+    "session_id": "5a267f8dcdd948b670a04e4b0866d182",
+    "counter": 8,
+    "received_ns": 1794722682582056713,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:04:42.588842+00:00",
+    "session_id": "5a267f8dcdd948b670a04e4b0866d182",
+    "counter": 8
+  },
+  {
+    "event": "session_established",
+    "utc": "2026-11-15T06:05:25.960348+00:00",
+    "session_id": "56872cf55906d75ee2d702ade22e476f",
+    "peer_authenticated": true,
+    "client_key_confirmed": true
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:05:27.094837+00:00",
+    "session_id": "56872cf55906d75ee2d702ade22e476f",
+    "counter": 1,
+    "received_ns": 1794722727082632869,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:05:27.094925+00:00",
+    "session_id": "56872cf55906d75ee2d702ade22e476f",
+    "counter": 1
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:05:29.377436+00:00",
+    "session_id": "56872cf55906d75ee2d702ade22e476f",
+    "counter": 2,
+    "received_ns": 1794722729370445862,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:05:29.377507+00:00",
+    "session_id": "56872cf55906d75ee2d702ade22e476f",
+    "counter": 2
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:05:31.509996+00:00",
+    "session_id": "56872cf55906d75ee2d702ade22e476f",
+    "counter": 3,
+    "received_ns": 1794722731507524539,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:05:31.510094+00:00",
+    "session_id": "56872cf55906d75ee2d702ade22e476f",
+    "counter": 3
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:05:33.683599+00:00",
+    "session_id": "56872cf55906d75ee2d702ade22e476f",
+    "counter": 4,
+    "received_ns": 1794722733676745522,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:05:33.683698+00:00",
+    "session_id": "56872cf55906d75ee2d702ade22e476f",
+    "counter": 4
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:05:35.948423+00:00",
+    "session_id": "56872cf55906d75ee2d702ade22e476f",
+    "counter": 5,
+    "received_ns": 1794722735941722132,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:05:35.948518+00:00",
+    "session_id": "56872cf55906d75ee2d702ade22e476f",
+    "counter": 5
+  },
+  {
+    "event": "write_failed",
+    "utc": "2026-11-15T06:05:38.101769+00:00",
+    "session_id": "56872cf55906d75ee2d702ade22e476f",
+    "reason": "Influx write unconfirmed; no ACK or retry"
+  },
+  {
+    "event": "write_failed",
+    "utc": "2026-11-15T06:05:40.287937+00:00",
+    "session_id": "56872cf55906d75ee2d702ade22e476f",
+    "reason": "Influx write unconfirmed; no ACK or retry"
+  },
+  {
+    "event": "write_failed",
+    "utc": "2026-11-15T06:05:42.492741+00:00",
+    "session_id": "56872cf55906d75ee2d702ade22e476f",
+    "reason": "Influx write unconfirmed; no ACK or retry"
+  },
+  {
+    "event": "write_failed",
+    "utc": "2026-11-15T06:05:44.635935+00:00",
+    "session_id": "56872cf55906d75ee2d702ade22e476f",
+    "reason": "Influx write unconfirmed; no ACK or retry"
+  },
+  {
+    "event": "write_failed",
+    "utc": "2026-11-15T06:05:46.803150+00:00",
+    "session_id": "56872cf55906d75ee2d702ade22e476f",
+    "reason": "Influx write unconfirmed; no ACK or retry"
+  },
+  {
+    "event": "write_failed",
+    "utc": "2026-11-15T06:05:48.952493+00:00",
+    "session_id": "56872cf55906d75ee2d702ade22e476f",
+    "reason": "Influx write unconfirmed; no ACK or retry"
+  },
+  {
+    "event": "session_established",
+    "utc": "2026-11-15T06:06:04.488266+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "peer_authenticated": true,
+    "client_key_confirmed": true
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:06:05.600279+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 1,
+    "received_ns": 1794722765593452204,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:06:05.600356+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 1
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:06:07.822795+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 2,
+    "received_ns": 1794722767816125508,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:06:07.822868+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 2
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:06:10.033461+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 3,
+    "received_ns": 1794722770026850972,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:06:10.033535+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 3
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:06:12.274156+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 4,
+    "received_ns": 1794722772267516832,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:06:12.274229+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 4
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:06:14.503849+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 5,
+    "received_ns": 1794722774497435297,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:06:14.503921+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 5
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:06:16.747973+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 6,
+    "received_ns": 1794722776741378734,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:06:16.748057+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 6
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:06:18.971264+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 7,
+    "received_ns": 1794722778964347415,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:06:18.971355+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 7
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:06:21.164377+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 8,
+    "received_ns": 1794722781162957809,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:06:21.164450+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 8
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:06:23.350714+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 9,
+    "received_ns": 1794722783344054235,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:06:23.350788+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 9
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:06:25.624169+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 10,
+    "received_ns": 1794722785617714264,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:06:25.624242+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 10
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:06:27.837183+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 11,
+    "received_ns": 1794722787835099038,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:06:27.837258+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 11
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:06:30.071330+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 12,
+    "received_ns": 1794722790064428916,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:06:30.071764+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 12
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:06:32.269423+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 13,
+    "received_ns": 1794722792262553663,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:06:32.269495+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 13
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:06:34.499609+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 14,
+    "received_ns": 1794722794492909618,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:06:34.499680+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 14
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:06:36.665297+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 15,
+    "received_ns": 1794722796658656691,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:06:36.665367+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 15
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:06:38.891015+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 16,
+    "received_ns": 1794722798884379079,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:06:38.891100+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 16
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:06:41.127103+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 17,
+    "received_ns": 1794722801120421959,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:06:41.127176+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 17
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:06:43.361621+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 18,
+    "received_ns": 1794722803354981672,
+    "device_id": "esp32-meja01",
+    "temperature_c": 45.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": true
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:06:43.361694+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 18
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:06:45.567364+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 19,
+    "received_ns": 1794722805560663409,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:06:45.567435+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 19
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:06:47.836611+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 20,
+    "received_ns": 1794722807830033852,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:06:47.836707+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 20
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:06:50.012435+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 21,
+    "received_ns": 1794722810005876126,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:06:50.012507+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 21
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:06:52.203516+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 22,
+    "received_ns": 1794722812196997249,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:06:52.203587+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 22
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:06:54.416958+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 23,
+    "received_ns": 1794722814410387251,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:06:54.417063+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 23
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:06:56.632970+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 24,
+    "received_ns": 1794722816626298723,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:06:56.633051+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 24
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:06:58.818481+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 25,
+    "received_ns": 1794722818811532767,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:06:58.818576+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 25
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:07:01.036740+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 26,
+    "received_ns": 1794722821029809209,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:07:01.036841+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 26
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:07:03.257515+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 27,
+    "received_ns": 1794722823250560538,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:07:03.257586+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 27
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:07:05.423944+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 28,
+    "received_ns": 1794722825416987591,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:07:05.424185+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 28
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:07:07.621624+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 29,
+    "received_ns": 1794722827614914187,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:07:07.621699+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 29
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:07:09.861754+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 30,
+    "received_ns": 1794722829855074483,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:07:09.861829+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 30
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:07:12.121919+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 31,
+    "received_ns": 1794722832115284968,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:07:12.122025+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 31
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:07:14.338764+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 32,
+    "received_ns": 1794722834331876566,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:07:14.338835+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 32
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:07:16.580177+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 33,
+    "received_ns": 1794722836573202586,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:07:16.580251+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 33
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:07:18.808336+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 34,
+    "received_ns": 1794722838801651710,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:07:18.808407+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 34
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:07:20.990812+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 35,
+    "received_ns": 1794722840984199420,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:07:20.990890+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 35
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:07:23.205290+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 36,
+    "received_ns": 1794722843198625959,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:07:23.205364+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 36
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:07:25.431293+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 37,
+    "received_ns": 1794722845424411918,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:07:25.431395+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 37
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:07:27.696377+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 38,
+    "received_ns": 1794722847689359490,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:07:27.696477+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 38
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:07:29.937212+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 39,
+    "received_ns": 1794722849927643747,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:07:29.937298+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 39
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:07:32.126166+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 40,
+    "received_ns": 1794722852119398137,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:07:32.126752+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 40
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:07:34.332778+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 41,
+    "received_ns": 1794722854330986009,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:07:34.332850+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 41
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:07:36.516371+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 42,
+    "received_ns": 1794722856514266214,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:07:36.516452+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 42
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:07:38.749055+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 43,
+    "received_ns": 1794722858742337599,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:07:38.749129+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 43
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:07:40.950570+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 44,
+    "received_ns": 1794722860949022491,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:07:40.950641+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 44
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:07:43.173477+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 45,
+    "received_ns": 1794722863166544100,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:07:43.173562+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 45
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:07:45.447083+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 46,
+    "received_ns": 1794722865440221084,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:07:45.447184+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 46
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:07:47.681975+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 47,
+    "received_ns": 1794722867675490154,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:07:47.682062+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 47
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:07:49.864213+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 48,
+    "received_ns": 1794722869857657902,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:07:49.864285+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 48
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:07:52.060229+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 49,
+    "received_ns": 1794722872053632554,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:07:52.060304+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 49
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:07:54.247363+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 50,
+    "received_ns": 1794722874240792359,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:07:54.247436+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 50
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:07:56.456507+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 51,
+    "received_ns": 1794722876449560264,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:07:56.456933+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 51
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:07:58.644615+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 52,
+    "received_ns": 1794722878638069098,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:07:58.644692+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 52
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:08:00.851901+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 53,
+    "received_ns": 1794722880845487123,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:08:00.851998+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 53
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:08:03.062226+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 54,
+    "received_ns": 1794722883055468344,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:08:03.062300+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 54
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:08:05.215496+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 55,
+    "received_ns": 1794722885208809856,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:08:05.215571+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 55
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:08:07.497622+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 56,
+    "received_ns": 1794722887491016820,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:08:07.497695+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 56
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:08:09.760529+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 57,
+    "received_ns": 1794722889753952839,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:08:09.760601+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 57
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:08:11.954271+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 58,
+    "received_ns": 1794722891947640357,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:08:11.954345+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 58
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:08:14.153765+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 59,
+    "received_ns": 1794722894147140077,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:08:14.153836+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 59
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:08:16.380750+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 60,
+    "received_ns": 1794722896374275129,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:08:16.380823+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 60
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:08:18.579192+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 61,
+    "received_ns": 1794722898572615474,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:08:18.579266+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 61
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:08:20.789821+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 62,
+    "received_ns": 1794722900783177439,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:08:20.789902+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 62
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:08:22.973709+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 63,
+    "received_ns": 1794722902967100255,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:08:22.973782+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 63
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:08:25.178676+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 64,
+    "received_ns": 1794722905172185117,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:08:25.178750+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 64
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:08:27.358265+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 65,
+    "received_ns": 1794722907356606740,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:08:27.358714+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 65
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:08:29.569702+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 66,
+    "received_ns": 1794722909562921941,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:08:29.569786+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 66
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:08:31.753916+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 67,
+    "received_ns": 1794722911746781514,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:08:31.754010+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 67
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:08:33.994749+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 68,
+    "received_ns": 1794722913987813442,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:08:33.995236+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 68
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:08:36.203902+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 69,
+    "received_ns": 1794722916197262806,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:08:36.204478+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 69
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:08:38.422435+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 70,
+    "received_ns": 1794722918415597598,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:08:38.422508+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 70
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:08:40.587023+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 71,
+    "received_ns": 1794722920580397776,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:08:40.587095+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 71
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:08:42.787745+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 72,
+    "received_ns": 1794722922781318264,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:08:42.787822+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 72
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:08:45.025819+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 73,
+    "received_ns": 1794722925019216932,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:08:45.025891+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 73
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:08:47.261459+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 74,
+    "received_ns": 1794722927254841170,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:08:47.261532+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 74
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:08:49.435224+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 75,
+    "received_ns": 1794722929428657751,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:08:49.435301+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 75
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:08:51.674657+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 76,
+    "received_ns": 1794722931668094105,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:08:51.674729+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 76
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:08:53.980689+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 77,
+    "received_ns": 1794722933974196579,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:08:53.980761+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 77
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:08:56.153439+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 78,
+    "received_ns": 1794722936146708708,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:08:56.153521+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 78
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:08:58.332426+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 79,
+    "received_ns": 1794722938325810579,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:08:58.332498+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 79
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:09:00.528443+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 80,
+    "received_ns": 1794722940521351609,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:09:00.528547+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 80
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:09:02.706359+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 81,
+    "received_ns": 1794722942699642213,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:09:02.706460+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 81
+  },
+  {
+    "event": "renewal_requested",
+    "utc": "2026-11-15T06:09:04.707575+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f"
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:09:04.942230+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 82,
+    "received_ns": 1794722944935547049,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:09:04.942323+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f",
+    "counter": 82
+  },
+  {
+    "event": "renewal_requested",
+    "utc": "2026-11-15T06:09:09.898502+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f"
+  },
+  {
+    "event": "renewal_requested",
+    "utc": "2026-11-15T06:09:14.901070+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f"
+  },
+  {
+    "event": "renewal_requested",
+    "utc": "2026-11-15T06:09:19.903747+00:00",
+    "session_id": "0e19843623d38e60208b0bab8fa2db7f"
+  },
+  {
+    "event": "session_established",
+    "utc": "2026-11-15T06:09:20.938688+00:00",
+    "session_id": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+    "peer_authenticated": true,
+    "client_key_confirmed": true
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:09:21.902362+00:00",
+    "session_id": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+    "counter": 1,
+    "received_ns": 1794722961900264285,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:09:21.902432+00:00",
+    "session_id": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+    "counter": 1
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:09:24.049381+00:00",
+    "session_id": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+    "counter": 2,
+    "received_ns": 1794722964042696241,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:09:24.049451+00:00",
+    "session_id": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+    "counter": 2
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:09:26.315891+00:00",
+    "session_id": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+    "counter": 3,
+    "received_ns": 1794722966309245266,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:09:26.316002+00:00",
+    "session_id": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+    "counter": 3
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:09:28.534161+00:00",
+    "session_id": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+    "counter": 4,
+    "received_ns": 1794722968527638254,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 2423,
+    "gas_alarm": true,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:09:28.534234+00:00",
+    "session_id": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+    "counter": 4
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:09:30.725190+00:00",
+    "session_id": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+    "counter": 5,
+    "received_ns": 1794722970717840513,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:09:30.725267+00:00",
+    "session_id": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+    "counter": 5
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:09:32.897760+00:00",
+    "session_id": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+    "counter": 6,
+    "received_ns": 1794722972891242974,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:09:32.897833+00:00",
+    "session_id": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+    "counter": 6
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:09:35.059651+00:00",
+    "session_id": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+    "counter": 7,
+    "received_ns": 1794722975052922372,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:09:35.059736+00:00",
+    "session_id": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+    "counter": 7
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:09:37.184195+00:00",
+    "session_id": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+    "counter": 8,
+    "received_ns": 1794722977182821853,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:09:37.184267+00:00",
+    "session_id": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+    "counter": 8
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:09:39.310375+00:00",
+    "session_id": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+    "counter": 9,
+    "received_ns": 1794722979303962514,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:09:39.310450+00:00",
+    "session_id": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+    "counter": 9
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:09:41.443827+00:00",
+    "session_id": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+    "counter": 10,
+    "received_ns": 1794722981437338326,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:09:41.443899+00:00",
+    "session_id": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+    "counter": 10
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:09:43.596024+00:00",
+    "session_id": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+    "counter": 11,
+    "received_ns": 1794722983589370038,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:09:43.596094+00:00",
+    "session_id": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+    "counter": 11
+  },
+  {
+    "event": "telemetry_stored",
+    "utc": "2026-11-15T06:09:45.752665+00:00",
+    "session_id": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+    "counter": 12,
+    "received_ns": 1794722985746088680,
+    "device_id": "esp32-meja01",
+    "temperature_c": 25.0,
+    "gas_raw": 513,
+    "gas_alarm": false,
+    "temperature_alarm": false
+  },
+  {
+    "event": "stored_ack_queued",
+    "utc": "2026-11-15T06:09:45.752738+00:00",
+    "session_id": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+    "counter": 12
+  }
+]

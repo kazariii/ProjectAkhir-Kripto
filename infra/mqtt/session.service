@@ -1,0 +1,23 @@
+[Unit]
+Description=Lab Kimia authenticated PQC MQTT session receiver
+After=network-online.target docker.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+DynamicUser=yes
+WorkingDirectory=/opt/lab-kimia-mqtt
+LoadCredential=mqtt.json:/opt/lab-kimia-mqtt/evidence/local/mqtt-private/receiver.json
+LoadCredential=server.identity:/opt/lab-kimia-mqtt/evidence/local/session-private/server.identity
+LoadCredential=influx.json:/opt/lab-kimia-mqtt/evidence/local/session-private/influx.json
+ExecStart=/opt/lab-kimia-mqtt/.venv/bin/python -m tools.session.receiver --influx %d/influx.json
+Environment=PYTHONUNBUFFERED=1
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target

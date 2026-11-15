@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "case": "native run cannot prove Wokwi",
+      "rejected": true
+    },
+    {
+      "case": "incomplete serial capture",
+      "rejected": true
+    },
+    {
+      "case": "multiple runs mixed",
+      "rejected": true
+    }
+  ]
+}

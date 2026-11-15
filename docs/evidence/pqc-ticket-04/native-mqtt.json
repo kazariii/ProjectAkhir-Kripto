@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "source": "native-control",
+  "run_id": "2aaf229af1e1f95ec9aa64e6b191d21f",
+  "session_id": "c9da6ecf849075511c9689fa92afea2c",
+  "four_states": [
+    {
+      "counter": 2,
+      "device_id": "esp32-meja01",
+      "temperature_c": 25.0,
+      "gas_raw": 1200,
+      "gas_alarm": false,
+      "temperature_alarm": false
+    },
+    {
+      "counter": 3,
+      "device_id": "esp32-meja01",
+      "temperature_c": 45.0,
+      "gas_raw": 1200,
+      "gas_alarm": false,
+      "temperature_alarm": true
+    },
+    {
+      "counter": 4,
+      "device_id": "esp32-meja01",
+      "temperature_c": 45.0,
+      "gas_raw": 3000,
+      "gas_alarm": true,
+      "temperature_alarm": true
+    },
+    {
+      "counter": 5,
+      "device_id": "esp32-meja01",
+      "temperature_c": 25.0,
+      "gas_raw": 3000,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    }
+  ],
+  "tamper_no_ack": true,
+  "replay_no_ack": true,
+  "schema_no_ack": true
+}

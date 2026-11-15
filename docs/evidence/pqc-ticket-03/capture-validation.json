@@ -1,0 +1,44 @@
+{
+  "verified": true,
+  "provenance": "user-supplied Wokwi VS Code serial matched to live LXC journal and broker",
+  "capture_sha256": "540529d3f76e620f56f7ab61a06d9f008b272a633894aed8447f0387fd1b827f",
+  "esp32": {
+    "passed": true,
+    "run_id": "87e262e942f35bc4f7e310eba1538c14",
+    "session_id": "a20cbd94bfcf36f556ff25d49c14301f",
+    "mqtt_port": 1883,
+    "tls": false,
+    "local_ip": "10.13.37.2",
+    "mutual_auth": true,
+    "key_confirmation": true,
+    "encrypted_ack_verified": true,
+    "elapsed_ms": 12478
+  },
+  "lxc_events": [
+    {
+      "event": "session_established",
+      "utc": "2026-11-14T14:39:26.716905+00:00",
+      "session_id": "a20cbd94bfcf36f556ff25d49c14301f",
+      "peer_authenticated": true,
+      "client_key_confirmed": true
+    },
+    {
+      "event": "payload_accepted",
+      "utc": "2026-11-14T14:39:26.778774+00:00",
+      "session_id": "a20cbd94bfcf36f556ff25d49c14301f",
+      "device_id": "esp32-meja01",
+      "probe": "ticket-03",
+      "run_id": "87e262e942f35bc4f7e310eba1538c14",
+      "temperature_c": 26.25
+    },
+    {
+      "event": "encrypted_ack_queued",
+      "utc": "2026-11-14T14:39:26.778861+00:00",
+      "session_id": "a20cbd94bfcf36f556ff25d49c14301f",
+      "run_id": "87e262e942f35bc4f7e310eba1538c14",
+      "bytes": 207
+    }
+  ],
+  "broker_client_id": "esp32-session-87e262e942f3",
+  "broker_device_connection_matched": true
+}

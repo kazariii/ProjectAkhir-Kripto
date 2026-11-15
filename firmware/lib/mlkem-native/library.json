@@ -1,0 +1,1 @@
+{"name":"mlkem-native","version":"2.0.0","build":{"srcDir":".","srcFilter":["+<mlkem_native.c>"]}}

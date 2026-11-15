@@ -1,0 +1,1 @@
+{"name":"c-fn-dsa","version":"0.0.0-prospective","build":{"srcDir":".","srcFilter":["+<*.c>","-<test*.c>","-<speed*.c>"]}}

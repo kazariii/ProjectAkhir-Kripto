@@ -2,7 +2,7 @@
   "id": null,
   "uid": "suhu-meja01",
   "title": "Gas dan suhu lingkungan meja praktikum 01",
-  "description": "DS18B20 di sekitar meja, bukan nyala api. MQ2: ADC/level relatif, bukan konsentrasi LPG terkalibrasi atau ppm pengukuran nyata. Timestamp kedua field adalah waktu penerimaan pesan yang sama oleh Telegraf. Alarm lokal: DOUT MQ2 LOW atau suhu valid >=40 Celsius; ambang demonstrasi simulasi, bukan standar keselamatan. Data lama tanpa status alarm tidak dianggap normal. Data terlambat bila umur penerimaan >10 detik. Status dan waktu terakhir selalu memakai waktu sekarang dan seluruh riwayat tersimpan; pemilih rentang hanya untuk riwayat.",
+  "description": "DS18B20 di sekitar meja, bukan nyala api. MQ2: ADC/level relatif, bukan konsentrasi LPG terkalibrasi atau ppm pengukuran nyata. Timestamp kedua field adalah waktu penerimaan pesan yang sama oleh server. Alarm lokal: DOUT MQ2 LOW atau suhu valid >=40 Celsius; ambang demonstrasi simulasi, bukan standar keselamatan. Data lama tanpa status alarm tidak dianggap normal. Data terlambat bila umur penerimaan >10 detik. Status dan waktu terakhir selalu memakai waktu sekarang dan seluruh riwayat tersimpan; pemilih rentang hanya untuk riwayat.",
   "tags": [
     "lab-kimia",
     "suhu",
@@ -246,7 +246,7 @@
       "id": 5,
       "type": "stat",
       "title": "Kondisi dan kesegaran data — meja 01",
-      "description": "Data terlambat bila tidak ada pengukuran diterima >10 detik; kondisi saat ini belum diketahui, termasuk jika nilai terakhir normal. Penanda memakai waktu penerimaan Telegraf dan waktu sekarang, terlepas dari rentang riwayat. DOUT LOW atau suhu valid >=40 Celsius: pengaturan demo, bukan standar keselamatan.",
+      "description": "Data terlambat bila tidak ada pengukuran diterima >10 detik; kondisi saat ini belum diketahui, termasuk jika nilai terakhir normal. Penanda memakai waktu penerimaan server dan waktu sekarang, terlepas dari rentang riwayat. DOUT LOW atau suhu valid >=40 Celsius: pengaturan demo, bukan standar keselamatan.",
       "gridPos": {
         "x": 0,
         "y": 0,
@@ -495,7 +495,7 @@
       "id": 7,
       "type": "stat",
       "title": "Waktu pengukuran terakhir diterima",
-      "description": "Waktu penerimaan pesan oleh Telegraf, bukan jam sensor. Seluruh riwayat tersimpan; tidak mengikuti pemilih rentang riwayat.",
+      "description": "Waktu penerimaan pesan oleh server, bukan jam sensor. Seluruh riwayat tersimpan; tidak mengikuti pemilih rentang riwayat.",
       "gridPos": {
         "x": 16,
         "y": 0,

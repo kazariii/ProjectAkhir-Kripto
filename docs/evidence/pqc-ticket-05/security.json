@@ -1,0 +1,616 @@
+{
+  "passed": true,
+  "source": "native-client on real MQTT/LXC",
+  "started_ns": 1794723027241578250,
+  "sessions": [
+    "721f2f1b39fba687ffbe2afde3adb6f0",
+    "62bce08befbdb277d3ec484e22635712",
+    "01a8f180564aab9e7f7b35cc21a0cdc8",
+    "77834151dfdb1c96dda127bb45a27cbc"
+  ],
+  "cases": [
+    {
+      "case": "duplicate telemetry counter",
+      "no_reply": true,
+      "influx_points": 0,
+      "start_ns": 1794723027411289766,
+      "stop_ns": 1794723028011863623
+    },
+    {
+      "case": "modified magic",
+      "no_reply": true,
+      "influx_points": 0,
+      "start_ns": 1794723028022660110,
+      "stop_ns": 1794723028623069534
+    },
+    {
+      "case": "modified version",
+      "no_reply": true,
+      "influx_points": 0,
+      "start_ns": 1794723028626910527,
+      "stop_ns": 1794723029227440192
+    },
+    {
+      "case": "modified type",
+      "no_reply": true,
+      "influx_points": 0,
+      "start_ns": 1794723029231230061,
+      "stop_ns": 1794723029831686180
+    },
+    {
+      "case": "modified session id",
+      "no_reply": true,
+      "influx_points": 0,
+      "start_ns": 1794723029835461282,
+      "stop_ns": 1794723030435928898
+    },
+    {
+      "case": "modified counter",
+      "no_reply": true,
+      "influx_points": 0,
+      "start_ns": 1794723030439852501,
+      "stop_ns": 1794723031040341372
+    },
+    {
+      "case": "modified length",
+      "no_reply": true,
+      "influx_points": 0,
+      "start_ns": 1794723031044317712,
+      "stop_ns": 1794723031645639010
+    },
+    {
+      "case": "modified ciphertext",
+      "no_reply": true,
+      "influx_points": 0,
+      "start_ns": 1794723031649395400,
+      "stop_ns": 1794723032249938247
+    },
+    {
+      "case": "modified tag",
+      "no_reply": true,
+      "influx_points": 0,
+      "start_ns": 1794723032253824514,
+      "stop_ns": 1794723032854380931
+    },
+    {
+      "case": "modified padding",
+      "no_reply": true,
+      "influx_points": 0,
+      "start_ns": 1794723032858217580,
+      "stop_ns": 1794723033458655604
+    },
+    {
+      "case": "truncated packet",
+      "no_reply": true,
+      "influx_points": 0,
+      "start_ns": 1794723033465734823,
+      "stop_ns": 1794723034066743769
+    },
+    {
+      "case": "plaintext JSON",
+      "no_reply": true,
+      "influx_points": 0,
+      "start_ns": 1794723034070392530,
+      "stop_ns": 1794723034670839910
+    },
+    {
+      "case": "out of order old counter",
+      "no_reply": true,
+      "influx_points": 0,
+      "start_ns": 1794723034722148268,
+      "stop_ns": 1794723035322599163
+    },
+    {
+      "case": "authenticated invalid schema",
+      "no_reply": true,
+      "influx_points": 0,
+      "start_ns": 1794723035326350541,
+      "stop_ns": 1794723035926898664
+    },
+    {
+      "case": "wrong signing secret with correct public binding",
+      "no_reply": true,
+      "influx_points": 0,
+      "start_ns": 1794723035940717849,
+      "stop_ns": 1794723036541117081
+    },
+    {
+      "case": "previous session after rekey",
+      "no_reply": true,
+      "influx_points": 0,
+      "start_ns": 1794723036598120429,
+      "stop_ns": 1794723037198539133
+    },
+    {
+      "case": "receiver restart",
+      "fresh_session": true,
+      "stored_after": true
+    },
+    {
+      "case": "failed write never replayed",
+      "no_reply": true,
+      "influx_points": 0,
+      "start_ns": 1794723041110231306,
+      "stop_ns": 1794723041710700518
+    },
+    {
+      "case": "Influx unavailable",
+      "no_stored_ack": true,
+      "fresh_sample_after": true
+    },
+    {
+      "case": "previous session after broker restart",
+      "no_reply": true,
+      "influx_points": 0,
+      "start_ns": 1794723047158194472,
+      "stop_ns": 1794723047758581673
+    },
+    {
+      "case": "broker restart",
+      "fresh_session": true,
+      "stored_after": true
+    }
+  ],
+  "lost_m2_recovered": true,
+  "lost_m4_recovered": true,
+  "known_plaintext_absent_in_data_frames": true,
+  "points": [
+    {
+      "session_id": "721f2f1b39fba687ffbe2afde3adb6f0",
+      "counter": 1,
+      "received_ns": 1794723027370489380,
+      "influx_time": "2026-11-15T06:10:27.37048938Z",
+      "temperature_c": 27.5,
+      "gas_raw": 1234,
+      "gas_alarm": false,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "721f2f1b39fba687ffbe2afde3adb6f0",
+      "counter": 2,
+      "received_ns": 1794723034674794122,
+      "influx_time": "2026-11-15T06:10:34.674794122Z",
+      "temperature_c": 27.5,
+      "gas_raw": 1234,
+      "gas_alarm": false,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "721f2f1b39fba687ffbe2afde3adb6f0",
+      "counter": 4,
+      "received_ns": 1794723034681785663,
+      "influx_time": "2026-11-15T06:10:34.681785663Z",
+      "temperature_c": 27.5,
+      "gas_raw": 1234,
+      "gas_alarm": false,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "721f2f1b39fba687ffbe2afde3adb6f0",
+      "counter": 6,
+      "received_ns": 1794723036545237695,
+      "influx_time": "2026-11-15T06:10:36.545237695Z",
+      "temperature_c": 27.5,
+      "gas_raw": 1234,
+      "gas_alarm": false,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "62bce08befbdb277d3ec484e22635712",
+      "counter": 1,
+      "received_ns": 1794723037202728418,
+      "influx_time": "2026-11-15T06:10:37.202728418Z",
+      "temperature_c": 27.5,
+      "gas_raw": 1234,
+      "gas_alarm": false,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "01a8f180564aab9e7f7b35cc21a0cdc8",
+      "counter": 1,
+      "received_ns": 1794723038087334356,
+      "influx_time": "2026-11-15T06:10:38.087334356Z",
+      "temperature_c": 27.5,
+      "gas_raw": 1234,
+      "gas_alarm": false,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "01a8f180564aab9e7f7b35cc21a0cdc8",
+      "counter": 3,
+      "received_ns": 1794723041714887399,
+      "influx_time": "2026-11-15T06:10:41.714887399Z",
+      "temperature_c": 27.5,
+      "gas_raw": 1234,
+      "gas_alarm": false,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "77834151dfdb1c96dda127bb45a27cbc",
+      "counter": 1,
+      "received_ns": 1794723047764768277,
+      "influx_time": "2026-11-15T06:10:47.764768277Z",
+      "temperature_c": 27.5,
+      "gas_raw": 1234,
+      "gas_alarm": false,
+      "temperature_alarm": false
+    }
+  ],
+  "independent_mqtt_subscriber_matched_published_bytes": true,
+  "wire_metadata_only": [
+    {
+      "type": 1,
+      "bytes": 69,
+      "sha256": "5c400d1f62f5e467c38a97a34240d2b8219202fd1ac87e236727f3baf75119fc"
+    },
+    {
+      "type": 3,
+      "bytes": 1455,
+      "sha256": "d299f0fb00631655212667a0240a665bb17294aa3b59f3d00079bfa5e1321f08"
+    },
+    {
+      "type": 5,
+      "bytes": 207,
+      "sha256": "a38935c12a8459f1c98fdb29d798ef748a33c29180ad53b74ac63857abf143de"
+    },
+    {
+      "type": 5,
+      "bytes": 207,
+      "sha256": "8c58e41b92369a5ec3cab558ba1a6280a10ccffbea89c0f7935f8370784aaa9e"
+    }
+  ],
+  "grafana": {
+    "history_panel_results": {
+      "2": {
+        "status": 200,
+        "frames": [
+          {
+            "schema": {
+              "name": "suhu",
+              "refId": "A",
+              "meta": {
+                "typeVersion": [
+                  0,
+                  0
+                ],
+                "executedQueryString": "from(bucket: \"telemetry\")\n  |> range(start: 2026-11-15T06:10:26.37Z, stop: 2026-11-15T06:10:48.765Z)\n  |> filter(fn: (r) => r._measurement == \"suhu\" and r._field == \"temperature_c\" and r.device_id == \"esp32-meja01\")\n  |> aggregateWindow(every: 2s, fn: mean, createEmpty: true)\n  |> yield(name: \"suhu\")"
+              },
+              "fields": [
+                {
+                  "name": "Time",
+                  "type": "time",
+                  "typeInfo": {
+                    "frame": "time.Time",
+                    "nullable": true
+                  }
+                },
+                {
+                  "name": "temperature_c",
+                  "type": "number",
+                  "typeInfo": {
+                    "frame": "float64",
+                    "nullable": true
+                  },
+                  "labels": {
+                    "device_id": "esp32-meja01"
+                  }
+                }
+              ]
+            },
+            "data": {
+              "values": [
+                [
+                  1794723028000,
+                  1794723030000,
+                  1794723032000,
+                  1794723034000,
+                  1794723036000,
+                  1794723038000,
+                  1794723040000,
+                  1794723042000,
+                  1794723044000,
+                  1794723046000,
+                  1794723048000,
+                  1794723048765
+                ],
+                [
+                  27.5,
+                  null,
+                  null,
+                  null,
+                  27.5,
+                  27.5,
+                  27.5,
+                  27.5,
+                  null,
+                  null,
+                  27.5,
+                  null
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "4": {
+        "status": 200,
+        "frames": [
+          {
+            "schema": {
+              "name": "suhu",
+              "refId": "A",
+              "meta": {
+                "typeVersion": [
+                  0,
+                  0
+                ],
+                "executedQueryString": "from(bucket: \"telemetry\")\n  |> range(start: 2026-11-15T06:10:26.37Z, stop: 2026-11-15T06:10:48.765Z)\n  |> filter(fn: (r) => r._measurement == \"suhu\" and r._field == \"gas_raw\" and r.device_id == \"esp32-meja01\")\n  |> aggregateWindow(every: 2s, fn: mean, createEmpty: true)\n  |> yield(name: \"gas\")"
+              },
+              "fields": [
+                {
+                  "name": "Time",
+                  "type": "time",
+                  "typeInfo": {
+                    "frame": "time.Time",
+                    "nullable": true
+                  }
+                },
+                {
+                  "name": "gas_raw",
+                  "type": "number",
+                  "typeInfo": {
+                    "frame": "float64",
+                    "nullable": true
+                  },
+                  "labels": {
+                    "device_id": "esp32-meja01"
+                  }
+                }
+              ]
+            },
+            "data": {
+              "values": [
+                [
+                  1794723028000,
+                  1794723030000,
+                  1794723032000,
+                  1794723034000,
+                  1794723036000,
+                  1794723038000,
+                  1794723040000,
+                  1794723042000,
+                  1794723044000,
+                  1794723046000,
+                  1794723048000,
+                  1794723048765
+                ],
+                [
+                  1234,
+                  null,
+                  null,
+                  null,
+                  1234,
+                  1234,
+                  1234,
+                  1234,
+                  null,
+                  null,
+                  1234,
+                  null
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "6": {
+        "status": 200,
+        "frames": [
+          {
+            "schema": {
+              "refId": "A",
+              "meta": {
+                "typeVersion": [
+                  0,
+                  0
+                ],
+                "executedQueryString": "from(bucket: \"telemetry\")\n  |> range(start: 2026-11-15T06:10:26.37Z, stop: 2026-11-15T06:10:48.765Z)\n  |> filter(fn: (r) => r._measurement == \"suhu\" and r.device_id == \"esp32-meja01\")\n  |> filter(fn: (r) => r._field == \"temperature_c\" or r._field == \"gas_raw\" or r._field == \"gas_alarm\" or r._field == \"temperature_alarm\")\n  |> pivot(rowKey: [\"_time\"], columnKey: [\"_field\"], valueColumn: \"_value\")\n  |> filter(fn: (r) => exists r.gas_alarm and exists r.temperature_alarm and exists r.temperature_c and exists r.gas_raw)\n  |> map(fn: (r) => ({r with kondisi: if r.gas_alarm and r.temperature_alarm then \"Peringatan gas dan suhu\" else if r.gas_alarm then \"Peringatan gas\" else if r.temperature_alarm then \"Peringatan suhu\" else \"Normal\"}))\n  |> keep(columns: [\"_time\", \"temperature_c\", \"gas_raw\", \"gas_alarm\", \"temperature_alarm\", \"kondisi\"])\n  |> sort(columns: [\"_time\"], desc: true)"
+              },
+              "fields": [
+                {
+                  "name": "_time",
+                  "type": "time",
+                  "typeInfo": {
+                    "frame": "time.Time",
+                    "nullable": true
+                  }
+                },
+                {
+                  "name": "gas_alarm",
+                  "type": "boolean",
+                  "typeInfo": {
+                    "frame": "bool",
+                    "nullable": true
+                  },
+                  "labels": {}
+                },
+                {
+                  "name": "gas_raw",
+                  "type": "number",
+                  "typeInfo": {
+                    "frame": "int64",
+                    "nullable": true
+                  },
+                  "labels": {}
+                },
+                {
+                  "name": "temperature_alarm",
+                  "type": "boolean",
+                  "typeInfo": {
+                    "frame": "bool",
+                    "nullable": true
+                  },
+                  "labels": {}
+                },
+                {
+                  "name": "temperature_c",
+                  "type": "number",
+                  "typeInfo": {
+                    "frame": "float64",
+                    "nullable": true
+                  },
+                  "labels": {}
+                },
+                {
+                  "name": "kondisi",
+                  "type": "string",
+                  "typeInfo": {
+                    "frame": "string",
+                    "nullable": true
+                  },
+                  "labels": {}
+                }
+              ]
+            },
+            "data": {
+              "values": [
+                [
+                  1794723047764,
+                  1794723041714,
+                  1794723038087,
+                  1794723037202,
+                  1794723036545,
+                  1794723034681,
+                  1794723034674,
+                  1794723027370
+                ],
+                [
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false
+                ],
+                [
+                  1234,
+                  1234,
+                  1234,
+                  1234,
+                  1234,
+                  1234,
+                  1234,
+                  1234
+                ],
+                [
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false
+                ],
+                [
+                  27.5,
+                  27.5,
+                  27.5,
+                  27.5,
+                  27.5,
+                  27.5,
+                  27.5,
+                  27.5
+                ],
+                [
+                  "Normal",
+                  "Normal",
+                  "Normal",
+                  "Normal",
+                  "Normal",
+                  "Normal",
+                  "Normal",
+                  "Normal"
+                ]
+              ],
+              "nanos": [
+                [
+                  768277,
+                  887399,
+                  334356,
+                  728418,
+                  237695,
+                  785663,
+                  794122,
+                  489380
+                ],
+                null,
+                null,
+                null,
+                null,
+                null
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "history_table_points_matched": true,
+    "historical_alarm_states": [
+      {
+        "counter": 1,
+        "session_id": "721f2f1b39fba687ffbe2afde3adb6f0",
+        "state": 0,
+        "query_clock": "receiver time + 100ms for historical state validation"
+      },
+      {
+        "counter": 2,
+        "session_id": "721f2f1b39fba687ffbe2afde3adb6f0",
+        "state": 0,
+        "query_clock": "receiver time + 100ms for historical state validation"
+      },
+      {
+        "counter": 4,
+        "session_id": "721f2f1b39fba687ffbe2afde3adb6f0",
+        "state": 0,
+        "query_clock": "receiver time + 100ms for historical state validation"
+      },
+      {
+        "counter": 6,
+        "session_id": "721f2f1b39fba687ffbe2afde3adb6f0",
+        "state": 0,
+        "query_clock": "receiver time + 100ms for historical state validation"
+      },
+      {
+        "counter": 1,
+        "session_id": "62bce08befbdb277d3ec484e22635712",
+        "state": 0,
+        "query_clock": "receiver time + 100ms for historical state validation"
+      },
+      {
+        "counter": 1,
+        "session_id": "01a8f180564aab9e7f7b35cc21a0cdc8",
+        "state": 0,
+        "query_clock": "receiver time + 100ms for historical state validation"
+      },
+      {
+        "counter": 3,
+        "session_id": "01a8f180564aab9e7f7b35cc21a0cdc8",
+        "state": 0,
+        "query_clock": "receiver time + 100ms for historical state validation"
+      },
+      {
+        "counter": 1,
+        "session_id": "77834151dfdb1c96dda127bb45a27cbc",
+        "state": 0,
+        "query_clock": "receiver time + 100ms for historical state validation"
+      }
+    ],
+    "latest_stats_matched_at_sample_time": true,
+    "current_alarm_state_at_verification": [
+      0
+    ]
+  }
+}

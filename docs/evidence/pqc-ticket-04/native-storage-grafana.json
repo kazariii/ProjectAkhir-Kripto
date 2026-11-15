@@ -1,0 +1,324 @@
+{
+  "passed": true,
+  "source": "native-control",
+  "influx_points": [
+    {
+      "session_id": "c9da6ecf849075511c9689fa92afea2c",
+      "counter": 2,
+      "received_ns": 1794669294582763665,
+      "influx_time": "2026-11-14T15:14:54.582763665Z",
+      "temperature_c": 25.0,
+      "gas_raw": 1200,
+      "gas_alarm": false,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "c9da6ecf849075511c9689fa92afea2c",
+      "counter": 3,
+      "received_ns": 1794669295597002826,
+      "influx_time": "2026-11-14T15:14:55.597002826Z",
+      "temperature_c": 45.0,
+      "gas_raw": 1200,
+      "gas_alarm": false,
+      "temperature_alarm": true
+    },
+    {
+      "session_id": "c9da6ecf849075511c9689fa92afea2c",
+      "counter": 4,
+      "received_ns": 1794669296606003223,
+      "influx_time": "2026-11-14T15:14:56.606003223Z",
+      "temperature_c": 45.0,
+      "gas_raw": 3000,
+      "gas_alarm": true,
+      "temperature_alarm": true
+    },
+    {
+      "session_id": "c9da6ecf849075511c9689fa92afea2c",
+      "counter": 5,
+      "received_ns": 1794669297615081451,
+      "influx_time": "2026-11-14T15:14:57.615081451Z",
+      "temperature_c": 25.0,
+      "gas_raw": 3000,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    }
+  ],
+  "token": {
+    "bucket_write_only": true,
+    "read_data_visible": false,
+    "read_control_nonempty_admin": true,
+    "read_behavior": "HTTP 404"
+  },
+  "legacy_history_still_present": true,
+  "oldest_temperature_time": "2026-11-11T03:26:44.878766853Z",
+  "grafana": {
+    "history_panel_results": {
+      "2": {
+        "status": 200,
+        "frames": [
+          {
+            "schema": {
+              "name": "suhu",
+              "refId": "A",
+              "meta": {
+                "typeVersion": [
+                  0,
+                  0
+                ],
+                "executedQueryString": "from(bucket: \"telemetry\")\n  |> range(start: 2026-11-14T15:14:53.582Z, stop: 2026-11-14T15:14:58.616Z)\n  |> filter(fn: (r) => r._measurement == \"suhu\" and r._field == \"temperature_c\" and r.device_id == \"esp32-meja01\")\n  |> aggregateWindow(every: 2s, fn: mean, createEmpty: true)\n  |> yield(name: \"suhu\")"
+              },
+              "fields": [
+                {
+                  "name": "Time",
+                  "type": "time",
+                  "typeInfo": {
+                    "frame": "time.Time",
+                    "nullable": true
+                  }
+                },
+                {
+                  "name": "temperature_c",
+                  "type": "number",
+                  "typeInfo": {
+                    "frame": "float64",
+                    "nullable": true
+                  },
+                  "labels": {
+                    "device_id": "esp32-meja01"
+                  }
+                }
+              ]
+            },
+            "data": {
+              "values": [
+                [
+                  1794669294000,
+                  1794669296000,
+                  1794669298000,
+                  1794669298616
+                ],
+                [
+                  null,
+                  35,
+                  35,
+                  null
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "4": {
+        "status": 200,
+        "frames": [
+          {
+            "schema": {
+              "name": "suhu",
+              "refId": "A",
+              "meta": {
+                "typeVersion": [
+                  0,
+                  0
+                ],
+                "executedQueryString": "from(bucket: \"telemetry\")\n  |> range(start: 2026-11-14T15:14:53.582Z, stop: 2026-11-14T15:14:58.616Z)\n  |> filter(fn: (r) => r._measurement == \"suhu\" and r._field == \"gas_raw\" and r.device_id == \"esp32-meja01\")\n  |> aggregateWindow(every: 2s, fn: mean, createEmpty: true)\n  |> yield(name: \"gas\")"
+              },
+              "fields": [
+                {
+                  "name": "Time",
+                  "type": "time",
+                  "typeInfo": {
+                    "frame": "time.Time",
+                    "nullable": true
+                  }
+                },
+                {
+                  "name": "gas_raw",
+                  "type": "number",
+                  "typeInfo": {
+                    "frame": "float64",
+                    "nullable": true
+                  },
+                  "labels": {
+                    "device_id": "esp32-meja01"
+                  }
+                }
+              ]
+            },
+            "data": {
+              "values": [
+                [
+                  1794669294000,
+                  1794669296000,
+                  1794669298000,
+                  1794669298616
+                ],
+                [
+                  null,
+                  1200,
+                  3000,
+                  null
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "6": {
+        "status": 200,
+        "frames": [
+          {
+            "schema": {
+              "refId": "A",
+              "meta": {
+                "typeVersion": [
+                  0,
+                  0
+                ],
+                "executedQueryString": "from(bucket: \"telemetry\")\n  |> range(start: 2026-11-14T15:14:53.582Z, stop: 2026-11-14T15:14:58.616Z)\n  |> filter(fn: (r) => r._measurement == \"suhu\" and r.device_id == \"esp32-meja01\")\n  |> filter(fn: (r) => r._field == \"temperature_c\" or r._field == \"gas_raw\" or r._field == \"gas_alarm\" or r._field == \"temperature_alarm\")\n  |> pivot(rowKey: [\"_time\"], columnKey: [\"_field\"], valueColumn: \"_value\")\n  |> filter(fn: (r) => exists r.gas_alarm and exists r.temperature_alarm and exists r.temperature_c and exists r.gas_raw)\n  |> map(fn: (r) => ({r with kondisi: if r.gas_alarm and r.temperature_alarm then \"Peringatan gas dan suhu\" else if r.gas_alarm then \"Peringatan gas\" else if r.temperature_alarm then \"Peringatan suhu\" else \"Normal\"}))\n  |> keep(columns: [\"_time\", \"temperature_c\", \"gas_raw\", \"gas_alarm\", \"temperature_alarm\", \"kondisi\"])\n  |> sort(columns: [\"_time\"], desc: true)"
+              },
+              "fields": [
+                {
+                  "name": "_time",
+                  "type": "time",
+                  "typeInfo": {
+                    "frame": "time.Time",
+                    "nullable": true
+                  }
+                },
+                {
+                  "name": "gas_alarm",
+                  "type": "boolean",
+                  "typeInfo": {
+                    "frame": "bool",
+                    "nullable": true
+                  },
+                  "labels": {}
+                },
+                {
+                  "name": "gas_raw",
+                  "type": "number",
+                  "typeInfo": {
+                    "frame": "int64",
+                    "nullable": true
+                  },
+                  "labels": {}
+                },
+                {
+                  "name": "temperature_alarm",
+                  "type": "boolean",
+                  "typeInfo": {
+                    "frame": "bool",
+                    "nullable": true
+                  },
+                  "labels": {}
+                },
+                {
+                  "name": "temperature_c",
+                  "type": "number",
+                  "typeInfo": {
+                    "frame": "float64",
+                    "nullable": true
+                  },
+                  "labels": {}
+                },
+                {
+                  "name": "kondisi",
+                  "type": "string",
+                  "typeInfo": {
+                    "frame": "string",
+                    "nullable": true
+                  },
+                  "labels": {}
+                }
+              ]
+            },
+            "data": {
+              "values": [
+                [
+                  1794669297615,
+                  1794669296606,
+                  1794669295597,
+                  1794669294582
+                ],
+                [
+                  true,
+                  true,
+                  false,
+                  false
+                ],
+                [
+                  3000,
+                  3000,
+                  1200,
+                  1200
+                ],
+                [
+                  false,
+                  true,
+                  true,
+                  false
+                ],
+                [
+                  25,
+                  45,
+                  45,
+                  25
+                ],
+                [
+                  "Peringatan gas",
+                  "Peringatan gas dan suhu",
+                  "Peringatan suhu",
+                  "Normal"
+                ]
+              ],
+              "nanos": [
+                [
+                  81451,
+                  3223,
+                  2826,
+                  763665
+                ],
+                null,
+                null,
+                null,
+                null,
+                null
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "history_table_points_matched": true,
+    "historical_alarm_states": [
+      {
+        "counter": 2,
+        "session_id": "c9da6ecf849075511c9689fa92afea2c",
+        "state": 0,
+        "query_clock": "receiver time + 100ms for historical state validation"
+      },
+      {
+        "counter": 3,
+        "session_id": "c9da6ecf849075511c9689fa92afea2c",
+        "state": 2,
+        "query_clock": "receiver time + 100ms for historical state validation"
+      },
+      {
+        "counter": 4,
+        "session_id": "c9da6ecf849075511c9689fa92afea2c",
+        "state": 3,
+        "query_clock": "receiver time + 100ms for historical state validation"
+      },
+      {
+        "counter": 5,
+        "session_id": "c9da6ecf849075511c9689fa92afea2c",
+        "state": 1,
+        "query_clock": "receiver time + 100ms for historical state validation"
+      }
+    ],
+    "latest_stats_matched_at_sample_time": true,
+    "current_alarm_state_at_verification": [
+      -1
+    ]
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "ticket": "06",
+  "status": "done",
+  "verified": true,
+  "collected_utc": "2026-11-15T06:56:13.984133+00:00",
+  "state": {
+    "preserved_initialized_state": true,
+    "historical_points": [
+      {
+        "session_id": "79023128dccac3dabb68a5f7bbce51d8",
+        "counter": 1,
+        "received_ns": 1794673196852637418,
+        "influx_time": "2026-11-14T16:19:56.852637418Z",
+        "temperature_c": 25.0,
+        "gas_raw": 2177,
+        "gas_alarm": true,
+        "temperature_alarm": false
+      },
+      {
+        "session_id": "6031710b4aa72b64cf4e4fcb81436467",
+        "counter": 63,
+        "received_ns": 1794673653829751436,
+        "influx_time": "2026-11-14T16:27:33.829751436Z",
+        "temperature_c": 25.0,
+        "gas_raw": 513,
+        "gas_alarm": false,
+        "temperature_alarm": false
+      },
+      {
+        "session_id": "45f068c336ffc674ea77ab8bb317cdfe",
+        "counter": 1,
+        "received_ns": 1794722547905196595,
+        "influx_time": "2026-11-15T06:02:27.905196595Z",
+        "temperature_c": 25.0,
+        "gas_raw": 2177,
+        "gas_alarm": true,
+        "temperature_alarm": false
+      },
+      {
+        "session_id": "0af2f7276c4f1b4e24b78fb1b0b475d0",
+        "counter": 12,
+        "received_ns": 1794722985746088680,
+        "influx_time": "2026-11-15T06:09:45.74608868Z",
+        "temperature_c": 25.0,
+        "gas_raw": 513,
+        "gas_alarm": false,
+        "temperature_alarm": false
+      }
+    ],
+    "default_services": [
+      "influxdb",
+      "grafana"
+    ],
+    "telegraf_removed": true,
+    "receiver_active_enabled": true,
+    "diagnostic_stopped": true,
+    "private_mqtt_port": 1883,
+    "tls": false,
+    "autostart_configured": true,
+    "lxc_reboot_tested": false,
+    "default_compose_without_cloud_credentials": true,
+    "volumes": {
+      "lab-kimia-suhu-influxdb-1": {
+        "/etc/influxdb2": "lab-kimia-suhu_influx-config",
+        "/var/lib/influxdb2": "lab-kimia-suhu_influx-data"
+      },
+      "lab-kimia-suhu-grafana-1": {
+        "/var/lib/grafana": "lab-kimia-suhu_grafana-data"
+      }
+    },
+    "dashboard_uid": "suhu-meja01"
+  },
+  "native_restart_points": 2,
+  "rollback_override_validated": true,
+  "rollback_cloud_started": false,
+  "default_firmware": "pqc-telemetry",
+  "simulator_folder": "firmware",
+  "firmware_build": {
+    "passed": true,
+    "ram_bytes": 83644,
+    "flash_bytes": 861561
+  },
+  "wokwi": {
+    "run": {
+      "run_id": "3066a27ea869a9b9f201019f5537cf99",
+      "local_ip": "10.13.37.2"
+    },
+    "acked_samples": 169,
+    "sent_samples": 169,
+    "unconfirmed_sent_frames": 0,
+    "sessions": [
+      "2412c888666a5e97ed0f191158d393fa",
+      "50d0f32c6086d38ffeac276f57b0b3a0",
+      "e74b3579878198853f52359b2167367f"
+    ],
+    "four_states": true,
+    "capture_sha256": "eb65feebaac0b2183f0fe1225087245ddaa4fd38225940626a5e9510d9f54d91"
+  },
+  "source_sha256": {
+    "compose.yaml": "aa26aba1cd8165e222f15a3ccd0a63d87e5bf13fe131cec21618981c51b58ccc",
+    "compose.legacy.yaml": "970bcff74f36ebf30c249ab3d4df66ebf49eed0f13eedbd1f423c540f1a1935d",
+    "firmware/platformio.ini": "661fb841981c5ebbee7f7d99e7d224dec9699791afd78dd12c2a8bf09c5aa7de",
+    "firmware/wokwi.toml": "eef8f2268f963c70767439024e30968a2d9f94fc10b079ee82b9b4bf5e83aaca",
+    "firmware/diagram.json": "e22cc761f8554a6e197411b45ac298d8b5f024fc321e01751772cf4a0cc9346c",
+    "infra/mqtt/session.service": "c7c265c0154b41c09f1e8113182f3a2870b9a4aa564beaa6a122429620a28299",
+    "infra/mqtt/compose.yaml": "df8983cd8a3a768f4df6af0cb3a627c5850533d7b7899cddff3844e40a5651db",
+    "infra/mqtt/mosquitto.conf": "1b1391b3308a5ac8fb5688d2fea210cbe9cd4ac20f0af5e94e1c97b9c1e2ea3d",
+    "infra/mqtt/acl": "49f5f8101366d8964bb25181746cd305a719779317e011331fa48620aa9b54bf",
+    "tools/deploy/migrate.py": "67753d997ae2292520e85ce38ba0d6d5a8a320da7ae8d099970248987ddd1192",
+    "tools/deploy/check_migration.py": "2e059841cbb30853a0f3857f0bbb28256c64528726f7c3cd1a18ae5f526a2c70",
+    "tools/deploy/collect_evidence.py": "c5e01ceeccb5bcadf8b3e032f341a4096d6d88c23993cf0dcaa8c4452506a570",
+    "tools/session/receiver.py": "37314344d2deb23f14289b3f3e17a5a18ce44b2dcb36e66ed4e5192ca837dfb3",
+    "firmware/lib/pqc-telemetry/src/pqc_telemetry.cpp": "ff3ba5e1f6e1885d05b932853540b864d72152c08f1e6af620f2ee4984d9af7c"
+  },
+  "private_artifact_sha256": {
+    "firmware.bin": "798e8211928e54e5bcee66af9e2bc39d6b62f7a26f649a8cb8c7713336b6cdc7",
+    "firmware.elf": "7626b1874e7ebf75dece3ec6289d4b5eda12af1d17f43c3b6445b3cd0b95bd02"
+  },
+  "limitations": [
+    "Application crypto is a custom lab protocol; prospective FN-DSA, no final FIPS 206 or audit claim",
+    "MQTT passwords/metadata remain visible without TLS",
+    "Service restarts and autostart configuration verified; entire LXC was not rebooted",
+    "Archived rollback override validated without reactivating old cloud ingress",
+    "Simulator evidence does not certify physical sensors, RNG, hardware performance or safety"
+  ]
+}

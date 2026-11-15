@@ -1,0 +1,17 @@
+# Archived ingress. Never included by the default Compose project.
+# Deliberate rollback only: docker compose -f compose.yaml -f compose.legacy.yaml up -d telegraf
+services:
+  telegraf:
+    image: telegraf:1.40.3@sha256:2958e3cbdc22d702ebd4a1e2db004c564f52a866551a65817eea26011407ea66
+    restart: unless-stopped
+    depends_on:
+      influxdb:
+        condition: service_healthy
+    environment:
+      MQTT_HOST: ${MQTT_HOST:?Isi MQTT_HOST di .env untuk rollback legacy}
+      MQTT_TELEGRAF_USERNAME: ${MQTT_TELEGRAF_USERNAME:?Isi akun legacy di .env}
+      MQTT_TELEGRAF_PASSWORD: ${MQTT_TELEGRAF_PASSWORD:?Isi password legacy di .env}
+      INFLUX_TOKEN: ${INFLUX_TOKEN:?Isi INFLUX_TOKEN di .env}
+    volumes:
+      - ./infra/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+      - ./infra/certs/emqx-ca.pem:/etc/telegraf/emqx-ca.pem:ro

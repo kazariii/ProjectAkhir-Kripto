@@ -1,7 +1,9 @@
 [wokwi]
 version = 1
-firmware = '.pio/build/esp32dev/firmware.bin'
-elf = '.pio/build/esp32dev/firmware.elf'
+# Optional UART capture; disable again after collecting evidence.
+# rfc2217ServerPort = 4000
+firmware = '.pio/build/pqc-telemetry/firmware.bin'
+elf = '.pio/build/pqc-telemetry/firmware.elf'
 
 [[chip]]
 name = 'mq2-level'

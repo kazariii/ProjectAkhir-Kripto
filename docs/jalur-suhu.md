@@ -1,5 +1,7 @@
 # Menjalankan jalur gas, suhu, dan alarm
 
+> **Arsip penyiapan MQTT/TLS lama.** Untuk jalur utama revisi tugas gunakan [operasi MQTT/PQC](operasi-pqc.md). Rangkaian/sensor tetap dipakai, tetapi konfigurasi cloud, CA dan Telegraf di bawah bukan transport utama lagi.
+
 Untuk urutan presentasi dari awal hingga pengujian keamanan, gunakan [panduan demo proyek lengkap](demo-proyek.md). Dokumen ini menjadi rujukan terperinci untuk konfigurasi, rangkaian, dan penyiapan Wokwi.
 
 Implementasi tiket 01–04 tersedia. Demo EMQX/Wokwi sampai dashboard telah diverifikasi; pemasangan baru memerlukan konfigurasi pemilik. Hasil aktual tiket 01 dicatat di [verifikasi-tiket-01.md](verifikasi-tiket-01.md); pengujian gas ada di [verifikasi-tiket-02.md](verifikasi-tiket-02.md), sedangkan perilaku dan bukti alarm ada di [verifikasi-tiket-03.md](verifikasi-tiket-03.md).

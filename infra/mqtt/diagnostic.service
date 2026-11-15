@@ -1,0 +1,21 @@
+[Unit]
+Description=Lab Kimia private MQTT diagnostic responder
+After=network-online.target docker.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+DynamicUser=yes
+WorkingDirectory=/opt/lab-kimia-mqtt
+LoadCredential=mqtt.json:/opt/lab-kimia-mqtt/evidence/local/mqtt-private/receiver.json
+ExecStart=/opt/lab-kimia-mqtt/.venv/bin/python /opt/lab-kimia-mqtt/tools/mqtt/diagnostic.py serve
+Environment=PYTHONUNBUFFERED=1
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target

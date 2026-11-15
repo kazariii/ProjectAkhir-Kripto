@@ -1,0 +1,17 @@
+# Revisi MQTT dengan kriptografi aplikasi
+
+Keputusan pengguna: MQTT biasa tanpa TLS; ML-KEM-512 membentuk rahasia bersama, ChaCha20-Poly1305 melindungi telemetri, dan prospective FN-DSA degree 512 mengautentikasi pembentukan sesi dua arah. Public key identitas dipasang sebelum demo. Implementasi calon FN-DSA harus disebut prospektif dan dikunci berdasarkan commit, bukan diklaim memenuhi FIPS 206 final.
+
+Target revisi adalah Wokwi VS Code melalui Private Gateway ke Mosquitto privat di LXC. Penerima kriptografi menulis langsung ke InfluxDB untuk jalur baru; Grafana, data historis, sensor, dan alarm lokal dipertahankan. Penghentian jalur Telegraf lama dilakukan pada tiket migrasi 06.
+
+Pengguna meminta implementasi tiket 01 pada 14 November 2026. Tiket 01 adalah bukti kelayakan terisolasi, menggunakan satu payload sintetis dan pertukaran berkas/serial. Ini belum merupakan sesi MQTT interaktif, implementasi anti-replay produksi, atau migrasi layanan.
+
+Urutan revisi: 01 bukti kriptografi dan 02 konektivitas (independen); 03 sesi terautentikasi (01,02); 04 telemetri ke Grafana (03); 05 serangan/pemulihan (04); 06 migrasi LXC (05); 07 panduan demo (06). Status terkini: **seluruh tiket 01–07 selesai**. Bukti tahap-tahap sebelumnya tetap dipertahankan sebagai histori.
+
+Tiket 04 selesai (`done`): pilihan firmware sensor PQC berbagi loop sensor/alarm lama, dan receiver menulis langsung ke InfluxDB dengan token write-only. Run Wokwi final memiliki 176 sampel ber-ACK yang cocok dengan InfluxDB/Grafana dan mencakup empat keadaan alarm. Dua sesi terbentuk; enam frame SENT tanpa ACK tidak diklaim tersimpan. Batas perbedaan clock dan jeda rotasi dicatat untuk tiket 05. Prasyarat tiket 05 terpenuhi; migrasi penuh/default firmware dan penghentian Telegraf tetap tiket 06.
+
+Tiket 05 selesai (`done`): retry handshake idempoten dan renewal terenkripsi pada umur 180 detik mengatasi kehilangan respons dan clock simulator yang tertinggal. 113 pemeriksaan protokol, 12 tes parser/ACK/capture dan 21 kasus broker/pemulihan lulus. Run Wokwi memiliki 136 ACK dari 148 SENT pada lima sesi, empat keadaan alarm, dan pemulihan sesudah receiver/broker/Influx dimatikan bergiliran; seluruh ACK cocok dengan Influx/Grafana. Sampel lokal tetap tiap 2 detik, tanpa backlog. Dua belas frame tanpa ACK tidak diklaim tersimpan. Hasil ini menjadi prasyarat migrasi tiket 06.
+
+Tiket 06 selesai (`done`), 15 November 2026: default build/simulator memilih sensor PQC, Telegraf lama dihapus dari layanan dan Compose default, diagnostic proof dinonaktifkan. Volume, bucket, dashboard, histori, pin dan kredensial dipertahankan. Dua kontrol native sebelum/sesudah restart layanan serta empat titik historis cocok dengan Influx/Grafana. Wokwi dari folder firmware utama menghasilkan 169 ACK dari 169 SENT, tiga sesi dan empat keadaan alarm. Autostart dikonfigurasi; reboot seluruh LXC tidak diuji. Rollback manual tersedia melalui override eksplisit. Tiket 07 siap dikerjakan.
+
+Tiket 07 selesai (`done`), 15 November 2026: panduan demo utama sekarang memakai MQTT/PQC dan mencakup semua tahap, expected output, gangguan/pemulihan, keamanan, troubleshooting, capture dan penutupan. Alat menerima lokasi hasil run baru agar tidak menimpa bukti historis. Uji native 21 kasus/8 titik serta 113 pemeriksaan protokol, 12 tes Python dan loop sensor lulus ulang. Capture Wokwi tiket 05/06 diverifikasi kembali terhadap LXC/Influx/Grafana dan diberi label dipakai ulang, bukan run baru. Tidak ada perubahan algoritma/firmware atau commit/push.

@@ -1,0 +1,8 @@
+{
+    "source":  "automatic Wokwi RFC2217 UART capture from primary firmware workspace; Computer Use sensor controls",
+    "capture_sha256":  "eb65feebaac0b2183f0fe1225087245ddaa4fd38225940626a5e9510d9f54d91",
+    "bytes":  75101,
+    "reader":  "tools/telemetry/capture_serial.mjs",
+    "simulator_folder":  "firmware",
+    "paused":  false
+}

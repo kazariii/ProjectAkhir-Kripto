@@ -1,0 +1,10 @@
+[wokwi]
+version = 1
+# Optional UART capture (see ../README.md):
+# rfc2217ServerPort = 4000
+firmware = '../../../evidence/local/telemetry-firmware/pqc-telemetry-full.bin'
+elf = '../../../evidence/local/telemetry-firmware/firmware.elf'
+
+[[chip]]
+name = 'mq2-level'
+binary = '../../../firmware/mq2-level.chip.wasm'
