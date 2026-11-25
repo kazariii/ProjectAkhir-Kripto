@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/opt/lab-kimia-mqtt/tools/session/check_mqtt.py", line 50, in <module>
+    main()
+    ~~~~^^
+  File "/opt/lab-kimia-mqtt/tools/session/check_mqtt.py", line 23, in main
+    MqttConnection(broker, "native-session-") as connection:
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/lab-kimia-mqtt/tools/mqtt/client.py", line 28, in __init__
+    raise RuntimeError("MQTT CONNACK timeout")
+RuntimeError: MQTT CONNACK timeout

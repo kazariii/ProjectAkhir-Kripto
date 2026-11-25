@@ -15,7 +15,7 @@ def hex_id(value):
     return isinstance(value, str) and re.fullmatch("[0-9a-f]{32}", value) is not None
 
 
-def serial(text, fault_test=False):
+def serial(text, fault_test=False, public=False):
     require(len(re.findall(r"(?m)^\s*TELEMETRY_BEGIN\b", text)) == 1, "Expected exactly one telemetry run")
     require(not re.search(r"panic|Guru Meditation|watchdog|LEDC is not initialized", text, re.I), "Failed startup in capture")
     require(fault_test or "TELEMETRY_CONNECT_FAILED" not in text, "Connection failure in nominal capture")
@@ -31,7 +31,10 @@ def serial(text, fault_test=False):
             require(measured not in samples, "Duplicate local sample timestamp")
             samples[measured] = json.loads(sample[2])
     runs = [e for _, kind, e in entries if kind == "RUN"]
-    require(len(runs) == 1 and hex_id(runs[0].get("run_id")) and runs[0].get("local_ip") == "10.13.37.2", "Missing private Wokwi run identity")
+    # Private Gateway always assigns 10.13.37.2; the public Wokwi gateway uses another address.
+    require(len(runs) == 1 and hex_id(runs[0].get("run_id")) and
+            (runs[0].get("local_ip") != "10.13.37.2" if public else runs[0].get("local_ip") == "10.13.37.2"),
+            "Missing Wokwi run identity for the selected gateway")
     auth, sent, stored = {}, {}, {}
     for index, kind, event in entries:
         if kind == "RUN":
@@ -60,7 +63,9 @@ def serial(text, fault_test=False):
 
 def match(run, samples, events, broker):
     client = "esp32-telemetry-"+run["run_id"][:12]
-    require(any("New client connected" in row and (" as "+client+" (") in row and "u'diag-device'" in row
+    # A public broker exposes no connection log. Then the ESP32 is tied to the receiver
+    # only by the random 128-bit session IDs below, which native controls cannot reproduce.
+    require(broker is None or any("New client connected" in row and (" as "+client+" (") in row and "u'diag-device'" in row
                 for row in broker.splitlines()), "No ESP32 telemetry broker connection; native controls do not prove Wokwi")
     selected = []
     for sample in samples:
@@ -76,14 +81,18 @@ def match(run, samples, events, broker):
     return client, selected
 
 
-def verify(path, fault_test=False):
+def verify(path, fault_test=False, public=False):
     raw_text = path.read_text(encoding="utf-8-sig")
-    run, samples = serial(raw_text, fault_test=fault_test)
+    run, samples = serial(raw_text, fault_test=fault_test, public=public)
     sent = [json.loads(m[1]) for m in re.finditer(r"(?m)^\s*TELEMETRY_SENT (\{[^\r\n]+\})\s*$", raw_text)]
     confirmed = {(e["session_id"], e["counter"]) for e in samples}
     unconfirmed = [e for e in sent if (e["session_id"], e["counter"]) not in confirmed]
-    broker = subprocess.check_output(["docker", "logs", "lab-kimia-mqtt-pqc-broker-1"], stderr=subprocess.STDOUT, text=True)
-    client, events = match(run, samples, journal_events(), broker)
+    if public:
+        broker, unit = None, "lab-kimia-pqc-session-public.service"
+    else:
+        broker = subprocess.check_output(["docker", "logs", "lab-kimia-mqtt-pqc-broker-1"], stderr=subprocess.STDOUT, text=True)
+        unit = "lab-kimia-pqc-session.service"
+    client, events = match(run, samples, journal_events(unit), broker)
     points = matched_points(events)
     # One representative point per state is enough for Grafana query validation.
     representatives = {}
@@ -97,7 +106,8 @@ def verify(path, fault_test=False):
         provenance = json.loads(provenance_path.read_text())
         require(provenance.get("capture_sha256") == hashlib.sha256(path.read_bytes()).hexdigest(), "Serial provenance hash mismatch")
         source = provenance["source"]
-    return {"verified": True, "capture_mode": "fault" if fault_test else "nominal", "collected_utc": datetime.now(timezone.utc).isoformat(),
+    return {"verified": True, "capture_mode": "fault" if fault_test else "nominal",
+            "transport": "public broker.emqx.io; session IDs matched, no broker log" if public else "private Mosquitto; broker log matched", "collected_utc": datetime.now(timezone.utc).isoformat(),
             "provenance": source + "; sensor readings and encrypted storage ACKs matched to live LXC, InfluxDB and Grafana",
             "capture_sha256": hashlib.sha256(path.read_bytes()).hexdigest(), "run": run, "broker_client_id": client,
             "sent_samples": len(sent), "unconfirmed_sent_frames": unconfirmed,
@@ -110,9 +120,10 @@ if __name__ == "__main__":
     parser.add_argument("capture", type=Path)
     parser.add_argument("--fault-test", action="store_true",
                         help="Allow expected connection failures in a recorded fault exercise; not nominal startup evidence")
+    parser.add_argument("--public", action="store_true", help="Wokwi web run through the public broker receiver")
     parser.add_argument("--output", type=Path, default=ROOT / "docs/evidence/pqc-ticket-04/capture-validation.json")
     args = parser.parse_args()
-    result = verify(args.capture, fault_test=args.fault_test)
+    result = verify(args.capture, fault_test=args.fault_test, public=args.public)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, indent=2)+"\n")
     print(json.dumps({"verified": True, "run_id": result["run"]["run_id"],

@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "mode": "attack",
+  "source": "outsider attack during Wokwi web run",
+  "broker": "broker.emqx.io",
+  "topic_prefix": "lkpqc-b16bef88/session",
+  "started_utc": "2026-11-25T07:42:25.512810+00:00",
+  "finished_utc": "2026-11-25T07:50:55.504779+00:00",
+  "attack_started_utc": "2026-11-25T07:50:40.455385+00:00",
+  "confidentiality": {
+    "frames_observed": 23,
+    "plaintext_seen": false
+  },
+  "replayed_and_tampered_data": 5,
+  "flood": {
+    "frames": 300,
+    "rate_per_s": 25,
+    "seconds": 12
+  },
+  "receiver": {
+    "state": "active",
+    "restarts": 0,
+    "rejected_events": 100,
+    "stored_events": 12,
+    "duplicate_stored": 0
+  }
+}

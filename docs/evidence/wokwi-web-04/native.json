@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "mode": "native",
+  "source": "native-control",
+  "broker": "broker.emqx.io",
+  "topic_prefix": "lkpqc-b16bef88/session",
+  "started_utc": "2026-11-25T06:20:19.971309+00:00",
+  "finished_utc": "2026-11-25T06:20:51.193755+00:00",
+  "confidentiality": {
+    "frames_observed": 6,
+    "plaintext_seen": false
+  },
+  "forged": {
+    "frames": 5,
+    "authenticated_reply": false,
+    "receiver_rejected": 5
+  },
+  "tampered_data": {
+    "frames": 1,
+    "authenticated_reply": false,
+    "receiver_rejected": 1
+  },
+  "replayed_data": {
+    "frames": 1,
+    "authenticated_reply": false,
+    "receiver_rejected": 1
+  },
+  "replayed_client_hello": {
+    "active_session_survived": true,
+    "recovered": true
+  },
+  "retained_junk": {
+    "accepted_by_late_device": 0,
+    "late_device_ignored": 1
+  },
+  "flood": {
+    "frames": 300,
+    "rate_per_s": 25,
+    "seconds": 12,
+    "receiver_state": "active",
+    "receiver_restarts_during_test": 0,
+    "session_recovered": true,
+    "recovery_s": 1.5
+  },
+  "storage": {
+    "telemetry_stored_events": 0,
+    "influx_points": 0,
+    "rejected_events": 103
+  }
+}

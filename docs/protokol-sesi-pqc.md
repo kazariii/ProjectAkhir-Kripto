@@ -8,9 +8,9 @@ Profil tetap: ML-KEM-512, prospective FN-DSA degree 512, HKDF-SHA256, ChaCha20-P
 
 Kedua pihak menyimpan secret/public FN-DSA sendiri dan public peer yang dipin sebelum koneksi. Binding identitas adalah `SHA256(server_public || client_public)`. Tidak ada TOFU maupun distribusi private key melalui MQTT. Setiap handshake menghasilkan pasangan ML-KEM server baru; secret ML-KEM dan shared secret dibuang setelah pembentukan sesi.
 
-Transport MQTT biasa TCP/1883 memakai dua topik: `lab/kimia/pqc/session/up` untuk client→server dan `.../down` untuk server→client. Data binary, QoS 0, `retain=false`, MQTT clean session. Receiver membuang retained messages; callback PubSubClient tidak mengekspos flag retain, sehingga firmware mengandalkan nonce/transcript baru serta pemeriksaan sesi/counter untuk menolak replay. ACL hanya memberi tiap pihak arah topiknya. Header maksimum 1519 byte, di bawah batas broker 4096 dan buffer firmware 4096.
+Transport MQTT biasa TCP/1883 memakai dua topik: `<prefix>/up` untuk client→server dan `<prefix>/down` untuk server→client. Prefix jalur privat `lab/kimia/pqc/session`; prefix jalur publik `broker.emqx.io` adalah `lkpqc-b16bef88/session` (pencegah tabrakan, bukan rahasia). Data binary, QoS 0, `retain=false`, MQTT clean session. Receiver membuang retained messages; callback PubSubClient tidak mengekspos flag retain, sehingga firmware mengandalkan nonce/transcript baru serta pemeriksaan sesi/counter untuk menolak replay. Pada Mosquitto privat, ACL hanya memberi tiap pihak arah topiknya; broker publik tidak punya ACL, sehingga siapa pun dapat publish/subscribe dan penolakan sepenuhnya bergantung pada protokol ini. Header maksimum 1519 byte, di bawah batas broker 4096 dan buffer firmware 4096.
 
-MQTT password dan metadata topik tetap terbuka pada transport ini. Autentikasi aplikasi berasal dari pin/tanda tangan serta konfirmasi kunci, bukan kerahasiaan password broker. Broker/jaringan dapat menghapus, menunda atau membanjiri pesan; ketersediaan tidak dijamin oleh algoritma ini.
+Metadata topik (dan password MQTT pada jalur privat) tetap terbuka pada transport ini. Autentikasi aplikasi berasal dari pin/tanda tangan serta konfirmasi kunci, bukan kerahasiaan password broker. Broker/jaringan dapat menghapus, menunda atau membanjiri pesan; ketersediaan tidak dijamin oleh algoritma ini.
 
 ## Wire format
 

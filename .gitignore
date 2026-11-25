@@ -5,6 +5,7 @@ firmware/include/secrets.h
 firmware/include/pqc_fixture.h
 firmware/include/mqtt_diag_secrets.h
 firmware/include/pqc_session_identity.h
+firmware/include/pqc_session_identity_demo.h
 firmware/.pio/
 firmware/wokwi-api.h
 .pio/

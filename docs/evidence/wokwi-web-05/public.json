@@ -1,0 +1,1 @@
+{"passed": true, "source": "native-control", "broker": "broker.emqx.io", "topic_prefix": "lkpqc-b16bef88/session", "run_id": "6f60b58ab44ef9d2c728acbba9fd0726", "session_id": "d90a7425bef8833e3c77007cb79a946d", "encrypted_ack_verified": true}

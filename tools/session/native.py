@@ -6,8 +6,18 @@ import time
 ROOT = Path(__file__).resolve().parents[2]
 LIBRARY = ROOT / "evidence/local/pqc-session-build/libpqc-session.so"
 IDENTITY_SIZE = 3139
-UP = "lab/kimia/pqc/session/up"
-DOWN = "lab/kimia/pqc/session/down"
+# Must equal PQC_TOPIC_PREFIX in firmware/include/pqc_broker.h for the same broker.
+TOPIC_PREFIX = "lab/kimia/pqc/session"
+
+
+def topics(prefix=TOPIC_PREFIX):
+    """Session (up, down) topics. A prefix avoids collisions; it grants no access."""
+    if not prefix or prefix.endswith("/") or any(c in prefix for c in "+#"):
+        raise ValueError("Invalid MQTT topic prefix")
+    return prefix + "/up", prefix + "/down"
+
+
+UP, DOWN = topics()
 
 
 def now_ms():

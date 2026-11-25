@@ -1,0 +1,4 @@
+MQTT_DIAG_SERVER {"event": "request_received", "utc": "2026-11-25T03:38:17.531815+00:00", "run_id": "0f11eef15aef09561edb432e36c3cbca"}
+MQTT_DIAG_SERVER {"event": "reply_queued", "utc": "2026-11-25T03:38:17.531896+00:00", "run_id": "0f11eef15aef09561edb432e36c3cbca"}
+MQTT_DIAG_SERVER {"event": "large_received", "utc": "2026-11-25T03:38:19.211931+00:00", "run_id": "0f11eef15aef09561edb432e36c3cbca", "bytes": 1519}
+MQTT_DIAG_SERVER {"event": "large_reply_queued", "utc": "2026-11-25T03:38:19.212014+00:00", "run_id": "0f11eef15aef09561edb432e36c3cbca"}

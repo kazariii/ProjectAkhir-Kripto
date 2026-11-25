@@ -6,12 +6,12 @@
 #include <cstring>
 #include "pqc_session.h"
 #include "pqc_session_identity.h"
-#include "mqtt_diag_secrets.h"
+#include "pqc_broker.h"
 
 namespace {
 using namespace pqc;
 using namespace pqc::session;
-constexpr char UP[] = "lab/kimia/pqc/session/up", DOWN[] = "lab/kimia/pqc/session/down";
+constexpr const char *UP = SESSION_UP, *DOWN = SESSION_DOWN;
 enum class Command { Begin, Frame, Reset };
 struct Input { Command command; uint32_t generation; Packet packet; };
 struct Output {
@@ -86,7 +86,7 @@ void setup() {
     incoming = xQueueCreate(4, sizeof(Input)); outgoing = xQueueCreate(4, sizeof(Output));
     if (!incoming || !outgoing) { Serial.println("SESSION_FAILED queue allocation"); finished = true; return; }
     WiFi.mode(WIFI_STA); WiFi.begin("Wokwi-GUEST", "", 6);
-    mqtt.setServer(MQTT_DIAG_HOST, 1883); mqtt.setCallback(received);
+    mqtt.setServer(BROKER_HOST, BROKER_PORT); mqtt.setCallback(received);
     mqtt.setKeepAlive(15); mqtt.setSocketTimeout(3);
     if (!mqtt.setBufferSize(4096)) { fail("MQTT buffer allocation"); return; }
     // A separate owner keeps mqtt.loop() running during the ~12s FN-DSA sign.
@@ -114,7 +114,7 @@ void loop() {
         if (lastAttempt && millis()-lastAttempt < 3000) { delay(10); return; }
         lastAttempt = millis();
         char clientId[40]; snprintf(clientId, sizeof(clientId), "esp32-session-%.12s", runId);
-        if (!mqtt.connect(clientId, MQTT_DIAG_USERNAME, MQTT_DIAG_PASSWORD)) {
+        if (!mqtt.connect(clientId, BROKER_USERNAME, BROKER_PASSWORD)) {
             Serial.printf("SESSION_CONNECT_FAILED state=%d\n", mqtt.state()); return;
         }
         // Clean MQTT session, QoS 0, retain=false on both directions. Broker ACL

@@ -17,6 +17,8 @@ ROOT = Path(__file__).resolve().parents[2]
 REQUEST = "lab/kimia/pqc/diag/request"
 REPLY = "lab/kimia/pqc/diag/reply"
 TOKEN = re.compile(rb"diag:([0-9a-f]{32})\Z")
+LARGE = re.compile(rb"big:([0-9a-f]{32}):", re.DOTALL)
+LARGE_FRAME = 1519  # Largest PQC session header; public-broker spike only.
 
 
 import sys
@@ -29,19 +31,29 @@ def log(event, **fields):
                                           **fields}), flush=True)
 
 
-def serve(path):
+def serve(path, prefix="lab/kimia/pqc/diag", public=False):
+    """Echo diagnostics. Public mode accepts an account-less broker and also echoes one
+    1519-byte frame verbatim; anyone can publish there, so input stays strictly matched."""
+    request, reply = prefix + "/request", prefix + "/reply"
     with Session(credentials(path), "lxc-diag-") as session:
         require(session.code == 0, "Diagnostic receiver authentication failed")
         require(not isinstance(session.client.socket(), ssl.SSLSocket), "Unexpected TLS transport")
 
         def received(client, data, message):
+            large = public and len(message.payload) == LARGE_FRAME and LARGE.match(message.payload)
+            if message.topic == request and not message.retain and large:
+                run_id = large[1].decode("ascii")
+                log("large_received", run_id=run_id, bytes=LARGE_FRAME)
+                result = client.publish(reply, message.payload, qos=0, retain=False)
+                log("large_reply_queued" if result.rc == mqtt.MQTT_ERR_SUCCESS else "large_reply_failed", run_id=run_id)
+                return
             match = TOKEN.fullmatch(message.payload)
-            if message.topic != REQUEST or message.retain or not match:
+            if message.topic != request or message.retain or not match:
                 log("discarded", reason="invalid diagnostic message")
                 return
             run_id = match[1].decode("ascii")
             log("request_received", run_id=run_id)
-            result = client.publish(REPLY, "ack:" + run_id, qos=0, retain=False)
+            result = client.publish(reply, "ack:" + run_id, qos=0, retain=False)
             if result.rc == mqtt.MQTT_ERR_SUCCESS:
                 log("reply_queued", run_id=run_id)
             else:
@@ -50,8 +62,8 @@ def serve(path):
         session.client.on_message = received
         # The responder does not wait for QoS-0 acknowledgements or retain their MIDs.
         session.client.on_publish = None
-        require(session.subscribe(REQUEST) == [0], "Receiver subscription denied")
-        log("ready", port=1883, tls=False)
+        require(session.subscribe(request) == [0], "Receiver subscription denied")
+        log("ready", port=1883, tls=False, broker=session.client.host, prefix=prefix, public=public)
         while True:
             # Fail/restart instead of pretending a disconnected echo process is ready.
             time.sleep(1)
@@ -59,6 +71,7 @@ def serve(path):
 
 
 def check(private):
+    """Private Mosquitto only: login/ACL cases do not exist on the public broker."""
     device = credentials(private / "device.json")
     receiver = credentials(private / "receiver.json")
     run_id = secrets.token_hex(16)
@@ -149,13 +162,15 @@ def main():
     parser.add_argument("--credentials", type=Path)
     parser.add_argument("--private", type=Path, default=ROOT / "evidence/local/mqtt-private")
     parser.add_argument("--capture", type=Path)
+    parser.add_argument("--prefix", default="lab/kimia/pqc/diag")
+    parser.add_argument("--public", action="store_true", help="account-less public broker spike")
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
     if args.command == "serve":
         credential_path = args.credentials
         if credential_path is None:
             credential_path = Path(os.environ["CREDENTIALS_DIRECTORY"]) / "mqtt.json"
-        serve(credential_path)
+        serve(credential_path, args.prefix, args.public)
         return
     if args.command == "check":
         result = check(args.private)

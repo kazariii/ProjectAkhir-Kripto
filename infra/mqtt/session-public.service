@@ -1,0 +1,25 @@
+[Unit]
+Description=Lab Kimia PQC session receiver for the public broker (Wokwi web demo)
+After=network-online.target docker.service
+Wants=network-online.target
+
+# Runs beside lab-kimia-pqc-session.service (private Mosquitto). Uses the demo
+# identity, never the lab identity, because the demo firmware is shared.
+[Service]
+Type=simple
+DynamicUser=yes
+WorkingDirectory=/opt/lab-kimia-mqtt
+LoadCredential=mqtt.json:/opt/lab-kimia-mqtt/evidence/local/public-broker/session.json
+LoadCredential=server.identity:/opt/lab-kimia-mqtt/evidence/local/session-demo/server.identity
+LoadCredential=influx.json:/opt/lab-kimia-mqtt/evidence/local/session-private/influx.json
+ExecStart=/opt/lab-kimia-mqtt/.venv/bin/python -m tools.session.receiver --influx %d/influx.json
+Environment=PYTHONUNBUFFERED=1
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target

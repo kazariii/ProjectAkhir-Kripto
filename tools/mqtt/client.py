@@ -74,8 +74,16 @@ def require(condition, message):
 
 
 def credentials(path):
+    """Broker settings: host, port 1883, and either an account or an explicit "public": true.
+    An optional "topic_prefix" selects the session topics (tools.session.native.topics)."""
     data = json.loads(path.read_text())
-    require(data.get("port") == 1883 and data.get("host"), "Expected private TCP/1883 credentials")
+    require(data.get("port") == 1883 and data.get("host"), "Expected TCP/1883 credentials")
+    if data.get("public") is True:
+        require(data.get("username") is None and data.get("password") is None,
+                "Public broker settings must not carry an account")
+    else:
+        require(data.get("username") and data.get("password"),
+                'Missing account; an account-less broker must be declared with "public": true')
     return data
 
 

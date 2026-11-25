@@ -1,6 +1,6 @@
 # Panduan demo dan verifikasi akhir PQC — tiket 07
 
-Status **done**, **15 November 2026**. [Panduan demo utama](demo-proyek.md) sekarang memuat jalur MQTT TCP/1883 tanpa TLS dan dapat diikuti tanpa riwayat chat. [Ringkasan pemeriksaan](evidence/pqc-ticket-07/summary.json) mencatat hasil dan provenance. Kode/bukti tetap lokal dan disinkronkan ke source LXC; tidak ada commit/push.
+Status **done**, **15 November 2026**. [Panduan demo utama](demo-proyek-privat.md) sekarang memuat jalur MQTT TCP/1883 tanpa TLS dan dapat diikuti tanpa riwayat chat. [Ringkasan pemeriksaan](evidence/pqc-ticket-07/summary.json) mencatat hasil dan provenance. Kode/bukti tetap lokal dan disinkronkan ke source LXC; tidak ada commit/push.
 
 ## Perubahan yang diselesaikan
 

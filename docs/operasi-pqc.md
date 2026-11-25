@@ -1,8 +1,37 @@
 # Operasi MQTT/PQC di LXC
 
-Jalur utama sejak tiket 06 adalah Wokwi → Mosquitto TCP/1883 → receiver PQC → InfluxDB → Grafana. Monitoring tetap di LXC; laptop menjalankan simulator dan browser. MQTT/TLS/Telegraf lama telah dihentikan. Ini deployment lab privat dengan prospective FN-DSA, bukan sertifikasi keamanan produksi.
+Sejak 25 November 2026, jalur demo utama adalah Wokwi web → `broker.emqx.io:1883` (publik, tanpa TLS dan tanpa login) → receiver PQC publik di LXC → InfluxDB → Grafana. Jalur privat sejak tiket 06 (Wokwi VS Code → Mosquitto TCP/1883 → receiver PQC privat) tetap berjalan sebagai cadangan dan rollback. Monitoring tetap di LXC. MQTT/TLS/Telegraf lama telah dihentikan. Ini deployment lab dengan prospective FN-DSA, bukan sertifikasi keamanan produksi.
 
-Untuk presentasi berurutan beserta expected output, gunakan [panduan demo lengkap](demo-proyek.md). Dokumen operasi ini tetap menjadi rujukan lokasi state, provisioning dan rollback.
+Untuk presentasi berurutan beserta expected output, gunakan [panduan demo utama (Wokwi web)](demo-proyek.md) atau [panduan jalur privat](demo-proyek-privat.md). Dokumen operasi ini tetap menjadi rujukan lokasi state, provisioning dan rollback.
+
+## Jalur publik dan rollback ke jalur privat
+
+| Komponen | Jalur publik (default demo) | Jalur privat (cadangan) |
+|---|---|---|
+| Broker | `broker.emqx.io:1883`, tanpa login/ACL | `10.34.211.141:1883`, login/ACL |
+| Topik | `lkpqc-b16bef88/session/{up,down}` | `lab/kimia/pqc/session/{up,down}` |
+| Receiver | `lab-kimia-pqc-session-public.service` | `lab-kimia-pqc-session.service` |
+| Setting broker receiver | `evidence/local/public-broker/session.json` (`public: true`, `topic_prefix`) | `evidence/local/mqtt-private/` |
+| Identitas server | `evidence/local/session-demo/` | `evidence/local/session-private/` |
+| Firmware | `pio run -e pqc-telemetry-public` (default), bin gabungan untuk Wokwi web | `pio run -e pqc-telemetry` |
+| Simulator | Wokwi web, laptop di hotspot | Wokwi VS Code dengan Private Gateway |
+
+Kedua receiver menulis ke InfluxDB yang sama dengan token writer yang sama. Unit publik ada di `infra/mqtt/session-public.service` (dipasang ke `/etc/systemd/system/lab-kimia-pqc-session-public.service`). Kunci klien demo ada di dalam bin publik; ini risiko yang diterima dan dijelaskan di [panduan demo](demo-proyek.md#1-gambaran-sistem).
+
+Di broker publik, login/ACL **tidak** melindungi apa pun. Kerahasiaan, integritas, dan autentikasi hanya berasal dari protokol sesi. Tes akun/ACL broker (`tools/mqtt/diagnostic.py check`, kasus akun di `tools/telemetry/check_security.py`) hanya berlaku untuk jalur privat. Uji setara untuk jalur publik adalah `tools/session/check_public.py`.
+
+**Rollback ke jalur privat.** Jalur privat tidak pernah dimatikan, jadi rollback tidak memerlukan perubahan infrastruktur:
+
+```sh
+# Opsional: hanya satu jalur aktif
+systemctl disable --now lab-kimia-pqc-session-public.service
+cd /opt/lab-kimia-mqtt
+PLATFORMIO_CORE_DIR=/opt/lab-kimia-suhu/pqc-proof/evidence/local/platformio \
+  /opt/lab-kimia-suhu/pqc-proof/.venv/bin/pio run -d firmware -e pqc-telemetry
+.venv/bin/python -m tools.session.check_mqtt
+```
+
+Lalu arahkan `firmware/wokwi.toml` ke `.pio/build/pqc-telemetry/firmware.bin`/`.elf` dan ikuti [panduan jalur privat](demo-proyek-privat.md). Untuk kembali ke jalur publik: `systemctl enable --now lab-kimia-pqc-session-public.service`, lalu periksa dengan `.venv/bin/python -m tools.session.check_mqtt --broker evidence/local/public-broker/session.json --identity evidence/local/session-demo/client.identity`.
 
 ## Lokasi dan state
 
@@ -13,7 +42,7 @@ Untuk presentasi berurutan beserta expected output, gunakan [panduan demo lengka
 | Grafana | `http://10.34.211.141:3000/d/suhu-meja01`, UID `suhu-meja01` |
 | Datasource | `influx-suhu`, org `lab-kimia`, bucket `telemetry` |
 | InfluxDB | `http://127.0.0.1:8086`, hanya loopback LXC |
-| Broker | `10.34.211.141:1883`, bind privat, login/ACL, tanpa TLS |
+| Broker privat | `10.34.211.141:1883`, bind privat, login/ACL, tanpa TLS. Jalur publik memakai `broker.emqx.io:1883` tanpa login |
 | Receiver | `lab-kimia-pqc-session.service`, enabled, restart on failure |
 | Private MQTT | `evidence/local/mqtt-private` pada source receiver |
 | Private identity dan token writer | `evidence/local/session-private` pada source receiver |
@@ -53,14 +82,14 @@ Docker dan receiver enabled; container memakai `unless-stopped`. Ini konfigurasi
 
 ## Firmware utama dan Wokwi
 
-Gunakan folder **`firmware`**, `platformio.ini` default `pqc-telemetry`, dan `wokwi.toml` yang menunjuk `.pio/build/pqc-telemetry/firmware.bin`/`.elf`. Ini application image PlatformIO yang didukung [konfigurasi resmi Wokwi](https://docs.wokwi.com/vscode/project-config#esp32-application-image-vs-full-image); build memakai partition/flash standar. Image dan ELF memuat key/kredensial demo sehingga tetap ignored/private.
+Bagian ini menjelaskan jalur privat. Sejak 25 November 2026, `platformio.ini` default `pqc-telemetry-public` dan `wokwi.toml` menunjuk `.pio/build/pqc-telemetry-public/`; untuk jalur privat pilih `-e pqc-telemetry` secara eksplisit dan arahkan `wokwi.toml` kembali. Gunakan folder **`firmware`**, env `pqc-telemetry`, dan `wokwi.toml` yang menunjuk `.pio/build/pqc-telemetry/firmware.bin`/`.elf`. Ini application image PlatformIO yang didukung [konfigurasi resmi Wokwi](https://docs.wokwi.com/vscode/project-config#esp32-application-image-vs-full-image); build memakai partition/flash standar. Image dan ELF memuat key/kredensial demo sehingga tetap ignored/private.
 
 Build pada LXC yang sudah mempunyai toolchain:
 
 ```sh
 cd /opt/lab-kimia-mqtt
 PLATFORMIO_CORE_DIR=/opt/lab-kimia-suhu/pqc-proof/evidence/local/platformio \
-  /opt/lab-kimia-suhu/pqc-proof/.venv/bin/pio run -d firmware -j2
+  /opt/lab-kimia-suhu/pqc-proof/.venv/bin/pio run -d firmware -e pqc-telemetry -j2
 ```
 
 Salin `.bin` dan `.elf` melalui SCP ke `firmware/.pio/build/pqc-telemetry/` di laptop. F1 → Wokwi: Start Simulator, dengan Private Gateway/lisensi yang sudah aktif. Jalankan hanya satu perangkat/simulator. Awali 25°C/gas rendah, tunggu `TELEMETRY_STORED`; ubah sensor dan periksa flag serta dashboard. Bila UI mengingat gas 400 walaupun diagram berisi 0.1, turunkan slider sampai **DOUT HIGH**. Gas adalah stimulus simulator; ADC tidak dianggap ppm terkalibrasi.

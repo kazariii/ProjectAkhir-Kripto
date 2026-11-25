@@ -1,5 +1,7 @@
 # Sesi MQTT terautentikasi — tiket 03
 
+> **ACL di dokumen ini khusus jalur privat (Mosquitto LXC).** Jalur publik `broker.emqx.io` memakai prefix `lkpqc-b16bef88/session`, identitas `--profile demo`, dan receiver `lab-kimia-pqc-session-public.service`, tanpa login/ACL. Uji pihak luar di broker publik: `python -m tools.session.check_public {native,attack} --output ...`.
+
 Eksperimen satu perangkat, satu payload sintetis, dan ACK terenkripsi. Sensor, alarm, penulisan InfluxDB dan dashboard masuk tiket 04; sejak tiket 06 jalur PQC menjadi default. Untuk sensor gunakan [operasi utama](../../docs/operasi-pqc.md), sedangkan petunjuk di bawah khusus pengulangan proof tiket 03. Lihat [hasil aktual](../../docs/verifikasi-pqc-tiket-03.md) dan [format protokol](../../docs/protokol-sesi-pqc.md).
 
 ## Menjalankan kembali di laptop

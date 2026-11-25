@@ -1,6 +1,6 @@
 # Arsip demo proyek MQTT/TLS
 
-> **Arsip panduan MQTT/TLS lama.** Untuk demo sekarang gunakan [panduan utama MQTT/PQC](demo-proyek.md). Perintah dan hasil di bawah hanya untuk membaca histori/rollback lama; tidak dijalankan pada demo revisi.
+> **Arsip panduan MQTT/TLS lama.** Untuk demo sekarang gunakan [panduan utama MQTT/PQC](demo-proyek-privat.md). Perintah dan hasil di bawah hanya untuk membaca histori/rollback lama; tidak dijalankan pada demo revisi.
 
 Proyek: **Simulasi Monitoring Gas dan Suhu Laboratorium Kimia Dasar Berbasis MQTT over TLS dengan Dashboard Grafana**. Satu ESP32 memantau lingkungan sekitar satu meja praktikum LPG, menjalankan alarm lokal, dan mengirim pengukuran untuk ditinjau melalui dashboard. Panduan ini dapat diikuti tanpa riwayat chat. Hasil pengulangan aktual dan batas buktinya ada di [verifikasi tiket 07](verifikasi-tiket-07.md).
 

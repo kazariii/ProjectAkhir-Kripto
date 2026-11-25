@@ -5,14 +5,19 @@
 #include <esp_timer.h>
 #include <cstring>
 #include "pqc_session.h"
+// Lab identity by default; a public build selects a separate demo identity header.
+#ifdef PQC_IDENTITY_HEADER
+#include PQC_IDENTITY_HEADER
+#else
 #include "pqc_session_identity.h"
-#include "mqtt_diag_secrets.h"
+#endif
+#include "pqc_broker.h"
 #include "pending_sample.h"
 
 namespace pqc_telemetry { namespace {
 using namespace pqc;
 using namespace pqc::session;
-constexpr char UP[] = "lab/kimia/pqc/session/up", DOWN[] = "lab/kimia/pqc/session/down";
+constexpr const char *UP = SESSION_UP, *DOWN = SESSION_DOWN;
 constexpr uint32_t SAMPLE_AGE_MS = 2000;
 constexpr uint64_t ACK_TIMEOUT_MS = 10000;
 constexpr uint64_t RETRY_MS = 5000;
@@ -124,7 +129,7 @@ void worker(void*) {
 void network(void*) {
     Serial.printf("TELEMETRY_BEGIN ticket=04 transport=MQTT-TCP profile=LK3/1\n");
     WiFi.mode(WIFI_STA); WiFi.begin("Wokwi-GUEST", "", 6);
-    mqtt.setServer(MQTT_DIAG_HOST, 1883); mqtt.setCallback(received);
+    mqtt.setServer(BROKER_HOST, BROKER_PORT); mqtt.setCallback(received);
     // Wokwi's clock can lag wall time. Allow the measured signing interval and
     // short simulator stalls without a broker timeout; indefinite Pause still disconnects.
     mqtt.setKeepAlive(120); mqtt.setSocketTimeout(3);
@@ -152,7 +157,7 @@ void network(void*) {
             if (attempt && now()-attempt < 5000) { vTaskDelay(pdMS_TO_TICKS(10)); continue; }
             attempt = now();
             char client[40]; snprintf(client, sizeof(client), "esp32-telemetry-%.12s", run_id);
-            if (!mqtt.connect(client, MQTT_DIAG_USERNAME, MQTT_DIAG_PASSWORD)) {
+            if (!mqtt.connect(client, BROKER_USERNAME, BROKER_PASSWORD)) {
                 Serial.printf("TELEMETRY_CONNECT_FAILED state=%d\n", mqtt.state()); continue;
             }
             if (!mqtt.subscribe(DOWN, 0)) { mqtt.disconnect(); continue; }

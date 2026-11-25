@@ -1,5 +1,7 @@
 # MQTT privat: konektivitas tiket 02
 
+> **Khusus jalur privat.** Login, ACL, dan kontrol akun di dokumen ini hanya berlaku untuk Mosquitto LXC. Broker publik `broker.emqx.io` (jalur demo utama sejak 25 November 2026) tidak punya login/ACL; mode `serve --public --prefix ...` hanya dipakai untuk spike Wokwi web. Lihat [operasi](../../docs/operasi-pqc.md#jalur-publik-dan-rollback-ke-jalur-privat).
+
 Tujuan: ESP32 pada **Wokwi VS Code dengan Private Gateway** mengirim `diag:<run_id>` ke Mosquitto TCP/1883 di LXC; penerima LXC membalas `ack:<run_id>`. Hanya marker sintetis yang dikirim. Tidak ada pembacaan sensor, penulisan InfluxDB, atau sesi ML-KEM/FN-DSA pada tiket konektivitas ini. Autentikasi kriptografi aplikasi adalah tiket 03.
 
 ## Instalasi LXC

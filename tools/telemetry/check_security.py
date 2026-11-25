@@ -1,4 +1,5 @@
 """Ticket 05 destructive lab checks. Run on the private LXC with simulator stopped.
+Private Mosquitto path only; its broker account/ACL cases do not apply to the public broker.
 
 Temporarily restarts only the experimental receiver/broker and Influx container.
 Every stopped service is restored in finally. Does not alter credentials/volumes.

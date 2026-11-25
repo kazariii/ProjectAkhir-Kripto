@@ -6,7 +6,7 @@ Tanggal: **10 November 2026, WIB (UTC+7)**. Acuan: [07-demo-proyek-lengkap.md](.
 
 ## Hasil dan perubahan
 
-[Panduan demo lengkap](demo-proyek.md) menjadi pintu masuk dari README: prasyarat, konfigurasi pemilik dari template, EMQX Serverless/Spend Limit 0, Docker, delapan tab Wokwi, Grafana, alarm, gangguan/pemulihan, restart, keamanan dan penyiapan Git. Rincian rangkaian/penyiapan sebelumnya dipakai kembali melalui tautan. Tidak ada perubahan firmware, kontrak pesan, parser, dashboard, layanan produksi, akun atau izin broker pada tiket 07.
+[Panduan demo lengkap](demo-proyek-privat.md) menjadi pintu masuk dari README: prasyarat, konfigurasi pemilik dari template, EMQX Serverless/Spend Limit 0, Docker, delapan tab Wokwi, Grafana, alarm, gangguan/pemulihan, restart, keamanan dan penyiapan Git. Rincian rangkaian/penyiapan sebelumnya dipakai kembali melalui tautan. Tidak ada perubahan firmware, kontrak pesan, parser, dashboard, layanan produksi, akun atau izin broker pada tiket 07.
 
 [Skrip gangguan demo](../tests/demo_mqtt_outage.py) memindahkan prosedur takeover yang sebelumnya hanya berada di bukti lokal menjadi perintah yang bisa diulang. Memakai probe MQTT serta pembaca konfigurasi tiket 05, TLS terverifikasi dan ID ESP32 tetap; tidak publish/subscribe atau mengambil alih Telegraf. Durasi dibatasi 1–300 detik (default 90); selesai otomatis/Ctrl+C, dan menyimpan hasil tanpa rahasia di jalur yang diabaikan Git. Ini alat demo, bukan layanan aplikasi baru. Tidak ada dependensi tambahan.
 
@@ -66,7 +66,7 @@ Snapshot database lengkap sebelum/saat/sesudah, hasil semua panel, semua screens
 
 ## Reproduksi dan batas penerimaan
 
-Ikuti **bagian 2–7 [panduan demo](demo-proyek.md)** berurutan, dari mulai layanan dan Wokwi, enam tahap sensor, gangguan MQTT, pulih, restart, lalu uji akses dan TLS. Urutan uji keamanan bisa dijalankan saat kondisi sensor stabil; uji TLS lokal terisolasi tidak mengubah broker utama. Hasil run baru harus dicatat sendiri, tidak disalin sebagai kelulusan dari tabel ini.
+Ikuti **bagian 2–7 [panduan demo](demo-proyek-privat.md)** berurutan, dari mulai layanan dan Wokwi, enam tahap sensor, gangguan MQTT, pulih, restart, lalu uji akses dan TLS. Urutan uji keamanan bisa dijalankan saat kondisi sensor stabil; uji TLS lokal terisolasi tidak mengubah broker utama. Hasil run baru harus dicatat sendiri, tidak disalin sebagai kelulusan dari tabel ini.
 
 Pemasangan akun/kredensial baru tidak diulang: konfigurasi pemilik yang sudah berhasil pada tiket 01–06 dipakai kembali. Kredensial tetap diisi oleh pemilik. Build firmware/parser/stack lokal sebelumnya dipakai sebagai bukti pendukung; tidak diklaim dijalankan ulang pada tiket dokumentasi ini. Pembuktian baru berfokus pada demo nyata, pengujian keamanan, perbandingan data dan alat takeover. Konfigurasi contoh tersedia, rahasia lokal diabaikan/tidak dilacak Git; isi kandidat berkas diperiksa terhadap nilai password/token aktual dan penanda private key sebelum penyelesaian. Tidak ada push GitHub.
 

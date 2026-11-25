@@ -2,8 +2,8 @@
 version = 1
 # Optional UART capture; disable again after collecting evidence.
 # rfc2217ServerPort = 4000
-firmware = '.pio/build/pqc-telemetry/firmware.bin'
-elf = '.pio/build/pqc-telemetry/firmware.elf'
+firmware = '.pio/build/pqc-telemetry-public/firmware.bin'
+elf = '.pio/build/pqc-telemetry-public/firmware.elf'
 
 [[chip]]
 name = 'mq2-level'

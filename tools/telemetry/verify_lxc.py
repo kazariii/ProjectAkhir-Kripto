@@ -17,8 +17,8 @@ def request(url, data=None, headers=None):
         return response.read()
 
 
-def journal_events():
-    text = subprocess.check_output(["journalctl", "-u", "lab-kimia-pqc-session.service", "--no-pager", "-o", "cat"], text=True)
+def journal_events(unit="lab-kimia-pqc-session.service"):
+    text = subprocess.check_output(["journalctl", "-u", unit, "--no-pager", "-o", "cat"], text=True)
     return [json.loads(line.partition("SESSION_SERVER ")[2]) for line in text.splitlines() if line.startswith("SESSION_SERVER ")]
 
 

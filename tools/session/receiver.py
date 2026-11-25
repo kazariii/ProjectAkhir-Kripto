@@ -11,7 +11,7 @@ import time
 from urllib.error import URLError
 from tools.telemetry.storage import Writer, parse
 from tools.mqtt.client import MqttConnection, credentials, require, mqtt
-from tools.session.native import Native, Channel, UP, DOWN
+from tools.session.native import Native, Channel, TOPIC_PREFIX, topics
 
 
 def log(event, **fields):
@@ -49,8 +49,11 @@ def serve(mqtt_path, identity_path, influx_path=None):
     incoming = queue.Queue(maxsize=4)
     native = Native()
     writer = Writer(influx_path) if influx_path else None
+    broker = credentials(mqtt_path)
+    prefix = broker.get("topic_prefix", TOPIC_PREFIX)
+    UP, DOWN = topics(prefix)
     with Channel(native, identity_path.read_bytes(), server=True) as channel, \
-            MqttConnection(credentials(mqtt_path), "lxc-session-") as connection:
+            MqttConnection(broker, "lxc-session-") as connection:
         require(connection.code == 0, "Receiver MQTT authentication failed")
         require(not isinstance(connection.client.socket(), ssl.SSLSocket), "Unexpected TLS")
 
@@ -65,7 +68,8 @@ def serve(mqtt_path, identity_path, influx_path=None):
         connection.client.on_message = received
         connection.client.on_publish = None
         require(connection.subscribe(UP) == [0], "Session subscription denied")
-        log("ready", port=1883, tls=False, profile="LK3/1")
+        log("ready", port=1883, tls=False, profile="LK3/1", broker=broker["host"],
+            topic_prefix=prefix, public=broker.get("public") is True)
         renewal_at = 0
         while True:
             require(connection.client.is_connected(), "MQTT disconnected; discard session and restart")

@@ -1,0 +1,1293 @@
+{
+  "verified": true,
+  "capture_mode": "nominal",
+  "transport": "public broker.emqx.io; session IDs matched, no broker log",
+  "collected_utc": "2026-11-25T06:15:36.320175+00:00",
+  "provenance": "user-supplied Wokwi serial; sensor readings and encrypted storage ACKs matched to live LXC, InfluxDB and Grafana",
+  "capture_sha256": "147651577e48de35cfc63ba523f0836c081d36e24c5d7ca6f39672ee846803c4",
+  "run": {
+    "run_id": "8e88b610329a0b7b444f20dcea3142f8",
+    "local_ip": "10.10.0.2"
+  },
+  "broker_client_id": "esp32-telemetry-8e88b610329a",
+  "sent_samples": 25,
+  "unconfirmed_sent_frames": [],
+  "acked_sensor_samples": [
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 1,
+      "measured_ms": 20189,
+      "sample": {
+        "device_id": "esp32-meja01",
+        "temperature_c": 25.0,
+        "gas_raw": 2023,
+        "gas_alarm": false,
+        "temperature_alarm": false
+      }
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 2,
+      "measured_ms": 22189,
+      "sample": {
+        "device_id": "esp32-meja01",
+        "temperature_c": 25.0,
+        "gas_raw": 2023,
+        "gas_alarm": false,
+        "temperature_alarm": false
+      }
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 3,
+      "measured_ms": 24189,
+      "sample": {
+        "device_id": "esp32-meja01",
+        "temperature_c": 25.0,
+        "gas_raw": 2023,
+        "gas_alarm": false,
+        "temperature_alarm": false
+      }
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 4,
+      "measured_ms": 26189,
+      "sample": {
+        "device_id": "esp32-meja01",
+        "temperature_c": 25.0,
+        "gas_raw": 2023,
+        "gas_alarm": false,
+        "temperature_alarm": false
+      }
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 5,
+      "measured_ms": 28189,
+      "sample": {
+        "device_id": "esp32-meja01",
+        "temperature_c": 25.0,
+        "gas_raw": 2023,
+        "gas_alarm": false,
+        "temperature_alarm": false
+      }
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 6,
+      "measured_ms": 30189,
+      "sample": {
+        "device_id": "esp32-meja01",
+        "temperature_c": 125.0,
+        "gas_raw": 2023,
+        "gas_alarm": false,
+        "temperature_alarm": true
+      }
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 7,
+      "measured_ms": 32189,
+      "sample": {
+        "device_id": "esp32-meja01",
+        "temperature_c": 125.0,
+        "gas_raw": 2023,
+        "gas_alarm": false,
+        "temperature_alarm": true
+      }
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 8,
+      "measured_ms": 34189,
+      "sample": {
+        "device_id": "esp32-meja01",
+        "temperature_c": 125.0,
+        "gas_raw": 2023,
+        "gas_alarm": false,
+        "temperature_alarm": true
+      }
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 9,
+      "measured_ms": 36189,
+      "sample": {
+        "device_id": "esp32-meja01",
+        "temperature_c": 125.0,
+        "gas_raw": 2023,
+        "gas_alarm": false,
+        "temperature_alarm": true
+      }
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 10,
+      "measured_ms": 38189,
+      "sample": {
+        "device_id": "esp32-meja01",
+        "temperature_c": 125.0,
+        "gas_raw": 2023,
+        "gas_alarm": false,
+        "temperature_alarm": true
+      }
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 11,
+      "measured_ms": 40189,
+      "sample": {
+        "device_id": "esp32-meja01",
+        "temperature_c": 125.0,
+        "gas_raw": 2425,
+        "gas_alarm": true,
+        "temperature_alarm": true
+      }
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 12,
+      "measured_ms": 42189,
+      "sample": {
+        "device_id": "esp32-meja01",
+        "temperature_c": 125.0,
+        "gas_raw": 2425,
+        "gas_alarm": true,
+        "temperature_alarm": true
+      }
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 13,
+      "measured_ms": 44189,
+      "sample": {
+        "device_id": "esp32-meja01",
+        "temperature_c": 125.0,
+        "gas_raw": 2425,
+        "gas_alarm": true,
+        "temperature_alarm": true
+      }
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 14,
+      "measured_ms": 46189,
+      "sample": {
+        "device_id": "esp32-meja01",
+        "temperature_c": 125.0,
+        "gas_raw": 2425,
+        "gas_alarm": true,
+        "temperature_alarm": true
+      }
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 15,
+      "measured_ms": 48189,
+      "sample": {
+        "device_id": "esp32-meja01",
+        "temperature_c": 125.0,
+        "gas_raw": 2425,
+        "gas_alarm": true,
+        "temperature_alarm": true
+      }
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 16,
+      "measured_ms": 50189,
+      "sample": {
+        "device_id": "esp32-meja01",
+        "temperature_c": 125.0,
+        "gas_raw": 2425,
+        "gas_alarm": true,
+        "temperature_alarm": true
+      }
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 17,
+      "measured_ms": 52189,
+      "sample": {
+        "device_id": "esp32-meja01",
+        "temperature_c": 9.19,
+        "gas_raw": 2425,
+        "gas_alarm": true,
+        "temperature_alarm": false
+      }
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 18,
+      "measured_ms": 54189,
+      "sample": {
+        "device_id": "esp32-meja01",
+        "temperature_c": 22.0,
+        "gas_raw": 2425,
+        "gas_alarm": true,
+        "temperature_alarm": false
+      }
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 19,
+      "measured_ms": 56189,
+      "sample": {
+        "device_id": "esp32-meja01",
+        "temperature_c": 20.38,
+        "gas_raw": 2425,
+        "gas_alarm": true,
+        "temperature_alarm": false
+      }
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 20,
+      "measured_ms": 58189,
+      "sample": {
+        "device_id": "esp32-meja01",
+        "temperature_c": 20.38,
+        "gas_raw": 2425,
+        "gas_alarm": true,
+        "temperature_alarm": false
+      }
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 21,
+      "measured_ms": 60189,
+      "sample": {
+        "device_id": "esp32-meja01",
+        "temperature_c": 20.38,
+        "gas_raw": 2425,
+        "gas_alarm": true,
+        "temperature_alarm": false
+      }
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 22,
+      "measured_ms": 62189,
+      "sample": {
+        "device_id": "esp32-meja01",
+        "temperature_c": 20.38,
+        "gas_raw": 2425,
+        "gas_alarm": true,
+        "temperature_alarm": false
+      }
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 23,
+      "measured_ms": 64189,
+      "sample": {
+        "device_id": "esp32-meja01",
+        "temperature_c": 20.38,
+        "gas_raw": 2425,
+        "gas_alarm": true,
+        "temperature_alarm": false
+      }
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 24,
+      "measured_ms": 66189,
+      "sample": {
+        "device_id": "esp32-meja01",
+        "temperature_c": 20.38,
+        "gas_raw": 2425,
+        "gas_alarm": true,
+        "temperature_alarm": false
+      }
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 25,
+      "measured_ms": 68189,
+      "sample": {
+        "device_id": "esp32-meja01",
+        "temperature_c": 20.38,
+        "gas_raw": 2425,
+        "gas_alarm": true,
+        "temperature_alarm": false
+      }
+    }
+  ],
+  "lxc_stored_events": [
+    {
+      "event": "telemetry_stored",
+      "utc": "2026-11-25T06:13:22.053196+00:00",
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 1,
+      "received_ns": 1795587202046641142,
+      "device_id": "esp32-meja01",
+      "temperature_c": 25.0,
+      "gas_raw": 2023,
+      "gas_alarm": false,
+      "temperature_alarm": false
+    },
+    {
+      "event": "telemetry_stored",
+      "utc": "2026-11-25T06:13:24.126162+00:00",
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 2,
+      "received_ns": 1795587204119374513,
+      "device_id": "esp32-meja01",
+      "temperature_c": 25.0,
+      "gas_raw": 2023,
+      "gas_alarm": false,
+      "temperature_alarm": false
+    },
+    {
+      "event": "telemetry_stored",
+      "utc": "2026-11-25T06:13:26.224855+00:00",
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 3,
+      "received_ns": 1795587206218157154,
+      "device_id": "esp32-meja01",
+      "temperature_c": 25.0,
+      "gas_raw": 2023,
+      "gas_alarm": false,
+      "temperature_alarm": false
+    },
+    {
+      "event": "telemetry_stored",
+      "utc": "2026-11-25T06:13:28.283809+00:00",
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 4,
+      "received_ns": 1795587208277158964,
+      "device_id": "esp32-meja01",
+      "temperature_c": 25.0,
+      "gas_raw": 2023,
+      "gas_alarm": false,
+      "temperature_alarm": false
+    },
+    {
+      "event": "telemetry_stored",
+      "utc": "2026-11-25T06:13:30.392195+00:00",
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 5,
+      "received_ns": 1795587210387513741,
+      "device_id": "esp32-meja01",
+      "temperature_c": 25.0,
+      "gas_raw": 2023,
+      "gas_alarm": false,
+      "temperature_alarm": false
+    },
+    {
+      "event": "telemetry_stored",
+      "utc": "2026-11-25T06:13:32.483903+00:00",
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 6,
+      "received_ns": 1795587212477210453,
+      "device_id": "esp32-meja01",
+      "temperature_c": 125.0,
+      "gas_raw": 2023,
+      "gas_alarm": false,
+      "temperature_alarm": true
+    },
+    {
+      "event": "telemetry_stored",
+      "utc": "2026-11-25T06:13:34.531814+00:00",
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 7,
+      "received_ns": 1795587214526528087,
+      "device_id": "esp32-meja01",
+      "temperature_c": 125.0,
+      "gas_raw": 2023,
+      "gas_alarm": false,
+      "temperature_alarm": true
+    },
+    {
+      "event": "telemetry_stored",
+      "utc": "2026-11-25T06:13:36.644271+00:00",
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 8,
+      "received_ns": 1795587216637574509,
+      "device_id": "esp32-meja01",
+      "temperature_c": 125.0,
+      "gas_raw": 2023,
+      "gas_alarm": false,
+      "temperature_alarm": true
+    },
+    {
+      "event": "telemetry_stored",
+      "utc": "2026-11-25T06:13:38.722110+00:00",
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 9,
+      "received_ns": 1795587218717190255,
+      "device_id": "esp32-meja01",
+      "temperature_c": 125.0,
+      "gas_raw": 2023,
+      "gas_alarm": false,
+      "temperature_alarm": true
+    },
+    {
+      "event": "telemetry_stored",
+      "utc": "2026-11-25T06:13:40.813342+00:00",
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 10,
+      "received_ns": 1795587220806699697,
+      "device_id": "esp32-meja01",
+      "temperature_c": 125.0,
+      "gas_raw": 2023,
+      "gas_alarm": false,
+      "temperature_alarm": true
+    },
+    {
+      "event": "telemetry_stored",
+      "utc": "2026-11-25T06:13:42.943941+00:00",
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 11,
+      "received_ns": 1795587222937117962,
+      "device_id": "esp32-meja01",
+      "temperature_c": 125.0,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": true
+    },
+    {
+      "event": "telemetry_stored",
+      "utc": "2026-11-25T06:13:45.088288+00:00",
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 12,
+      "received_ns": 1795587225081704659,
+      "device_id": "esp32-meja01",
+      "temperature_c": 125.0,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": true
+    },
+    {
+      "event": "telemetry_stored",
+      "utc": "2026-11-25T06:13:47.136362+00:00",
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 13,
+      "received_ns": 1795587227129430678,
+      "device_id": "esp32-meja01",
+      "temperature_c": 125.0,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": true
+    },
+    {
+      "event": "telemetry_stored",
+      "utc": "2026-11-25T06:13:49.256889+00:00",
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 14,
+      "received_ns": 1795587229246062823,
+      "device_id": "esp32-meja01",
+      "temperature_c": 125.0,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": true
+    },
+    {
+      "event": "telemetry_stored",
+      "utc": "2026-11-25T06:13:51.344288+00:00",
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 15,
+      "received_ns": 1795587231322400281,
+      "device_id": "esp32-meja01",
+      "temperature_c": 125.0,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": true
+    },
+    {
+      "event": "telemetry_stored",
+      "utc": "2026-11-25T06:13:53.459029+00:00",
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 16,
+      "received_ns": 1795587233446640992,
+      "device_id": "esp32-meja01",
+      "temperature_c": 125.0,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": true
+    },
+    {
+      "event": "telemetry_stored",
+      "utc": "2026-11-25T06:13:55.524988+00:00",
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 17,
+      "received_ns": 1795587235518352027,
+      "device_id": "esp32-meja01",
+      "temperature_c": 9.19,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    },
+    {
+      "event": "telemetry_stored",
+      "utc": "2026-11-25T06:13:57.637427+00:00",
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 18,
+      "received_ns": 1795587237630855773,
+      "device_id": "esp32-meja01",
+      "temperature_c": 22.0,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    },
+    {
+      "event": "telemetry_stored",
+      "utc": "2026-11-25T06:13:59.727462+00:00",
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 19,
+      "received_ns": 1795587239717623329,
+      "device_id": "esp32-meja01",
+      "temperature_c": 20.38,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    },
+    {
+      "event": "telemetry_stored",
+      "utc": "2026-11-25T06:14:01.793401+00:00",
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 20,
+      "received_ns": 1795587241776498415,
+      "device_id": "esp32-meja01",
+      "temperature_c": 20.38,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    },
+    {
+      "event": "telemetry_stored",
+      "utc": "2026-11-25T06:14:03.862045+00:00",
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 21,
+      "received_ns": 1795587243855375918,
+      "device_id": "esp32-meja01",
+      "temperature_c": 20.38,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    },
+    {
+      "event": "telemetry_stored",
+      "utc": "2026-11-25T06:14:05.919053+00:00",
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 22,
+      "received_ns": 1795587245910345536,
+      "device_id": "esp32-meja01",
+      "temperature_c": 20.38,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    },
+    {
+      "event": "telemetry_stored",
+      "utc": "2026-11-25T06:14:08.043973+00:00",
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 23,
+      "received_ns": 1795587248037361012,
+      "device_id": "esp32-meja01",
+      "temperature_c": 20.38,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    },
+    {
+      "event": "telemetry_stored",
+      "utc": "2026-11-25T06:14:10.143829+00:00",
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 24,
+      "received_ns": 1795587250137172802,
+      "device_id": "esp32-meja01",
+      "temperature_c": 20.38,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    },
+    {
+      "event": "telemetry_stored",
+      "utc": "2026-11-25T06:14:12.243847+00:00",
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 25,
+      "received_ns": 1795587252237173276,
+      "device_id": "esp32-meja01",
+      "temperature_c": 20.38,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    }
+  ],
+  "influx_points": [
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 1,
+      "received_ns": 1795587202046641142,
+      "influx_time": "2026-11-25T06:13:22.046641142Z",
+      "temperature_c": 25.0,
+      "gas_raw": 2023,
+      "gas_alarm": false,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 2,
+      "received_ns": 1795587204119374513,
+      "influx_time": "2026-11-25T06:13:24.119374513Z",
+      "temperature_c": 25.0,
+      "gas_raw": 2023,
+      "gas_alarm": false,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 3,
+      "received_ns": 1795587206218157154,
+      "influx_time": "2026-11-25T06:13:26.218157154Z",
+      "temperature_c": 25.0,
+      "gas_raw": 2023,
+      "gas_alarm": false,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 4,
+      "received_ns": 1795587208277158964,
+      "influx_time": "2026-11-25T06:13:28.277158964Z",
+      "temperature_c": 25.0,
+      "gas_raw": 2023,
+      "gas_alarm": false,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 5,
+      "received_ns": 1795587210387513741,
+      "influx_time": "2026-11-25T06:13:30.387513741Z",
+      "temperature_c": 25.0,
+      "gas_raw": 2023,
+      "gas_alarm": false,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 6,
+      "received_ns": 1795587212477210453,
+      "influx_time": "2026-11-25T06:13:32.477210453Z",
+      "temperature_c": 125.0,
+      "gas_raw": 2023,
+      "gas_alarm": false,
+      "temperature_alarm": true
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 7,
+      "received_ns": 1795587214526528087,
+      "influx_time": "2026-11-25T06:13:34.526528087Z",
+      "temperature_c": 125.0,
+      "gas_raw": 2023,
+      "gas_alarm": false,
+      "temperature_alarm": true
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 8,
+      "received_ns": 1795587216637574509,
+      "influx_time": "2026-11-25T06:13:36.637574509Z",
+      "temperature_c": 125.0,
+      "gas_raw": 2023,
+      "gas_alarm": false,
+      "temperature_alarm": true
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 9,
+      "received_ns": 1795587218717190255,
+      "influx_time": "2026-11-25T06:13:38.717190255Z",
+      "temperature_c": 125.0,
+      "gas_raw": 2023,
+      "gas_alarm": false,
+      "temperature_alarm": true
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 10,
+      "received_ns": 1795587220806699697,
+      "influx_time": "2026-11-25T06:13:40.806699697Z",
+      "temperature_c": 125.0,
+      "gas_raw": 2023,
+      "gas_alarm": false,
+      "temperature_alarm": true
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 11,
+      "received_ns": 1795587222937117962,
+      "influx_time": "2026-11-25T06:13:42.937117962Z",
+      "temperature_c": 125.0,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": true
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 12,
+      "received_ns": 1795587225081704659,
+      "influx_time": "2026-11-25T06:13:45.081704659Z",
+      "temperature_c": 125.0,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": true
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 13,
+      "received_ns": 1795587227129430678,
+      "influx_time": "2026-11-25T06:13:47.129430678Z",
+      "temperature_c": 125.0,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": true
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 14,
+      "received_ns": 1795587229246062823,
+      "influx_time": "2026-11-25T06:13:49.246062823Z",
+      "temperature_c": 125.0,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": true
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 15,
+      "received_ns": 1795587231322400281,
+      "influx_time": "2026-11-25T06:13:51.322400281Z",
+      "temperature_c": 125.0,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": true
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 16,
+      "received_ns": 1795587233446640992,
+      "influx_time": "2026-11-25T06:13:53.446640992Z",
+      "temperature_c": 125.0,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": true
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 17,
+      "received_ns": 1795587235518352027,
+      "influx_time": "2026-11-25T06:13:55.518352027Z",
+      "temperature_c": 9.19,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 18,
+      "received_ns": 1795587237630855773,
+      "influx_time": "2026-11-25T06:13:57.630855773Z",
+      "temperature_c": 22.0,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 19,
+      "received_ns": 1795587239717623329,
+      "influx_time": "2026-11-25T06:13:59.717623329Z",
+      "temperature_c": 20.38,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 20,
+      "received_ns": 1795587241776498415,
+      "influx_time": "2026-11-25T06:14:01.776498415Z",
+      "temperature_c": 20.38,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 21,
+      "received_ns": 1795587243855375918,
+      "influx_time": "2026-11-25T06:14:03.855375918Z",
+      "temperature_c": 20.38,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 22,
+      "received_ns": 1795587245910345536,
+      "influx_time": "2026-11-25T06:14:05.910345536Z",
+      "temperature_c": 20.38,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 23,
+      "received_ns": 1795587248037361012,
+      "influx_time": "2026-11-25T06:14:08.037361012Z",
+      "temperature_c": 20.38,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 24,
+      "received_ns": 1795587250137172802,
+      "influx_time": "2026-11-25T06:14:10.137172802Z",
+      "temperature_c": 20.38,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    },
+    {
+      "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+      "counter": 25,
+      "received_ns": 1795587252237173276,
+      "influx_time": "2026-11-25T06:14:12.237173276Z",
+      "temperature_c": 20.38,
+      "gas_raw": 2425,
+      "gas_alarm": true,
+      "temperature_alarm": false
+    }
+  ],
+  "all_four_states": true,
+  "grafana": {
+    "history_panel_results": {
+      "2": {
+        "status": 200,
+        "frames": [
+          {
+            "schema": {
+              "name": "suhu",
+              "refId": "A",
+              "meta": {
+                "typeVersion": [
+                  0,
+                  0
+                ],
+                "executedQueryString": "from(bucket: \"telemetry\")\n  |> range(start: 2026-11-25T06:13:21.046Z, stop: 2026-11-25T06:13:56.519Z)\n  |> filter(fn: (r) => r._measurement == \"suhu\" and r._field == \"temperature_c\" and r.device_id == \"esp32-meja01\")\n  |> aggregateWindow(every: 2s, fn: mean, createEmpty: true)\n  |> yield(name: \"suhu\")"
+              },
+              "fields": [
+                {
+                  "name": "Time",
+                  "type": "time",
+                  "typeInfo": {
+                    "frame": "time.Time",
+                    "nullable": true
+                  }
+                },
+                {
+                  "name": "temperature_c",
+                  "type": "number",
+                  "typeInfo": {
+                    "frame": "float64",
+                    "nullable": true
+                  },
+                  "labels": {
+                    "device_id": "esp32-meja01"
+                  }
+                }
+              ]
+            },
+            "data": {
+              "values": [
+                [
+                  1795587202000,
+                  1795587204000,
+                  1795587206000,
+                  1795587208000,
+                  1795587210000,
+                  1795587212000,
+                  1795587214000,
+                  1795587216000,
+                  1795587218000,
+                  1795587220000,
+                  1795587222000,
+                  1795587224000,
+                  1795587226000,
+                  1795587228000,
+                  1795587230000,
+                  1795587232000,
+                  1795587234000,
+                  1795587236000,
+                  1795587236519
+                ],
+                [
+                  null,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25,
+                  125,
+                  125,
+                  125,
+                  125,
+                  125,
+                  125,
+                  125,
+                  125,
+                  125,
+                  125,
+                  125,
+                  9.19,
+                  null
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "4": {
+        "status": 200,
+        "frames": [
+          {
+            "schema": {
+              "name": "suhu",
+              "refId": "A",
+              "meta": {
+                "typeVersion": [
+                  0,
+                  0
+                ],
+                "executedQueryString": "from(bucket: \"telemetry\")\n  |> range(start: 2026-11-25T06:13:21.046Z, stop: 2026-11-25T06:13:56.519Z)\n  |> filter(fn: (r) => r._measurement == \"suhu\" and r._field == \"gas_raw\" and r.device_id == \"esp32-meja01\")\n  |> aggregateWindow(every: 2s, fn: mean, createEmpty: true)\n  |> yield(name: \"gas\")"
+              },
+              "fields": [
+                {
+                  "name": "Time",
+                  "type": "time",
+                  "typeInfo": {
+                    "frame": "time.Time",
+                    "nullable": true
+                  }
+                },
+                {
+                  "name": "gas_raw",
+                  "type": "number",
+                  "typeInfo": {
+                    "frame": "float64",
+                    "nullable": true
+                  },
+                  "labels": {
+                    "device_id": "esp32-meja01"
+                  }
+                }
+              ]
+            },
+            "data": {
+              "values": [
+                [
+                  1795587202000,
+                  1795587204000,
+                  1795587206000,
+                  1795587208000,
+                  1795587210000,
+                  1795587212000,
+                  1795587214000,
+                  1795587216000,
+                  1795587218000,
+                  1795587220000,
+                  1795587222000,
+                  1795587224000,
+                  1795587226000,
+                  1795587228000,
+                  1795587230000,
+                  1795587232000,
+                  1795587234000,
+                  1795587236000,
+                  1795587236519
+                ],
+                [
+                  null,
+                  2023,
+                  2023,
+                  2023,
+                  2023,
+                  2023,
+                  2023,
+                  2023,
+                  2023,
+                  2023,
+                  2023,
+                  2425,
+                  2425,
+                  2425,
+                  2425,
+                  2425,
+                  2425,
+                  2425,
+                  null
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "6": {
+        "status": 200,
+        "frames": [
+          {
+            "schema": {
+              "refId": "A",
+              "meta": {
+                "typeVersion": [
+                  0,
+                  0
+                ],
+                "executedQueryString": "from(bucket: \"telemetry\")\n  |> range(start: 2026-11-25T06:13:21.046Z, stop: 2026-11-25T06:13:56.519Z)\n  |> filter(fn: (r) => r._measurement == \"suhu\" and r.device_id == \"esp32-meja01\")\n  |> filter(fn: (r) => r._field == \"temperature_c\" or r._field == \"gas_raw\" or r._field == \"gas_alarm\" or r._field == \"temperature_alarm\")\n  |> pivot(rowKey: [\"_time\"], columnKey: [\"_field\"], valueColumn: \"_value\")\n  |> filter(fn: (r) => exists r.gas_alarm and exists r.temperature_alarm and exists r.temperature_c and exists r.gas_raw)\n  |> map(fn: (r) => ({r with kondisi: if r.gas_alarm and r.temperature_alarm then \"Peringatan gas dan suhu\" else if r.gas_alarm then \"Peringatan gas\" else if r.temperature_alarm then \"Peringatan suhu\" else \"Normal\"}))\n  |> keep(columns: [\"_time\", \"temperature_c\", \"gas_raw\", \"gas_alarm\", \"temperature_alarm\", \"kondisi\"])\n  |> sort(columns: [\"_time\"], desc: true)"
+              },
+              "fields": [
+                {
+                  "name": "_time",
+                  "type": "time",
+                  "typeInfo": {
+                    "frame": "time.Time",
+                    "nullable": true
+                  }
+                },
+                {
+                  "name": "gas_alarm",
+                  "type": "boolean",
+                  "typeInfo": {
+                    "frame": "bool",
+                    "nullable": true
+                  },
+                  "labels": {}
+                },
+                {
+                  "name": "gas_raw",
+                  "type": "number",
+                  "typeInfo": {
+                    "frame": "int64",
+                    "nullable": true
+                  },
+                  "labels": {}
+                },
+                {
+                  "name": "temperature_alarm",
+                  "type": "boolean",
+                  "typeInfo": {
+                    "frame": "bool",
+                    "nullable": true
+                  },
+                  "labels": {}
+                },
+                {
+                  "name": "temperature_c",
+                  "type": "number",
+                  "typeInfo": {
+                    "frame": "float64",
+                    "nullable": true
+                  },
+                  "labels": {}
+                },
+                {
+                  "name": "kondisi",
+                  "type": "string",
+                  "typeInfo": {
+                    "frame": "string",
+                    "nullable": true
+                  },
+                  "labels": {}
+                }
+              ]
+            },
+            "data": {
+              "values": [
+                [
+                  1795587235518,
+                  1795587233446,
+                  1795587231322,
+                  1795587229246,
+                  1795587227129,
+                  1795587225081,
+                  1795587222937,
+                  1795587220806,
+                  1795587218717,
+                  1795587216637,
+                  1795587214526,
+                  1795587212477,
+                  1795587210387,
+                  1795587208277,
+                  1795587206218,
+                  1795587204119,
+                  1795587202046
+                ],
+                [
+                  true,
+                  true,
+                  true,
+                  true,
+                  true,
+                  true,
+                  true,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false
+                ],
+                [
+                  2425,
+                  2425,
+                  2425,
+                  2425,
+                  2425,
+                  2425,
+                  2425,
+                  2023,
+                  2023,
+                  2023,
+                  2023,
+                  2023,
+                  2023,
+                  2023,
+                  2023,
+                  2023,
+                  2023
+                ],
+                [
+                  false,
+                  true,
+                  true,
+                  true,
+                  true,
+                  true,
+                  true,
+                  true,
+                  true,
+                  true,
+                  true,
+                  true,
+                  false,
+                  false,
+                  false,
+                  false,
+                  false
+                ],
+                [
+                  9.19,
+                  125,
+                  125,
+                  125,
+                  125,
+                  125,
+                  125,
+                  125,
+                  125,
+                  125,
+                  125,
+                  125,
+                  25,
+                  25,
+                  25,
+                  25,
+                  25
+                ],
+                [
+                  "Peringatan gas",
+                  "Peringatan gas dan suhu",
+                  "Peringatan gas dan suhu",
+                  "Peringatan gas dan suhu",
+                  "Peringatan gas dan suhu",
+                  "Peringatan gas dan suhu",
+                  "Peringatan gas dan suhu",
+                  "Peringatan suhu",
+                  "Peringatan suhu",
+                  "Peringatan suhu",
+                  "Peringatan suhu",
+                  "Peringatan suhu",
+                  "Normal",
+                  "Normal",
+                  "Normal",
+                  "Normal",
+                  "Normal"
+                ]
+              ],
+              "nanos": [
+                [
+                  352027,
+                  640992,
+                  400281,
+                  62823,
+                  430678,
+                  704659,
+                  117962,
+                  699697,
+                  190255,
+                  574509,
+                  528087,
+                  210453,
+                  513741,
+                  158964,
+                  157154,
+                  374513,
+                  641142
+                ],
+                null,
+                null,
+                null,
+                null,
+                null
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "history_table_points_matched": true,
+    "historical_alarm_states": [
+      {
+        "counter": 1,
+        "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+        "state": 0,
+        "query_clock": "receiver time + 100ms for historical state validation"
+      },
+      {
+        "counter": 6,
+        "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+        "state": 2,
+        "query_clock": "receiver time + 100ms for historical state validation"
+      },
+      {
+        "counter": 11,
+        "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+        "state": 3,
+        "query_clock": "receiver time + 100ms for historical state validation"
+      },
+      {
+        "counter": 17,
+        "session_id": "0938415ec9aa5b94fa0ce88232dece22",
+        "state": 1,
+        "query_clock": "receiver time + 100ms for historical state validation"
+      }
+    ],
+    "latest_stats_matched_at_sample_time": true,
+    "current_alarm_state_at_verification": [
+      -1
+    ]
+  }
+}
